@@ -11,11 +11,14 @@ import {userSession} from '../store'
 
 <template>
   <NavBar/>
-  <div class="layout gutter--md gutter--lg">
+  <div class="layout gutter--md">
     <router-view />
   </div>
 
 </template>
 
 <style>
+.margin-spacer{
+  margin:15px 0 15px 0!important;
+}
 </style>

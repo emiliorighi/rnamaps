@@ -1,8 +1,9 @@
 <template>
 <svg
-   width="297mm"
-   height="210mm"
-   viewBox="0 0 1052.3622 744.09448"
+   width="350px"
+   heigth="300px"
+   viewBox="250 200 500 300"
+   style="width:100%;height:100%;overflow:visible"
    >
   <defs
      id="defs4">
@@ -52,6 +53,19 @@
        y2="1083.7908"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.76008645,0,0,0.73444057,86.379687,127.54725)" />
+        <filter id="outline">
+            <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"></feMorphology>
+            <feFlood flood-color="white" flood-opacity="1" result="PINK"></feFlood>
+            <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE"></feComposite>
+            <feMerge>
+                <feMergeNode in="OUTLINE" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+       <filter id="contour">
+	    <feMorphology in="SourceAlpha" operator="dilate" radius="2"/>
+	    <feComposite in="SourceGraphic"/>
+	  </filter>
     <filter
        inkscape:label="Thin Membrane"
        inkscape:menu="Ridges"
@@ -29459,7 +29473,8 @@
      id="layer1"
      transform="translate(0,-308.26772)"
      style="display:inline"
-     @mouseenter="showAlert=false">
+     @mouseenter="$emit('active', '')">
+     >
     <path
        style="fill:none;fill-rule:evenodd;stroke:#6800b2;stroke-width:0.81424;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
        d="m 342.38065,171.99246 -21.75897,1.38428 -22.617,3.0642 c -8.25769,1.49597 -15.48139,3.78086 -23.54084,7.19755 l -21.88051,11.2379 c -5.72374,3.06646 -12.25279,6.93295 -17.56204,12.36704 -7.65249,4.79159 -11.23746,10.82627 -15.90172,16.40739 l -11.24435,16.53168 c -2.24349,6.34315 -6.32551,11.8405 -7.70731,19.01374 -2.10272,5.10012 -1.28995,11.4898 -2.16347,16.81941 l 2.64163,16.55725 5.87751,17.82383 c 2.44229,7.57993 12.586,23.03812 18.39479,30.01453 9.70724,9.10763 30.00839,20.28732 38.53903,24.83258 5.05514,2.65655 38.01843,12.10571 48.7118,12.82069 11.39814,2.50455 55.38596,-1.73583 71.66489,-6.57604 16.06914,-5.69519 34.66466,-10.8823 48.16625,-21.81062 12.90153,-11.23673 25.08204,-23.32944 31.3618,-38.52793 6.26269,-13.32857 12.86874,-29.822 12.25342,-42.92351 l -1.57166,-14.20458 -2.57019,-6.44178 -2.06525,-8.3348 -3.20989,-7.05804 -2.31204,-5.39992"
@@ -29674,7 +29689,7 @@
      id="layer6"
      inkscape:label="chromatin"
      style="display:inline"
-     @mouseenter="displayData('ChIPseq')">
+     @mouseenter="$emit('active', 'ChIPseq')">
     <ellipse
        style="display:inline;opacity:1;fill:#ecac96;fill-opacity:0.788961;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.823864;filter:url(#filter5829-06-1-5-2)"
        id="path4299-39-4-5-0-8-0-4-8"
@@ -29864,7 +29879,7 @@
      id="layer5"
      inkscape:label="nuclear RNA"
      style="display:inline"
-     @mouseenter="displayData('RNAseq')">
+     @mouseenter="$emit('active', 'RNAseq')">
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#2075ac;stroke-width:1.1835;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.545455"
        d="m 443.80209,585.68026 c 23.95841,3.203 25.92211,8.7284 0.66014,2.7339 -9.87868,0.6904 -8.40889,3.1121 6.14275,9.4901"
@@ -30005,7 +30020,7 @@
      id="layer4"
      inkscape:label="cytosolic RNA"
      style="display:inline"
-     @mouseenter="displayData('RNAseq')">
+     @mouseenter="$emit('active', 'RNAseq')">
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#2075ac;stroke-width:1.26193;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 610.17529,666.90956 c 19.9321,4.3771 21.56579,11.9281 0.5492,3.7361 -8.21853,0.9435 -16.28145,-3.6042 -25.60386,-1.3166"
@@ -30110,7 +30125,7 @@
      id="layer2"
      inkscape:label="proteins"
      style="display:inline"
-     @mouseenter="displayData('Proteomics')">
+     @mouseenter="$emit('active', 'Proteomics')">
     <path
        sodipodi:type="star"
        style="opacity:1;fill:#2dc13d;fill-opacity:0.971591;stroke:none;stroke-width:2.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter13515-4-5-74-4)"
@@ -30297,7 +30312,7 @@
      id="layer3"
      inkscape:label="ribosome"
      style="display:inline"
-     @mouseenter="displayData('RibosomeProfiling')">
+     @mouseenter="$emit('active', 'RibosomeProfiling')">
     <g
        id="g7956-28-70-1"
        transform="matrix(0.15677159,0,0,0.17774531,367.55969,392.74927)"
@@ -30764,19 +30779,33 @@
        transform="translate(0,-308.26772)" />
   </g>
 </svg>
-<va-alert v-model="showAlert" border="left" color="#872674">{{dataType}}</va-alert>
 </template>
 <script setup>
-import {ref} from 'vue'
+import {ref} from "vue"
 
-var dataType = ref('')
-var showAlert = ref(false)
+// var dataType = ref('')
+// var showAlert = ref(false)
 
-function displayData(data){
-    console.log(data)
-    showAlert.value = true
-    dataType.value = data
-}
+// function displayData(event, data){
+//     showAlert.value = true
+//     dataType.value = data
+// }
 </script>
 <style scoped>
+
+#layer2:hover{
+    filter: url(#outline);     
+}
+#layer3:hover{
+    filter: url(#outline);     
+}
+#layer4:hover{
+    filter: url(#outline);     
+}
+#layer5:hover{
+    filter: url(#outline);     
+}
+#layer6:hover{
+    filter: url(#outline);     
+}
 </style>
