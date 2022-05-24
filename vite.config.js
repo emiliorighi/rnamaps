@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import react from '@vitejs/plugin-react'
 import rollupNodePolyFill from 'rollup-plugin-node-polyfills'
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
@@ -30,5 +29,12 @@ export default defineConfig({
         ]
     }
 },
-  plugins: [vue(),react(), rollupNodePolyFill]
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
+        }
+      }
+    }), rollupNodePolyFill]
 })
