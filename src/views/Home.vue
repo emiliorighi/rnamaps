@@ -23,12 +23,12 @@ import OrganismCard from '../components/OrganismCard.vue'
 
 const organisms = [
     {
-        title:'Human',
+        title:'human',
         imagePath:'src/assets/transdifferentiation.v2.svg',
         content:'induced transdifferentiation of human pre-B cells into macrophages'
     },
     {
-        title:'Fly',
+        title:'fly',
         imagePath:'src/assets/development_labeled3.svg',
         content:'organ morphogenesis during fly development'
     }

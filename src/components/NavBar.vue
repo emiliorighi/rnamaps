@@ -7,7 +7,7 @@
                 :key="item.to"
                 :active="item.active"
             >
-                <img width="24" :src="item.path"/>
+                <img width="50" :src="item.path"/>
             </va-navbar-item>
         </template>
         <template #right>
@@ -18,7 +18,7 @@
 <script setup>
     const items = [
         // { title: 'Home', path: 'dashboard' },
-        { title: 'Fly', path: 'src/assets/fly-icon.png'},
-        { title: 'Human', path: 'src/assets/human-icon.png'},
+        { title: 'Fly', path: 'src/assets/fly_icon.svg'},
+        { title: 'Human', path: 'src/assets/women_icon.svg'},
       ]
 </script>

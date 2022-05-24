@@ -1,5 +1,5 @@
 <template>
-    <va-card class="organism-card">
+    <va-card class="organism-card" :href="title">
         <va-image
         contain
         style="height: 200px;"
@@ -22,6 +22,6 @@ const props = defineProps({
     border-radius: 1.25rem;
 }
 .organism-card:hover{
-    border: 1px solid #872674;
+    border: 2px solid #872674;
 }
 </style>

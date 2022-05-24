@@ -12,11 +12,7 @@ import {userSession} from '../store'
 <template>
   <NavBar/>
   <div class="layout gutter--md gutter--lg">
-    <div class="row">
-      <div class="flex">
-        <router-view />
-      </div>
-    </div>
+    <router-view />
   </div>
 
 </template>

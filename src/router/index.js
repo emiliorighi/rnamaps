@@ -1,30 +1,25 @@
 import { createWebHistory, createRouter } from 'vue-router';
 import Home from '../views/Home.vue';
 
-const humanComponent = () => import('../views/Human.vue')
-const flyComponent = () => import('../views/Fly.vue')
+const organismComponent = () => import('../views/Organism.vue')
 const jBrowseComponent = () => import('../views/JBrowse.vue')
 
 
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "H¡home",
     component: Home,
   },
   {
-    path: "/human",
-    name: "Human",
-    component: humanComponent,
-  },
-  {
-    path: "/fly",
-    name: "Fly",
-    component: flyComponent,
+    path: "/:organism",
+    name: "organism",
+    component: organismComponent,
+    props:true
   },
   {
     path: "/jbrowse2",
-    name: "JBrowse2",
+    name: "jbrowse2",
     component: jBrowseComponent,
   },
 ];
