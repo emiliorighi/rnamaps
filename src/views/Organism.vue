@@ -1,89 +1,60 @@
 <template>
     <Title :title="title"/>
-    <div class="row margin-spacer">
-        <div class="flex lg4" >
+     <div style="margin-top:50px" class="row">
+       <!-- <div class="flex lg4" >
             <div class="row margin-spacer">
-                <div class="flex lg12 md12 margin-spacer">
+                <div class="flex lg12 margin-spacer">
                     <CellSvg @active="activateClass"/>
                 </div>
             </div>
-        </div>
-        <div class="flex lg8">
-            <table class="exp-matrix">
-                <thead>
-                    <tr>
-                        <th class="sticky-col first-col"/>
-                        <th v-for="tp in time" 
-                            :key="tp.value">
-                            <va-chip
-                                class="timepoints"
-                                
-                                flat
-                                color="#872674"
-                            >
-                                {{tp.label}}
-                            </va-chip>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="space-under" v-for="type in dataTypes" :key="type.label">
-                        <td class="sticky-col first-col">
-                            <va-chip
-                                color="#872674"
-                                :outline="!type.hovered"
-                            >
-                                {{type.label}}
-                            </va-chip>
-                        </td>
-                        <td style="text-align:center" v-for="tp in time" :key="tp.value">
-                            <va-button style="width:min-content;" size="small" color="#872674" flat class="mr-4">
-                                {{getExperimentsLength(type.label,tp.value)}}
-                            </va-button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        </div> -->
+        <div style="overflow:scroll" class="flex lg12">
+            <CustomTable
+                @paginate="updateExps"
+                :experiments="totalExps"
+                :time="time" 
+                :dataTypes="dataTypes" 
+                :organism="organism" 
+            />
         </div>
     </div>
     <div class="row margin-spacer">
-        <div class="flex lg6" style="overflow:scroll">
-            <va-data-table 
-                :items="experiments" 
-                :columns="columns"
-                :style="{
-                    '--va-data-table-scroll-table-color': '#872674',
-                }"
-                :per-page="perPage"
-                :current-page="currentPage"
-                @filtered="filtered = $event.items"
-            >
-                <template #header(actions)/>
-                <template #cell(actions)><va-button size="small" color="#872674" icon='add'></va-button></template>
-                <template #bodyAppend>
-                    <tr>
-                        <td colspan="1"/>
-                        <td colspan="2">
-                            <va-pagination
-                                flat
-                                color="#872674"
-                                v-model="currentPage"
-                                :pages="pages"
-                                input
-                            />
-                        </td>
-                    </tr>
-                </template>
-            </va-data-table>
+        <div class="flex lg12">
+            <va-list>
+                <va-list-label>
+                    Metadata
+                </va-list-label>
+                <va-list-item
+                    v-for="exp in experiments"
+                    :key="exp.labExpId"
+                >
+                <va-list-item-section >
+                    <va-list-item-label>
+                        {{ exp.labExpId }}
+                    </va-list-item-label>
+                    <va-list-item-label caption>
+                        fraction: {{ exp.fraction }}
+                    </va-list-item-label>
+                    <va-list-item-label caption>
+                        platform: {{ exp.platform }}
+                    </va-list-item-label>
+                </va-list-item-section>
+                <va-list-item-section icon>
+                    <va-button icon="add" color="#872674"/>
+                </va-list-item-section>
+                </va-list-item>
+            </va-list>
         </div>
     </div>
 </template>
 <script setup>
 import expService from '../services/ExperimentService'
 import {ref,computed, reactive} from 'vue'
+import metadata from '../../metadata.json'
 import FieldSelect from '../components/FieldSelect.vue'
 import CellSvg from '../components/CellSvg.vue'
 import Title from '../components/Title.vue'
+import CustomTable from '../components/CustomTable.vue'
 
 const dataTypes=reactive([
     {label:'Proteomics',color:'#2b4135',hovered:false},
@@ -118,13 +89,12 @@ const props = defineProps({
 
 const selectedTime = ref('')
 const title = props.organism? props.organism[0].toUpperCase() + props.organism.slice(1).toLowerCase() : ''
-var listValue =ref([])
 var perPage = ref(10)
 var currentPage = ref(1)
-const experiments = expService.getExperiments({organism:props.organism})
-var filtered = [...experiments]
+const totalExps = expService.getExperiments({organism:props.organism})
+const experiments = ref([])
 const columns=props.organism === 'human'? ['labExpId','dataType','time','actions'] : ['labExpId','dataType','stage','actions']
-const columnDefinitions = Object.keys(experiments[0])
+
 const pages = computed(() => {
   return (perPage && perPage.value !== 0)
         ? Math.ceil(filtered.length / perPage.value)
@@ -149,30 +119,20 @@ function activateClass(type){
         }
     })
 }
-function getExperimentsLength(type,tp){
-    return experiments.filter(exp => {
-        if (props.organism === 'fly'){
-            if (exp.dataType === type && exp.stage === tp){
-                return exp
-            }
-        }
-        if (props.organism === 'human'){
-            if (exp.dataType === type && exp.time === tp){
-                return exp
-            }
-        }
-    }).length
+
+function updateExps(exps){
+    console.log([...exps].slice(0,perPage.value))
+    experiments.value = [...exps]
+    console.log(experiments)
 }
 </script>
 <style scoped>
 .timepoints{
     rotate: -45deg;
 }
-tr.space-under>td {
+/* tr.space-under>td {
   padding-bottom: 1em;
-  text-align: right;
-  width:fit-content
-}
+} */
 tbody:before {
     content:"@";
     display:block;
@@ -186,9 +146,10 @@ tbody:before {
 }
 
 .first-col {
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
-  left: 0px;
+    left: -5px;
+    text-align: end;
+    background-color: white;
+    z-index: 1000;
+    padding:.8rem
 }
 </style>

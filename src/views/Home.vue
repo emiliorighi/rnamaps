@@ -21,12 +21,12 @@ import Title from '../components/Title.vue'
 const title = 'Uncovering and understanding RNA through Massively Parallel Sequencing'
 const organisms = [
     {
-        title:'human',
+        title:'Human',
         imagePath:'src/assets/transdifferentiation.v2.svg',
         content:'induced transdifferentiation of human pre-B cells into macrophages'
     },
     {
-        title:'fly',
+        title:'Fly',
         imagePath:'src/assets/development_labeled3.svg',
         content:'organ morphogenesis during fly development'
     }

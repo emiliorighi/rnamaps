@@ -1,13 +1,19 @@
 import {defineStore} from 'pinia'
 
-export const userSession = defineStore('main', {
+export const experiments = defineStore('experiments', {
     state: () => ({
-        tracks:[]
+        renderedExps:[],
+        currentPage:1,
+        pageSize:5,
+        table:{},
     }),
     getters:{
         getTracks: (state) => state.tracks
     },
     actions:{
+        activateTable(){
+
+        },
         removeTracks(){
             this.tracks=[]
         }

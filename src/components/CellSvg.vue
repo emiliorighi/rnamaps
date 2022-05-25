@@ -1,7 +1,7 @@
 <template>
 <svg
-   width="350px"
-   heigth="300px"
+   width="250px"
+   heigth="200px"
    viewBox="250 200 500 300"
    style="width:100%;height:100%;overflow:visible"
    >
