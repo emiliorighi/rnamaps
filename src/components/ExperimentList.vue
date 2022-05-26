@@ -24,30 +24,34 @@
         </va-list-item>
     </va-list>
     <va-pagination
-      v-if="expsToRender.length"
+      v-if="total"
       size="small"
       v-model="index"
-      :total="experiments.length"
+      :total="total"
       boundary-numbers
       :page-size="pageSize"
-      :visible-pages="4"
+      :visible-pages="5"
     />
 </template>
 <script setup>
 import { ref,computed } from 'vue'
 import {session} from '../stores/session'
+import {experiments} from '../stores/experiments'
 
-const props = defineProps({
-    experiments:Array
+const Exps = experiments()
+const total = computed(() => {
+    return Exps.renderedExps.length
 })
+
+const expsToRender = computed(() => {
+    return Exps.renderedExps.slice(index.value-1, index.value+pageSize.value)
+})
+
 const Session = session()
 
 const pageSize=ref(5)
 var index = ref(1)
 
-const expsToRender = computed(() => {
-    return props.experiments.slice(index.value-1, index.value+pageSize.value)
-})
 
 function addTrack(label){
     if(!Session.tracks.includes(label)){

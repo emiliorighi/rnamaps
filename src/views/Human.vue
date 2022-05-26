@@ -1,7 +1,7 @@
 <template>
     <Title :title="'Human'"/>
      <div class="row">
-        <div style="overflow:auto" class="flex lg12">
+        <div style="overflow:auto;padding:30px" class="flex">
             <CustomTable
                 v-if="Object.keys(Experiments.table).length"
                 :organism="Experiments.table"
@@ -12,35 +12,26 @@
     </div>
     <div class="row">
         <div class="flex">
-            <ExperimentList :experiments="filteredExps"/>
+            <ExperimentList/>
         </div>
     </div>
 </template>
 <script setup>
 import {experiments} from '../stores/experiments'
-import {ref,computed, reactive,onMounted} from 'vue'
+import {ref, reactive,onMounted} from 'vue'
 import Title from '../components/Title.vue'
 import CustomTable from '../components/CustomTable.vue'
 import ExperimentList from '../components/ExperimentList.vue'
-import {human} from '../assets/schemas/metadata.json'
 
 
 const organism = 'human'
 const Experiments = experiments()
-const metadata = {...human}
 
 onMounted(() =>{
 //convert metadata into reactive table
-Object.keys(metadata).forEach(key1 => {
-    Object.keys(metadata[key1]).forEach(key2 => {
-        metadata[key1][key2] = {
-            active: false,
-            value: metadata[key1][key2].length
-        }
-    })
-})
+    Experiments.currentOrganism = organism
+    Experiments.createQueryTable()
 
-Experiments.table = {...metadata}
 })
 
 const dataTypes=reactive([
@@ -48,10 +39,6 @@ const dataTypes=reactive([
     {label:'RibosomeProfiling',active:false}, 
     {label:'RNAseq',active:false},
     {label:'ChIPseq',active:false}])
-
-const query = ref([])
-
-const filteredExps = ref([])
 
 const timepoints = reactive([
     {label: "Oh",value: "00d00h00m",active:false},
@@ -68,35 +55,7 @@ const timepoints = reactive([
     {label: "7d",value: "07d00h00m",active:false},
 ])
 
-function updateExps(exps){
-    filteredExps.value = [...exps]
-}
-
 </script>
 <style scoped>
-.timepoints{
-    rotate: -45deg;
-}
-/* tr.space-under>td {
-  padding-bottom: 1em;
-} */
-tbody:before {
-    content:"@";
-    display:block;
-    line-height:10px;
-    text-indent:-99999px;
-}
-.sticky-col {
-  position: -webkit-sticky;
-  position: sticky;
-  background-color: white;
-}
 
-.first-col {
-    left: -5px;
-    text-align: end;
-    background-color: white;
-    z-index: 1000;
-    padding:.8rem
-}
 </style>

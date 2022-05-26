@@ -1,46 +1,62 @@
 <template>
     <Title :title="'Fly'"/>
      <div class="row">
-        <div style="overflow:auto" class="flex lg12">
+        <div style="overflow:auto;padding:30px" class="flex align-self--center">
             <CustomTable
+                v-if="Object.keys(Experiments.table).length"
                 :organism="Experiments.table"
                 :timepoints="flyStages"
                 :dataTypes="dataTypes"
             />
         </div>
+        <div class="flex align-self--center">
+            <va-select
+                v-model="selectedTissue"
+                class="mb-4"
+                label="Tissue"
+                color="#872674"
+                :options="tissues"
+            />
+            <va-select
+                v-if="selectedTissue === 'wing'"
+                v-model="selectedCompartment"
+                class="mb-4"
+                label="Wing Compartment"
+                color="#872674"
+                :options="compartments"
+            />
+        </div>
     </div>
     <div class="row">
         <div class="flex">
-            <ExperimentList :experiments="filteredExps"/>
+            <ExperimentList/>
         </div>
     </div>
 </template>
 <script setup>
-import {ref,computed, reactive,onMounted} from 'vue'
+import {ref, reactive,onMounted} from 'vue'
 import Title from '../components/Title.vue'
 import CustomTable from '../components/CustomTable.vue'
 import ExperimentList from '../components/ExperimentList.vue'
-import {fly} from '../assets/schemas/metadata.json'
 import {experiments} from '../stores/experiments'
 
 
 const organism = 'fly'
 const Experiments = experiments()
-const metadata = {...fly}
 
+const tissues = reactive([
+    'wing', 'eye', 'antenna', 'leg', 'eye-antenna', 'genitalia'
+])
+const compartments = reactive([
+    'whole tissue', 'anterior', 'dorsal', 'posterior', 'ventral'
+])
+const selectedTissue=ref('')
+const selectedCompartment=ref('')
 onMounted(() =>{
 //convert metadata into reactive table
-Object.keys(metadata).forEach(key1 => {
-    Object.keys(metadata[key1]).forEach(key2 => {
-        metadata[key1][key2] = {
-            active: false,
-            value: metadata[key1][key2].length
-        }
-    })
+    Experiments.currentOrganism = organism
+    Experiments.createQueryTable()
 })
-Experiments.table = {...metadata}
-})
-const filteredExps = ref([])
 
 const dataTypes=reactive([ 
     {label:'RNAseq',active:false},
@@ -52,35 +68,7 @@ const flyStages = reactive([
     {label:"WP", value:"WP",active:false}
 ])
 
-function updateExps(exps){
-    filteredExps.value = [...exps]
-}
 
 </script>
 <style scoped>
-.timepoints{
-    rotate: -45deg;
-}
-/* tr.space-under>td {
-  padding-bottom: 1em;
-} */
-tbody:before {
-    content:"@";
-    display:block;
-    line-height:10px;
-    text-indent:-99999px;
-}
-.sticky-col {
-  position: -webkit-sticky;
-  position: sticky;
-  background-color: white;
-}
-
-.first-col {
-    left: -5px;
-    text-align: end;
-    background-color: white;
-    z-index: 1000;
-    padding:.8rem
-}
 </style>

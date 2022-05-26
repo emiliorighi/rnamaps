@@ -10,7 +10,7 @@
                         class="timepoints"
                         :flat="!tp.active"
                         color="#872674"
-                        @click="cellClick({timepoints: tp.value})"
+                        @click="cellClick({timepoint: tp.value})"
                     >
                         {{tp.label}}
                     </va-chip>
@@ -24,14 +24,14 @@
                         size="small"
                         color="#872674"
                         :outline="!type.active"
-                        @click="cellClick({dataTypes: type.label})"
+                        @click="cellClick({dataType: type.label})"
                     >
                         {{type.label}}
                     </va-button>
                 </td>
                 <td style="text-align:center" v-for="tp in timepoints" :key="tp.value">
                     <va-button rounded 
-                        @click="cellClick({timepoints: tp.value, dataTypes: type.label})" 
+                        @click="cellClick({timepoint: tp.value, dataType: type.label})" 
                         style="width:min-content;" size="small"
                         color="#872674" 
                         :flat="!Exps.table[type.label][tp.value].active"
@@ -51,33 +51,51 @@ const Exps = experiments()
 
 //each query element is a layer of the nested obj
 function cellClick(query){
+    Exps.query = {...query}
     Object.keys(Exps.table).forEach(key1 => {
-        // if(key)
         Object.keys(Exps.table[key1]).forEach(key2 => {
             Exps.table[key1][key2].active = false
         })
     })
-    if(query.dataTypes && query.timepoints){
-        Exps.table[query.dataTypes][query.timepoints].active = true
-    }else{
-
+    switch (true) {
+        case query.dataType !== undefined && query.timepoint !== undefined:
+            Exps.table[query.dataType][query.timepoint].active = true
+            Exps.filterExperiments()
+            break;
+        case query.dataType !== undefined:
+            Object.keys(Exps.table[query.dataType]).forEach(key => {
+                Exps.table[query.dataType][key].active = true
+            })
+            Exps.filterDTExperiments()
+            break;
+        case query.timepoint !== undefined:
+            Object.keys(Exps.table).forEach(key1 => {
+                Object.keys(Exps.table[key1]).forEach(key2 => {
+                    if(key2 === query.timepoint){
+                        Exps.table[key1][key2].active = true
+                    }
+                })
+            })
+            Exps.filterTPExperiments()
+            break;
+        default:
+            break;
     }
     props.timepoints.forEach(tp => {
-        if (tp.value === query.timepoints){
+        if (tp.value === query.timepoint){
             tp.active = true
         }else{
             tp.active = false
         }
     })
     props.dataTypes.forEach(dt => {
-        if(dt.label === query.dataTypes){
+        if(dt.label === query.dataType){
             dt.active = true
         }else{
             dt.active = false
         }
     })
 }
-
 const props = defineProps({
     timepoints:Array,
     dataTypes:Array,
@@ -105,6 +123,6 @@ tbody:before {
     text-align: end;
     background-color: white;
     z-index: 1000;
-    padding:.5rem
+    padding:.8rem
 }
 </style>
