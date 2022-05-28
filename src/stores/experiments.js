@@ -1,17 +1,20 @@
 import {defineStore} from 'pinia'
 import schema from '../assets/schemas/test_metadata.json'
-import { shallowReactive,reactive } from 'vue'
+import { shallowReactive,reactive,ref } from 'vue'
 
 export const experiments = defineStore('experiments', {
     state: () => ({
         renderedExps:[],
         table:reactive({}),
         query:[],
-        currentOrganism: '',
+        currentOrganism: ref(''),
+        dataTypes:reactive([]),
+        timepoints:reactive([]),
         index:1,
     }),
     actions:{
         createMatrix(){
+            this.table = {}
             schema[this.currentOrganism].forEach(exp => {
                 if(!(exp.dataType in this.table)){
                     this.table[exp.dataType] = {}
@@ -24,6 +27,10 @@ export const experiments = defineStore('experiments', {
                 }
                 this.table[exp.dataType][exp.time].value ++
             })
+        },
+        loadExps(){
+            const exps = schema[this.currentOrganism]
+            this.renderedExps = [...exps]
         },
         filterExperiments(){
             const filteredExps = schema[this.currentOrganism].filter(exp => exp.dataType === this.query.dataType && exp.time === this.query.timepoint)

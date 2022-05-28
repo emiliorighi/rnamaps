@@ -44,7 +44,7 @@
             :total="total"
             boundary-numbers
             :page-size="pageSize"
-            :visible-pages="5"
+            :visible-pages="3"
             hide-on-single-page
         />
     </div>

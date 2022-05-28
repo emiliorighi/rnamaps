@@ -5,8 +5,6 @@
             <CustomTable
                 v-if="Object.keys(Experiments.table).length"
                 :organism="Experiments.table"
-                :timepoints="flyStages"
-                :dataTypes="dataTypes"
             />
         </div>
         <div class="flex align-self--center">
@@ -34,12 +32,12 @@
     </div>
 </template>
 <script setup>
-import {ref, reactive,onMounted} from 'vue'
+import {ref, reactive,onMounted,watch} from 'vue'
 import Title from '../components/Title.vue'
 import CustomTable from '../components/CustomTable.vue'
 import ExperimentList from '../components/ExperimentList.vue'
 import {experiments} from '../stores/experiments'
-
+import {dataTypes,timepoints} from '../static-config'
 
 const organism = 'fly'
 const Experiments = experiments()
@@ -53,15 +51,14 @@ const compartments = reactive([
 const selectedTissue=ref('')
 const selectedCompartment=ref('')
 
-const dataTypes=reactive([ 
-    {label:'RNAseq',active:false},
-    {label:'ChIPseq',active:false}])
+onMounted(()=>{
+    Experiments.currentOrganism = organism
+    Experiments.dataTypes = [...dataTypes[organism]]
+    Experiments.timepoints = [...timepoints[organism]]
+    Experiments.createMatrix()
+    Experiments.loadExps()
+})
 
-const flyStages = reactive([
-    {label:"L3", value:"L3",active:false},
-    {label:"LP", value:"LP",active:false},
-    {label:"WP", value:"WP",active:false}
-])
 
 
 </script>

@@ -3,7 +3,7 @@
         <thead>
             <tr>
                 <th />
-                <th v-for="tp in timepoints" 
+                <th v-for="tp in Exps.timepoints" 
                     :key="tp.value">
                     <va-chip
                         size="small"
@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="space-under" v-for="type in dataTypes" :key="type">
+            <tr class="space-under" v-for="type in Exps.dataTypes" :key="type">
                 <td class="sticky-col first-col">
                     <va-button
                         size="small"
@@ -29,7 +29,7 @@
                         {{type.label}}
                     </va-button>
                 </td>
-                <td style="text-align:center" v-for="tp in timepoints" :key="tp.value">
+                <td style="text-align:center" v-for="tp in Exps.timepoints" :key="tp.value">
                     <va-button rounded 
                         @click="cellClick({timepoint: tp.value, dataType: type.label})" 
                         style="width:min-content;" size="small"
@@ -45,9 +45,10 @@
 </template>
 <script setup>
 import {experiments} from '../stores/experiments'
-
+import {onMounted, reactive} from 'vue'
 
 const Exps = experiments()
+
 
 //each query element is a layer of the nested obj
 function cellClick(query){
@@ -82,14 +83,14 @@ function cellClick(query){
         default:
             break;
     }
-    props.timepoints.forEach(tp => {
+    Exps.timepoints.forEach(tp => {
         if (tp.value === query.timepoint){
             tp.active = true
         }else{
             tp.active = false
         }
     })
-    props.dataTypes.forEach(dt => {
+    Exps.dataTypes.forEach(dt => {
         if(dt.label === query.dataType){
             dt.active = true
         }else{
@@ -97,10 +98,7 @@ function cellClick(query){
         }
     })
 }
-const props = defineProps({
-    timepoints:Array,
-    dataTypes:Array,
-})
+
 
 </script>
 <style scoped>

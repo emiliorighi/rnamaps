@@ -5,9 +5,9 @@
             <va-navbar-item 
                 v-for="item in items"
                 :key="item.route"
-                :active="item.active"
+                :disabled="item.active"
             >
-                <va-button @click="toPage(item.route)" color="#872674"><va-image contain style="width:50px" :src="item.path"/></va-button>
+                <va-button :to="{name:item.route}" color="#872674"><va-image contain style="width:50px" :src="item.path"/></va-button>
             </va-navbar-item>
         </template>
         <template #right>
@@ -59,12 +59,11 @@ import {experiments} from '../stores/experiments'
 import {flyGenome} from '../assemblies/fly'
 import {humanGenome} from '../assemblies/human'
 import { useRouter } from 'vue-router'
-
+import {dataTypes,timepoints} from '../static-config'
 
 const router = useRouter()
 const Session = session()
 const Exps = experiments()
-
 const items = [
     // { title: 'Home', path: 'dashboard' },
     { title: 'Fly', path: 'src/assets/fly_icon.svg', route:'fly'},
@@ -81,12 +80,5 @@ function loadTracks(){
     Session.createSession()
 }
 
-function toPage(route){
-    Exps.currentOrganism = route
-    Exps.createMatrix()
-    router.push({
-        name: route
-    })    
-}
 
 </script>
