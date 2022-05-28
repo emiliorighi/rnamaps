@@ -8,7 +8,8 @@
             <va-list-item
                 v-for="exp in expsToRender"
                 :key="exp.labExpId"
-        >
+                :to="{name:'experiments',params:{id:exp.labExpId}}"
+            >
             <va-list-item-section>
                 <va-list-item-label>
                     {{ exp.labExpId }}
@@ -21,7 +22,7 @@
                 </va-list-item-label>
             </va-list-item-section>
             <va-list-item-section icon>
-                <va-icon @click="addTrack(exp)" name="remove_red_eye" color="#872674"/>
+                <va-button size="small" @click.stop.prevent="addTrack(exp)" icon="add" color="#872674"/>
             </va-list-item-section>
         </va-list-item>
     </va-list>
@@ -44,7 +45,7 @@
             :total="total"
             boundary-numbers
             :page-size="pageSize"
-            :visible-pages="3"
+            :visible-pages="5"
             hide-on-single-page
         />
     </div>

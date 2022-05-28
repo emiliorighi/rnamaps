@@ -2,7 +2,7 @@
     <table class="exp-matrix">
         <thead>
             <tr>
-                <th />
+                <th/>
                 <th v-for="tp in Exps.timepoints" 
                     :key="tp.value">
                     <va-chip
@@ -23,6 +23,7 @@
                     <va-button
                         size="small"
                         color="#872674"
+                        style="width:100%"
                         :outline="!type.active"
                         @click="cellClick({dataType: type.label})"
                     >

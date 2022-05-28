@@ -12,7 +12,6 @@
 <script setup>
 import {experiments} from '../stores/experiments'
 import { useRouter } from 'vue-router'
-import {dataTypes,timepoints} from '../static-config'
 
 const router = useRouter()
 const Exps = experiments()
@@ -23,16 +22,6 @@ const props = defineProps({
   content:String
 })
 
-// function toPage(title){
-//     Exps.currentOrganism = title
-//     Exps.dataTypes = [...dataTypes[title]]
-//     Exps.timepoints = [...timepoints[title]]
-//     Exps.createMatrix()
-//     Exps.loadExps()
-//     router.push({
-//         name: title
-//     })
-// }
 
 </script>
 <style scoped>

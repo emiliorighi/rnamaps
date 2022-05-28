@@ -4,7 +4,7 @@ import Home from '../views/Home.vue';
 const jBrowseComponent = () => import('../views/JBrowse.vue')
 const humanPage = () => import('../views/Human.vue')
 const flyPage = () => import('../views/Fly.vue')
-
+const expDetails = () => import('../views/ExperimentDetails.vue')
 const routes = [
   {
     path: "/",
@@ -12,15 +12,19 @@ const routes = [
     component: Home,
   },
   {
-    path: "/Human",
+    path: "/human",
     name: "human",
     component: humanPage,
-    props:true
   },
   {
-    path: "/Fly",
+    path: "/fly",
     name: "fly",
     component: flyPage,
+  },
+  {
+    path: "/experiments/:id",
+    name: "experiments",
+    component: expDetails,
     props:true
   },
   {

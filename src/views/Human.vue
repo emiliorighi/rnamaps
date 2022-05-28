@@ -1,31 +1,17 @@
 <template>
     <Title :title="'Human'"/>
-     <div class="row">
-        <div style="overflow:auto;padding: 30px 0 30px 0" class="flex">
-            <va-card outlined>
-                <va-card-title>Experiment matrix</va-card-title>
-                <va-card-content>
-
-                </va-card-content>
-            </va-card>
-        </div>
-        <div style="overflow:auto;padding: 30px 0 30px 0" class="flex">
-            <va-card outlined >
-                <va-card-title>Experiment matrix</va-card-title>
-                <va-card-content>
-                    <CustomTable
-                        v-if="Object.keys(Experiments.table).length"
-                        :organism="Experiments.table"
-                    />
-                </va-card-content>
-            </va-card>
+     <div class="row justify--start">
+        <div  style="overflow:auto;padding: 30px 0 30px 0" class="flex lg12">
+            <CustomTable
+                    v-if="Object.keys(Experiments.table).length"
+                    :organism="Experiments.table"
+            />
         </div>
     </div>
     <div class="row">
-        <div class="flex lg10">
+        <div class="flex lg12">
             <ExperimentList/>
         </div>
-
     </div>
 </template>
 <script setup>
