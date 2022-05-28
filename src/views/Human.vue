@@ -1,7 +1,9 @@
 <template>
     <Title :title="'Human'"/>
      <div class="row">
-        <div style="overflow:auto;padding:30px" class="flex">
+     <!-- <div class="flex lg6">
+     </div> -->
+        <div style="overflow:auto;padding: 30px 0 30px 0" class="flex">
             <CustomTable
                 v-if="Object.keys(Experiments.table).length"
                 :organism="Experiments.table"
@@ -27,15 +29,15 @@ import CustomTable from '../components/CustomTable.vue'
 import ExperimentList from '../components/ExperimentList.vue'
 
 
-const organism = 'human'
+// const organism = 'human'
 const Experiments = experiments()
 
-onMounted(() =>{
-//convert metadata into reactive table
-    Experiments.currentOrganism = organism
-    Experiments.createQueryTable()
+// onMounted(() =>{
+// //convert metadata into reactive table
+//     Experiments.currentOrganism = organism
+//     Experiments.createQueryTable()
 
-})
+// })
 
 const isProteomicsActive = computed(() => {
     return dataTypes.filter(dt => dt.active && dt.label === 'Proteomics').length

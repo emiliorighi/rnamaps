@@ -52,11 +52,6 @@ const compartments = reactive([
 ])
 const selectedTissue=ref('')
 const selectedCompartment=ref('')
-onMounted(() =>{
-//convert metadata into reactive table
-    Experiments.currentOrganism = organism
-    Experiments.createQueryTable()
-})
 
 const dataTypes=reactive([ 
     {label:'RNAseq',active:false},

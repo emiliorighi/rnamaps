@@ -1,5 +1,5 @@
 <template>
-    <va-card class="organism-card" :href="title">
+    <va-card class="organism-card" @click="toPage()">
         <va-image
         contain
         style="height: 200px;"
@@ -10,12 +10,26 @@
     </va-card>
 </template>
 <script setup>
+import {experiments} from '../stores/experiments'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const Exps = experiments()
 
 const props = defineProps({
   imagePath: String,
   title:String,
   content:String
 })
+
+function toPage(){
+    Exps.currentOrganism = props.title
+    Exps.createMatrix()
+    router.push({
+        name: props.title
+    })    
+}
+
 </script>
 <style scoped>
 .organism-card{

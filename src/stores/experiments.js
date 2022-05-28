@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia'
-import schema from '../assets/schemas/metadata.json'
+import schema from '../assets/schemas/test_metadata.json'
 import { shallowReactive,reactive } from 'vue'
 
 export const experiments = defineStore('experiments', {
@@ -11,41 +11,31 @@ export const experiments = defineStore('experiments', {
         index:1,
     }),
     actions:{
-        createQueryTable(){
-            const data = schema[this.currentOrganism]
-            Object.keys(data).forEach(dt => {
-                this.table[dt] = {}
-                Object.keys(data[dt]).forEach(tp => {
-                    this.table[dt][tp] = {}
-                    this.table[dt][tp].active=false
-                    this.table[dt][tp].value=data[dt][tp].length
-                })
+        createMatrix(){
+            schema[this.currentOrganism].forEach(exp => {
+                if(!(exp.dataType in this.table)){
+                    this.table[exp.dataType] = {}
+                }
+                if(!(exp.time in this.table[exp.dataType])){
+                    this.table[exp.dataType][exp.time] = {
+                        value:0,
+                        active:false,
+                    }
+                }
+                this.table[exp.dataType][exp.time].value ++
             })
         },
         filterExperiments(){
-            this.renderedExps = [...schema[this.currentOrganism][this.query.dataType][this.query.timepoint]]
+            const filteredExps = schema[this.currentOrganism].filter(exp => exp.dataType === this.query.dataType && exp.time === this.query.timepoint)
+            this.renderedExps = [...filteredExps]
         },
         filterTPExperiments(){
-            const newExps = []
-            Object.keys(schema[this.currentOrganism]).forEach(dt => {
-                Object.keys(schema[this.currentOrganism][dt]).forEach(tp => {
-                    if(tp === this.query.timepoint){
-                        newExps.push(...schema[this.currentOrganism][dt][tp])
-                    }
-                })
-            })
+            const newExps = schema[this.currentOrganism].filter(exp => exp.time === this.query.timepoint)
             this.renderedExps = [...newExps]
         },
         filterDTExperiments(){
-            const newExps = []
-            Object.keys(schema[this.currentOrganism][this.query.dataType]).forEach(tp => {
-                newExps.push(...schema[this.currentOrganism][this.query.dataType][tp])
-            })
+            const newExps = schema[this.currentOrganism].filter(exp => exp.dataType === this.query.dataType)
             this.renderedExps = [...newExps]
         },
-        removeTracks(){
-            this.tracks=[]
-        }
     }
-    // other options...
   })

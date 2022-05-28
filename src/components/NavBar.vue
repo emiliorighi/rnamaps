@@ -4,10 +4,10 @@
             <va-navbar-item>RNAmaps</va-navbar-item>
             <va-navbar-item 
                 v-for="item in items"
-                :key="item.to"
+                :key="item.route"
                 :active="item.active"
             >
-                <va-button :href="item.route" color="#872674"><va-image contain style="width:50px" :src="item.path"/></va-button>
+                <va-button @click="toPage(item.route)" color="#872674"><va-image contain style="width:50px" :src="item.path"/></va-button>
             </va-navbar-item>
         </template>
         <template #right>
@@ -58,11 +58,13 @@ import {session} from '../stores/session'
 import {experiments} from '../stores/experiments'
 import {flyGenome} from '../assemblies/fly'
 import {humanGenome} from '../assemblies/human'
+import { useRouter } from 'vue-router'
 
 
-
+const router = useRouter()
 const Session = session()
 const Exps = experiments()
+
 const items = [
     // { title: 'Home', path: 'dashboard' },
     { title: 'Fly', path: 'src/assets/fly_icon.svg', route:'fly'},
@@ -77,7 +79,14 @@ function loadTracks(){
         Session.assembly = [...[humanGenome]]
     }
     Session.createSession()
-    
+}
+
+function toPage(route){
+    Exps.currentOrganism = route
+    Exps.createMatrix()
+    router.push({
+        name: route
+    })    
 }
 
 </script>
