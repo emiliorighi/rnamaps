@@ -1,6 +1,15 @@
 <template>
 <div class="row">
-    <div class="flex lg12">
+    <div class="flex">
+      <va-card 
+        stripe 
+        stripe-color="success"
+        v-for="exp in expsToRender"
+        :key="exp.labExpId"
+    >
+        <va-card-title>{{exp.labExpId}}</va-card-title>
+        <va-card-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</va-card-content>
+      </va-card>
     <va-list>
         <va-list-label>
             Experiments
@@ -21,7 +30,7 @@
                 </va-list-item-label>
             </va-list-item-section>
             <va-list-item-section icon>
-                <va-icon @click="addTrack(exp)" name="remove_red_eye" color="#872674"/>
+                <va-button @click="addTrack(exp)" icon="remove_red_eye" color="#872674"/>
             </va-list-item-section>
         </va-list-item>
     </va-list>

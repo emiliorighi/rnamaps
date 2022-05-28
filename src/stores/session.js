@@ -4,6 +4,7 @@ export const session = defineStore('session', {
     state: () => ({
         tracks:[],
         assembly:[],
+
     }),
     getters:{
         getTracks: (state) => state.tracks
@@ -14,6 +15,9 @@ export const session = defineStore('session', {
         },
         addTrack(){
 
+        },
+        createSession(){
+            
         }
     }
     // other options...

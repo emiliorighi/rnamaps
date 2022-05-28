@@ -57,6 +57,7 @@ function cellClick(query){
             Exps.table[key1][key2].active = false
         })
     })
+    Exps.index=1
     switch (true) {
         case query.dataType !== undefined && query.timepoint !== undefined:
             Exps.table[query.dataType][query.timepoint].active = true

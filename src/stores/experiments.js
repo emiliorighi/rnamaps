@@ -8,6 +8,7 @@ export const experiments = defineStore('experiments', {
         table:reactive({}),
         query:[],
         currentOrganism: '',
+        index:1,
     }),
     actions:{
         createQueryTable(){

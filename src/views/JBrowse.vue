@@ -8,7 +8,9 @@ import React from 'react'
 import assembly from '../assembly'
 import tracks from '../tracks'
 import {onMounted, ref} from 'vue'
+import {session} from '../stores/session'
 
+const Sess = session()
 const wrapper = ref(null)
 
 const props = defineProps({

@@ -29905,7 +29905,27 @@
                     "stage": "NA",
                     "status": "used",
                     "strandSpecificity": "Mate2_Sense",
-                    "time": "07d00h00m"
+                    "time": "07d00h00m",
+                    "bedFiles": [
+                        {
+                            "type":"bed",
+                            "url":"https://public-docs.crg.es/rguigo/Data/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1_zerone_merged.bed"
+                        },
+                        {
+                            "type":"bb",
+                            "url":"https://public-docs.crg.es/rguigo/Data/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1_zerone_merged.bb"
+                        }                        
+                    ],
+                    "bigWigFiles":[
+                        {
+                            "type":"fc_signal",
+                            "url":"https://public-docs.crg.es/rguigo/Data/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1X1.fc_signal.bw"
+                        },
+                        {
+                            "type":"pileup_signal",
+                            "url":"https://public-docs.crg.es/rguigo/Data/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1X1.pileup_signal.bw"
+                        }    
+                    ]
                 },
                 {
                     "RIN": "9,9",

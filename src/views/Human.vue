@@ -11,14 +11,17 @@
         </div>
     </div>
     <div class="row">
-        <div class="flex">
+        <div class="flex lg10">
             <ExperimentList/>
+        </div>
+        <div class="flex lg2" v-if="isProteomicsActive">
+
         </div>
     </div>
 </template>
 <script setup>
 import {experiments} from '../stores/experiments'
-import {ref, reactive,onMounted} from 'vue'
+import {ref, reactive,onMounted,computed} from 'vue'
 import Title from '../components/Title.vue'
 import CustomTable from '../components/CustomTable.vue'
 import ExperimentList from '../components/ExperimentList.vue'
@@ -32,6 +35,10 @@ onMounted(() =>{
     Experiments.currentOrganism = organism
     Experiments.createQueryTable()
 
+})
+
+const isProteomicsActive = computed(() => {
+    return dataTypes.filter(dt => dt.active && dt.label === 'Proteomics').length
 })
 
 const dataTypes=reactive([
