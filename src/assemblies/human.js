@@ -1,5 +1,5 @@
-export const humanGenome = 
-{
+export const humanGenome = Object.freeze(
+    {
     name: 'GRCh38',
     sequence: {
       type: 'ReferenceSequenceTrack',
@@ -31,3 +31,4 @@ export const humanGenome =
       },
     },
   }
+)

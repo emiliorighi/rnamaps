@@ -23043,7 +23043,21 @@
             "runId": "15840",
             "runLane": "53",
             "status": "used",
-            "time": "07d00h00m"
+            "time": "07d00h00m",
+            "files":[
+                {
+                    "type":"bb",
+                    "url":"files/H168H4K20me1_zerone_merged.bb"
+                },                        
+                {
+                    "type":"bw",
+                    "url":"files/H168H4K20me1X1.fc_signal.bw"
+                },
+                {
+                    "type":"bw",
+                    "url":"files/H168H4K20me1X1.pileup_signal.bw"
+                }    
+            ]
         },
         {
             "antibody": "H4K20me1",

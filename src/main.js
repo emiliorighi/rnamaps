@@ -11,7 +11,7 @@ createApp(App)
 // .use(createVuesticEssential({
 //     components:{VaDataTable,VaButton,VaDivider,VaPagination,VaCard,VaCardTitle,VaCardContent,VaNavbar,VaNavbarItem,VaIcon,VaImage,VaSidebar,VaSidebarItem,VaSidebarItemContent,VaSidebarItemTitle}
 // }))
+.use(createPinia())
 .use(createVuestic())
 .use(router)
-.use(createPinia())
 .mount('#app')

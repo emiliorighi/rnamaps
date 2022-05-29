@@ -21,7 +21,7 @@
                             <va-card-content>
                                 <va-list>
                                     <va-list-label>
-                                        Human:
+                                        {{Exps.currentOrganism}}
                                     </va-list-label>
                                     <va-list-item
                                         v-for="track in Session.tracks"
@@ -43,8 +43,8 @@
                                 </va-list>
                             </va-card-content>
                             <va-card-actions align="between">
-                                <va-button @click="loadTracks()">Load tracks</va-button>
-                                <va-button>Remove tracks</va-button>
+                                <va-button @click="loadTracks()">Genome Browser</va-button>
+                                <va-button @click="clearSession()">Clear session</va-button>
                             </va-card-actions>
                         </va-card>
                     </va-button-dropdown>
@@ -59,7 +59,6 @@ import {experiments} from '../stores/experiments'
 import {flyGenome} from '../assemblies/fly'
 import {humanGenome} from '../assemblies/human'
 import { useRouter } from 'vue-router'
-import {dataTypes,timepoints} from '../static-config'
 
 const router = useRouter()
 const Session = session()
@@ -73,11 +72,14 @@ const items = [
 function loadTracks(){
     //create assembly
     if (Exps.currentOrganism === 'fly'){
-        Session.assembly = [...[flyGenome]]
+        Session.organism = 'fly'
+        Session.assembly = {...flyGenome}
     }else {
-        Session.assembly = [...[humanGenome]]
+        Session.organism = 'human'
+        Session.assembly = {...humanGenome}
     }
     Session.createSession()
+    router.push({name: 'jbrowse2'})
 }
 
 

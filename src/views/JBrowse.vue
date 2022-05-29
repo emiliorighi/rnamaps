@@ -5,11 +5,9 @@ import {
 } from '@jbrowse/react-linear-genome-view'
 import { createRoot } from 'react-dom/client'
 import React from 'react'
-import assembly from '../assembly'
-import tracks from '../tracks'
 import {onMounted, ref} from 'vue'
 import {session} from '../stores/session'
-
+import {humanGenome} from '../assemblies/human'
 const Sess = session()
 const wrapper = ref(null)
 
@@ -24,9 +22,10 @@ onMounted(()=>{
 })
 
 function renderBrowser(){
+  const tracks = Object.assign([],Sess.browserTracks)
   createRoot(wrapper.value)
     .render(
-      React.createElement(JBrowseLinearGenomeView, {viewState: new createViewState({tracks:tracks, assembly: assembly})})
+      React.createElement(JBrowseLinearGenomeView, {viewState: new createViewState({assembly:humanGenome,tracks:tracks})})
       )
 }
 </script>

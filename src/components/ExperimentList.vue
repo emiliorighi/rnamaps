@@ -1,33 +1,4 @@
 <template>
-<div class="row">
-    <div class="flex lg12">
-    <va-list>
-        <va-list-label>
-            Experiments
-        </va-list-label>
-            <va-list-item
-                v-for="exp in expsToRender"
-                :key="exp.labExpId"
-                :to="{name:'experiments',params:{id:exp.labExpId}}"
-            >
-            <va-list-item-section>
-                <va-list-item-label>
-                    {{ exp.labExpId }}
-                </va-list-item-label>
-                <va-list-item-label caption>
-                    fraction: {{ exp.fraction }}
-                </va-list-item-label>
-                <va-list-item-label caption>
-                    platform: {{ exp.platform }}
-                </va-list-item-label>
-            </va-list-item-section>
-            <va-list-item-section icon>
-                <va-button size="small" @click.stop.prevent="addTrack(exp)" icon="add" color="#872674"/>
-            </va-list-item-section>
-        </va-list-item>
-    </va-list>
-    </div>
-</div>
 <div v-if="total" class="row justify--space-between">
     <div class="flex">
         <va-chip
@@ -50,6 +21,38 @@
         />
     </div>
 </div>
+<div class="row">
+    <div class="flex lg12">
+    <va-list>
+        <va-list-label>
+            Experiments
+        </va-list-label>
+            <va-list-item
+                v-for="exp in expsToRender"
+                :key="exp.labExpId"
+                :to="{name:'experiments',params:{id:exp.labExpId}}"
+            >
+            <va-list-item-section
+                class="exp-item"
+            >
+                <va-list-item-label>
+                    {{ exp.labExpId }}
+                </va-list-item-label>
+                <va-list-item-label caption>
+                    fraction: {{ exp.fraction }}
+                </va-list-item-label>
+                <va-list-item-label caption>
+                    platform: {{ exp.platform }}
+                </va-list-item-label>
+            </va-list-item-section>
+            <va-list-item-section icon>
+                <va-button size="small" @click.stop.prevent="addTrack(exp)" icon="add" color="#872674"/>
+            </va-list-item-section>
+        </va-list-item>
+    </va-list>
+    </div>
+</div>
+
 </template>
 <script setup>
 import { ref,computed } from 'vue'
@@ -71,10 +74,18 @@ const pageSize=ref(5)
 
 
 function addTrack(exp){
-    console.log(exp)
-    if(!Session.tracks.includes(exp)){
-        Session.tracks.push(exp)
+    if(!Session.tracks.includes(exp.labExpId) ){
+        Session.tracks.push(exp.labExpId)
     }
 }
 
 </script>
+<style scoped>
+.exp-item{
+    border-radius: 1.25rem;
+    padding: 5px;
+}
+.exp-item:hover{
+    border: 2px solid #872674;
+}
+</style>

@@ -13,17 +13,20 @@ export const mapper = {
               "bigBedLocation": {
                 "uri": "",
                 "locationType": "UriLocation"
-              }
+              },
+            "renderer": {
+                "type": 'SvgFeatureRenderer',
+            }
         }  
     },
     bw: 
     {
         "trackId": "",
         "name": "",
-        "assemblyNames": [""],
+        "assemblyNames": [],
         "type": "QuantitativeTrack",
         "adapter": {
-          "type": "BigWig",
+          "type": "BigWigAdapter",
           "bigWigLocation": {
             "uri": "",
             "locationType": "UriLocation"
