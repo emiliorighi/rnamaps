@@ -10,17 +10,18 @@
                     </va-button>
                 </div>
             </div>
-            <!-- <div v-if="filteredExps.length > pageSize" class="flex">
-                <va-button flat size="small" color="#872674" icon="chevron_left"/>
-                <va-chip color="#872674" flat class="title">{{pageSize-index+' / '+filteredExps.length}}</va-chip>
-                <va-button flat color="#872674" size="small" icon="chevron_right"/>
-            </div> -->
+            <div v-if="Exp.renderedExps.length > pageSize" class="flex">
+                <va-button v-if="index-pageSize >= 0" @click="index=index-pageSize" flat size="small" color="#872674" icon="chevron_left"/>
+                <va-chip color="#872674" flat class="title">{{index+':'+(pageSize+index-1>Exp.renderedExps.length?Exp.renderedExps.length:pageSize+index-1)+' of '+(Exp.renderedExps.length)}}</va-chip>
+                <va-button v-if="index+pageSize < Exp.renderedExps.length-1" @click="index=index+pageSize" flat color="#872674" size="small" icon="chevron_right"/>
+            </div>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="flex lg3">
         <va-collapse
+        class="title"
             v-for="inputKey in Object.keys(Exp.table)"
             :key="inputKey" 
             v-model="showCollapse[inputKey]"
@@ -46,27 +47,6 @@
                 </div>
             </ul>
         </va-collapse>
-        <!-- <va-collapse
-            v-for="q in query"
-            :key="q.label"
-            v-model="q.open"
-            :header="q.label"
-            solid
-        >
-            <ul>
-                <li @click="handleClick(q, opt)" 
-                    :class="opt.active? 'label-element active-input':'label-element'"
-                    v-for="opt in formData[q.label]"
-                    :key="opt.label"
-                >
-                <va-badge color="primary" :text="opt.count">
-                    <div  class="text--secondary">
-                        {{opt.label}}
-                    </div>
-                </va-badge>
-            </li>
-            </ul>
-        </va-collapse> -->
     </div>
    <div class="flex lg9">
         <ul>
@@ -111,14 +91,8 @@
 </template>
 <script setup>
 import {hExperiments} from '../stores/ExperimentStore'
-import {ref, reactive,onMounted,computed, watch} from 'vue'
-import Title from '../components/Title.vue'
-import CustomTable from '../components/CustomTable.vue'
-import ExperimentCards from '../components/ExperimentCards.vue'
-import ExperimentList from '../components/ExperimentList.vue'
-import CellSvg from '../components/CellSvg.vue'
-import {human} from '../assets/schemas/test_metadata.json'
-import { dataTypes } from '../static-config'
+import {ref, reactive,onMounted,computed} from 'vue'
+
 const Exp = hExperiments()
 
 onMounted(()=>{
@@ -128,28 +102,30 @@ onMounted(()=>{
 
 const showCollapse=reactive({dataType:true,time:true,fraction:true})
 
-const index=ref(0)
+const index=ref(1)
 const pageSize=ref(5)
+
+function resetPagination(){
+    index.value = 1
+    pageSize.value = 5
+}
 
 function handleClick(key, option){
     option.active = !option.active
     Exp.query[key] = option.active ? option.value : null
-
     Exp.filterExperiments()
     Exp.updateQueryInputs()
-    // if(option.active){
-    //     query[key]=option.value
-    // }else{
-    //     query[key]=null
-    // }
+    resetPagination()
 }
 function clearFilter(key, value){
     Exp.query[key] = null
     Exp.filterExperiments()
     Exp.updateQueryInputs()
+    resetPagination()
 }
+
 const paginatedExps = computed(()=> {
-    return Exp.renderedExps.slice(index.value, index.value+pageSize.value)
+    return Exp.renderedExps.slice(index.value-1, index.value+pageSize.value)
 })
 
 
