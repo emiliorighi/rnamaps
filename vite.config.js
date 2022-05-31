@@ -47,5 +47,5 @@ export default defineConfig({
           isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
         }
       }
-    }),rollupNodePolyFill()]
+    }),rollupNodePolyFill]
 })
