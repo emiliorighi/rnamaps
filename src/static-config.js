@@ -1,13 +1,13 @@
 export const dataTypes = {
     fly:[ 
-        {label:'RNAseq',active:false},
-        {label:'ChIPseq',active:false}
+        {label:'RNAseq',value:'RNAseq',active:false},
+        {label:'ChIPseq',value:'ChIPseq',active:false}
     ],
     human:[
-        {label:'Proteomics',active:false},
-        {label:'RibosomeProfiling',active:false}, 
-        {label:'RNAseq',active:false},
-        {label:'ChIPseq',active:false}
+        {label:'Proteomics',value:'Proteomics',active:false},
+        {label:'RibosomeProfiling',value:'RibosomeProfiling',active:false}, 
+        {label:'RNAseq',value:'RNAseq',active:false},
+        {label:'ChIPseq',value:'ChIPseq',active:false}
     ]
 } 
 export const timepoints = {

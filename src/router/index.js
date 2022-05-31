@@ -3,6 +3,7 @@ import Home from '../views/Home.vue';
 
 const jBrowseComponent = () => import('../views/JBrowse.vue')
 const humanPage = () => import('../views/Human.vue')
+const humanNew = () => import('../views/HumanNew.vue')
 const flyPage = () => import('../views/Fly.vue')
 const expDetails = () => import('../views/ExperimentDetails.vue')
 const routes = [
@@ -15,6 +16,11 @@ const routes = [
     path: "/human",
     name: "human",
     component: humanPage,
+  },
+  {
+    path: "/human-new",
+    name: "human-new",
+    component: humanNew,
   },
   {
     path: "/fly",
