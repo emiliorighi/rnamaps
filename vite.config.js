@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import rollupNodePolyFill from 'rollup-plugin-node-polyfills'
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
 
@@ -19,6 +20,8 @@ export default defineConfig({
       stream: 'rollup-plugin-node-polyfills/polyfills/stream',
       buffer: 'rollup-plugin-node-polyfills/polyfills/buffer-es6',
       util: 'rollup-plugin-node-polyfills/polyfills/util',
+      './runtimeConfig': './runtimeConfig.browser',
+
     }
   },
   optimizeDeps: {
@@ -44,5 +47,5 @@ export default defineConfig({
           isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
         }
       }
-    })]
+    }),rollupNodePolyFill()]
 })
