@@ -1,6 +1,6 @@
 import {defineStore} from 'pinia'
 import schema from '../assets/schemas/test_metadata.json'
-import {reactive,ref } from 'vue'
+import {reactive } from 'vue'
 
 export const hExperiments = defineStore('hExperiments', {
     state: () => ({
@@ -57,4 +57,66 @@ export const hExperiments = defineStore('hExperiments', {
             this.renderedExps = [...fExps]
         }
     }
-  })
+})
+
+export const fExperiments = defineStore('fExperiments', {
+    state: () => ({
+        renderedExps:[],
+        query:reactive({
+            dataType:null,
+            time:null,
+            fraction:null,
+            tissue:null,
+            compartment:null
+        }),
+        table:reactive({
+            dataType: [
+                {label:'RNAseq',value:'RNAseq',active:false,count:1},
+                {label:'ChIPseq',value:'ChIPseq',active:false,count:1}
+            ],
+            time: [
+                {label:"L3", value:"L3",active:false,count:1},
+                {label:"LP", value:"LP",active:false,count:1},
+                {label:"WP", value:"WP",active:false,count:1},
+            ],
+            fraction:[
+                {label:'Whole Cell RNA',value:'Whole Cell RNA',active:false,count:1},
+                {label:'Cytoplasmic RNA',value:'Cytoplasmic RNA',active:false,count:1}, 
+                {label:'Nucleus RNA',value:'Nucleus RNA',active:false,count:1},
+            ],
+            tissue:[
+                {label:'wing',value:'wing',active:false,count:1},
+                {label:'eye',value:'eye',active:false,count:1},
+                {label:'antenna',value:'antenna',active:false,count:1},
+                {label:'leg',value:'eye-antenna',active:false,count:1},
+                {label:'genitalia',value:'genitalina',active:false,count:1},
+            ],
+            compartment:[
+                {label:'whole tissue',value:'whole tissue',active:false,count:1},
+                {label:'anterior',value:'anterior',active:false,count:1},
+                {label:'dorsal',value:'dorsal',active:false,count:1},
+                {label:'posterior',value:'posterior',active:false,count:1},
+                {label:'ventral',value:'ventral',active:false,count:1},
+            ]
+        }),
+    }),
+    actions:{
+        loadExps(){
+            const exps = schema.fly
+            this.renderedExps = [...exps]
+        },
+        updateQueryInputs(){
+            Object.keys(this.table).forEach(key => {
+                this.table[key].forEach(opt => {
+                    opt.count = this.renderedExps.filter(exp=>exp[key] === opt.value).length
+                })
+            })
+        },
+        filterExperiments(){
+            const fExps = schema.human
+            .filter(exp => Object.keys(this.query)
+            .filter(key=>this.query[key]).every(key => this.query[key] === exp[key]))
+            this.renderedExps = [...fExps]
+        }
+    }
+})

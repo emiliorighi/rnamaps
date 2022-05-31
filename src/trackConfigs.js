@@ -7,18 +7,17 @@ export const mapper = {
             "trackId": "",
             "name": "",
             "assemblyNames": [],
-            "category": ["Annotation"],
             "adapter": {
               "type": "BigBedAdapter",
               "bigBedLocation": {
                 "uri": "",
                 "locationType": "UriLocation"
-              },
-            "renderer": {
-                "type": 'SvgFeatureRenderer',
-            }
-        }  
-    },
+                },
+                "renderer": {
+                    "type": 'SvgFeatureRenderer',
+                }
+            }  
+        },
     bw: 
     {
         "trackId": "",

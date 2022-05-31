@@ -10,7 +10,34 @@ export const session = defineStore('session', {
         assembly:{},
         browserSession:{
         },
-        browserTracks:reactive([]),
+        browserTracks:reactive([
+            {
+                "trackId": "WWP.3.UniqueMultiple.plusRaw.bw",
+                "name": "WWP.3.UniqueMultiple.plusRaw.bw",
+                "assemblyNames": ['dm6'],
+                "type": "QuantitativeTrack",
+                "adapter": {
+                  "type": "BigWigAdapter",
+                  "bigWigLocation": {
+                    "uri": "/files/cklein/dmel/UCSC_tracks/RNAseq/trypsin/WWP.3.UniqueMultiple.plusRaw.bw",
+                    "locationType": "UriLocation"
+                  }
+                },
+            },
+            {
+                "trackId": "WWP.3.UniqueMultiple.minusRaw.bw",
+                "name": "WWP.3.UniqueMultiple.minusRaw.bw",
+                "assemblyNames": ['dm6'],
+                "type": "QuantitativeTrack",
+                "adapter": {
+                  "type": "BigWigAdapter",
+                  "bigWigLocation": {
+                    "uri": "/files/cklein/dmel/UCSC_tracks/RNAseq/trypsin/WWP.3.UniqueMultiple.minusRaw.bw",
+                    "locationType": "UriLocation"
+                  }
+                }
+            }
+        ]),
         organism:ref(''),
     }),
     getters:{

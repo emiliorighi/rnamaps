@@ -8,6 +8,7 @@ import React from 'react'
 import {onMounted, ref} from 'vue'
 import {session} from '../stores/session'
 import {humanGenome} from '../assemblies/human'
+import {flyGenome} from '../assemblies/fly'
 const Sess = session()
 const wrapper = ref(null)
 
@@ -25,7 +26,7 @@ function renderBrowser(){
   const tracks = Object.assign([],Sess.browserTracks)
   createRoot(wrapper.value)
     .render(
-      React.createElement(JBrowseLinearGenomeView, {viewState: new createViewState({assembly:humanGenome,tracks:tracks})})
+      React.createElement(JBrowseLinearGenomeView, {viewState: new createViewState({assembly:flyGenome,tracks:tracks})})
       )
 }
 </script>

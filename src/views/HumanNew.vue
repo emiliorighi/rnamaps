@@ -5,7 +5,7 @@
         <div class="row justify--space-between">
             <div class="flex">
                 <div style="display:inline" v-for="q in Object.keys(Exp.query)" :key="q">
-                    <va-button v-if="Exp.query[q]" icon-right="clear" size="small" @click="clearFilter(q, Exp.query[q])" outline color="#872674" >
+                    <va-button v-if="Exp.query[q]" icon-right="clear" size="small" @click="clearFilter(q, Exp.query[q])" :rounded="false" outline >
                         {{Exp.query[q]}}
                     </va-button>
                 </div>
@@ -13,7 +13,7 @@
             <div v-if="Exp.renderedExps.length > pageSize" class="flex">
                 <va-button v-if="index-pageSize >= 0" @click="index=index-pageSize" flat size="small" color="#872674" icon="chevron_left"/>
                 <va-chip color="#872674" flat class="title">{{index+':'+(pageSize+index-1>Exp.renderedExps.length?Exp.renderedExps.length:pageSize+index-1)+' of '+(Exp.renderedExps.length)}}</va-chip>
-                <va-button v-if="index+pageSize < Exp.renderedExps.length-1" @click="index=index+pageSize" flat color="#872674" size="small" icon="chevron_right"/>
+                <va-button v-if="index+pageSize <= Exp.renderedExps.length" @click="index=index+pageSize" flat color="#872674" size="small" icon="chevron_right"/>
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@
                                 </li>
                             </ul>
                         </va-button-dropdown>
-                        <va-button icon="add" size="small"/>
+                        <va-button icon="add" @click="addTrack(exp)" size="small"/>
                     </div>
                 </div>
                 <div class="row">
@@ -117,13 +117,20 @@ function handleClick(key, option){
     Exp.updateQueryInputs()
     resetPagination()
 }
+
 function clearFilter(key, value){
     Exp.query[key] = null
     Exp.filterExperiments()
     Exp.updateQueryInputs()
     resetPagination()
 }
+function addTrack(exp){
+    exp.files.forEach(file => {
+        
+    })
 
+
+}
 const paginatedExps = computed(()=> {
     return Exp.renderedExps.slice(index.value-1, index.value+pageSize.value)
 })
