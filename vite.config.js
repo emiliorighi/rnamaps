@@ -9,7 +9,7 @@ export default defineConfig({
   server:{
     proxy:{
       "/files":{
-        target:'https://public-docs.crg.es/rguigo/Data/',
+        target:'https://public-docs.crg.es/rguigo/Data',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/files/, "")
