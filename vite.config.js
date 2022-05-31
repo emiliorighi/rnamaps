@@ -4,7 +4,6 @@ import rollupNodePolyFill from 'rollup-plugin-node-polyfills'
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   server:{
     proxy:{
@@ -46,5 +45,5 @@ export default defineConfig({
           isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
         }
       }
-    }), rollupNodePolyFill]
+    })]
 })
