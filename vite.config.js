@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import rollupNodePolyFill from 'rollup-plugin-node-polyfills'
-import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
-import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
+// import rollupNodePolyFill from 'rollup-plugin-polyfill-node'
+// import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
+// import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
+// import {nextTick} from 'process'
 
 export default defineConfig({
   server:{
@@ -15,31 +16,45 @@ export default defineConfig({
       }
     }
   },
-  resolve:{
-    alias:{
-      stream: 'rollup-plugin-node-polyfills/polyfills/stream',
-      buffer: 'rollup-plugin-node-polyfills/polyfills/buffer-es6',
-      util: 'rollup-plugin-node-polyfills/polyfills/util',
-      './runtimeConfig': './runtimeConfig.browser',
-
-    }
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-        // Node.js global to browser globalThis
-        define: {
-            global: 'globalThis'
-        },
-        // Enable esbuild polyfill plugins
-        plugins: [
-            NodeGlobalsPolyfillPlugin({
-                process: true,
-                buffer: true
-            }),
-            NodeModulesPolyfillPlugin()
-        ]
-    }
-},
+  // resolve:{
+  // //   alias:{
+  // //     stream: 'rollup-plugin-node-polyfills/polyfills/stream',
+  // //     buffer: 'rollup-plugin-node-polyfills/polyfills/buffer-es6',
+  // //     util: 'rollup-plugin-node-polyfills/polyfills/util',
+  // // //     './runtimeConfig': './runtimeConfig.browser',
+  // //   }
+  // },
+  // build:{
+  //   rollupOptions: {
+  //       plugins: [
+  //         NodeGlobalsPolyfillPlugin({
+  //           process: true,
+  //           buffer: true
+  //         }),
+  //         NodeModulesPolyfillPlugin(),
+  //           // Enable rollup polyfills plugin
+  //           // used during production bundling
+  //           rollupNodePolyFill()
+  //       ]
+  //   }
+  // },
+//   optimizeDeps: {
+//     esbuildOptions: {
+//         // Node.js global to browser globalThis
+//         define: {
+//             global: 'globalThis'
+//         },
+//         // Enable esbuild polyfill plugins
+//         plugins: [
+//             NodeGlobalsPolyfillPlugin({
+//                 process: true,
+//                 buffer: true,
+//                 // define:{'process.NODE_ENV' : 'production'}
+//             }),
+//             NodeModulesPolyfillPlugin()
+//         ]
+//     }
+// },
   plugins: [
     vue({
       template: {
@@ -47,5 +62,5 @@ export default defineConfig({
           isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
         }
       }
-    }),rollupNodePolyFill]
+    })]
 })
