@@ -1,7 +1,8 @@
 <template>
     <va-navbar text-color="white" color="#872674">
         <template #left>
-            <va-navbar-item>RNAmaps</va-navbar-item>
+            <va-navbar-item><va-button :to="{name:'jbrowse2'}"></va-button></va-navbar-item>
+            <va-navbar-item></va-navbar-item>
             <va-navbar-item 
                 v-for="item in items"
                 :key="item.route"
