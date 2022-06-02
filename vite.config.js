@@ -14,6 +14,12 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/files/, "")
+      },
+      "/ucsc":{
+        target:'http://hgdownload.soe.ucsc.edu/goldenPath',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/ucsc/, "")
       }
     }
   },
