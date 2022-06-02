@@ -24,7 +24,7 @@
                 </va-list-item-label>
             </va-list-item-section>
             <va-list-item-section icon>
-                <va-icon size="small" @click.stop.prevent="addTrack(exp)" name="cart" color="#872674"/>
+                <va-icon size="small" @click.stop.prevent="addTrack(exp)" name="cart" color="secondary"/>
             </va-list-item-section>
         </va-list-item>
     </va-list>
@@ -34,7 +34,7 @@
     <div class="flex">
         <va-chip
             flat
-            color="#872674"
+            color="secondary"
         >
         <strong>total: {{total}}</strong>
         </va-chip>
@@ -42,7 +42,7 @@
     <div class="flex">
         <va-pagination
             size="small"
-            color="#872674"
+            color="secondary"
             v-model="Exps.index"
             :total="total"
             boundary-numbers
@@ -86,6 +86,6 @@ function addTrack(exp){
     border: 2px solid transparent;
 }
 .exp-item:hover{
-    border: 2px solid #872674;
+    border: 2px solid secondary;
 }
 </style>

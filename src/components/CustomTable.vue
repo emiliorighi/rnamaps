@@ -9,7 +9,7 @@
                         size="small"
                         class="timepoints"
                         :flat="!tp.active"
-                        color="#872674"
+                        color="secondary"
                         @click="cellClick({timepoint: tp.value})"
                     >
                         {{tp.label}}
@@ -22,7 +22,7 @@
                 <td class="sticky-col first-col">
                     <va-button
                         size="small"
-                        color="#872674"
+                        color="secondary"
                         style="width:100%"
                         :outline="!type.active"
                         @click="cellClick({dataType: type.label})"
@@ -34,7 +34,7 @@
                     <va-button rounded 
                         @click="cellClick({timepoint: tp.value, dataType: type.label})" 
                         style="width:min-content;" size="small"
-                        color="#872674" 
+                        color="secondary" 
                         :flat="!Exps.table[type.label][tp.value].active"
                     >
                         {{Exps.table[type.label][tp.value].value}}

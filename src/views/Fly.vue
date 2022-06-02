@@ -12,7 +12,7 @@
                 v-model="selectedTissue"
                 class="mb-4"
                 label="Tissue"
-                color="#872674"
+                color="secondary"
                 :options="tissues"
             />
             <va-select
@@ -20,7 +20,7 @@
                 v-model="selectedCompartment"
                 class="mb-4"
                 label="Wing Compartment"
-                color="#872674"
+                color="secondary"
                 :options="compartments"
             />
         </div>

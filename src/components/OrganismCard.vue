@@ -1,5 +1,5 @@
 <template>
-    <va-card class="organism-card" :to="{name:title}">
+    <va-card class="organism-card" :to="{name:route}">
         <va-image
             contain
             style="height: 200px;"
@@ -19,7 +19,8 @@ const Exps = experiments()
 const props = defineProps({
   imagePath: String,
   title:String,
-  content:String
+  content:String,
+  route:String
 })
 
 
@@ -27,8 +28,9 @@ const props = defineProps({
 <style scoped>
 .organism-card{
     border-radius: 1.25rem;
+    border: 2px solid transparent;
 }
 .organism-card:hover{
-    border: 2px solid #872674;
+    border: 2px solid #0d233f;
 }
 </style>

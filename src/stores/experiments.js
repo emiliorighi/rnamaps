@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia'
-import schema from '../assets/schemas/test_metadata.json'
+import schema from '../assets/metadata.json'
 import { shallowReactive,reactive,ref } from 'vue'
 
 export const experiments = defineStore('experiments', {

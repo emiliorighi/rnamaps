@@ -1,5 +1,5 @@
 <template>
-    <va-sidebar gradient color="#872674" textColor="white">
+    <va-sidebar gradient color="secondary" textColor="white">
       <va-sidebar-item
         v-for="item in items"
         :key="item.to"

@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia'
-import schema from '../assets/schemas/test_metadata.json'
+import schema from '../assets/metadata.json'
 import {reactive } from 'vue'
 
 export const hExperiments = defineStore('hExperiments', {
@@ -79,11 +79,6 @@ export const fExperiments = defineStore('fExperiments', {
                 {label:"LP", value:"LP",active:false,count:1},
                 {label:"WP", value:"WP",active:false,count:1},
             ],
-            fraction:[
-                {label:'Whole Cell RNA',value:'Whole Cell RNA',active:false,count:1},
-                {label:'Cytoplasmic RNA',value:'Cytoplasmic RNA',active:false,count:1}, 
-                {label:'Nucleus RNA',value:'Nucleus RNA',active:false,count:1},
-            ],
             tissue:[
                 {label:'wing',value:'wing',active:false,count:1},
                 {label:'eye',value:'eye',active:false,count:1},
@@ -113,10 +108,32 @@ export const fExperiments = defineStore('fExperiments', {
             })
         },
         filterExperiments(){
-            const fExps = schema.human
+            const fExps = schema.fly
             .filter(exp => Object.keys(this.query)
             .filter(key=>this.query[key]).every(key => this.query[key] === exp[key]))
             this.renderedExps = [...fExps]
+        }
+    }
+})
+
+export const expDetails = defineStore('expDetails', {
+    state: () => ({
+        expId:'',
+        expObject:'',
+        organism:'',
+        assemblyName:''
+    }),
+    actions:{
+        getExperiment(){
+            Object.keys(schema).forEach(organism => {
+                const filteredExp = schema[organism].filter(exp => exp.labExpId === this.expId)
+                if(filteredExp.length){
+                    this.organism = organism
+                    this.expObject = filteredExp[0]
+                }
+
+            })
+            this.assemblyName = this.organism === 'fly' ? 'dm6': 'GRCh38'
         }
     }
 })

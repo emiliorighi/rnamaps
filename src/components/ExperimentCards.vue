@@ -7,7 +7,7 @@
                 <va-card-content class="exp-title-wrapper">
                     <a class="exp-title title" :href="'/experiments/'+exp.labExpId">{{exp.labExpId}}</a>
                     <va-popover message="Add tracks to genome browser session">
-                        <va-button icon="add" outline color="#872674"/>
+                        <va-button icon="add" outline color="secondary"/>
                     </va-popover>
                 </va-card-content>
                 <va-card-content>
@@ -21,12 +21,12 @@
             </va-card>
         <va-button
             :disabled="true"
-            color="#872674"
+            color="secondary"
         >
         <strong>total: {{total}}</strong>
         </va-button>
         <va-pagination
-            color="#872674"
+            color="secondary"
             input
             v-model="Exps.index"
             :total="total"
@@ -82,7 +82,7 @@ function addTrack(exp){
     padding: 5px;
 }
 .exp-item:hover{
-    border: 2px solid #872674;
+    border: 2px solid secondary;
 }
 a.exp-title{
     font-size: 1rem;

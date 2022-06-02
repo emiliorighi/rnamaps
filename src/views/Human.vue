@@ -18,7 +18,7 @@
          <div class="flex lg3">
             <va-button-toggle
                 outline
-                color="#872674"
+                color="secondary"
                 size="small"
                 v-model="pageSize"
                 :options="pageOpts"
@@ -26,7 +26,7 @@
          </div>
         <div class="flex lg3">
             <va-pagination
-                color="#872674"
+                color="secondary"
                 size="small"
                 :visible-pages="5"
                 v-model="Experiments.index"
@@ -43,21 +43,21 @@
                 class="exp-selector"
                 v-model="selectedDt"
                 label="DataTypes"
-                color="#872674"
+                color="secondary"
                 :options="Experiments.dataTypes.map(dt => dt.label)"
             />
             <va-select
                 class="exp-selector"
                 v-model="selectedTp"
                 label="Timepoints"
-                color="#872674"
+                color="secondary"
                 :options="Experiments.timepoints.map(tp => tp.value)"
             />
             <va-select
                 class="exp-selector"
                 v-model="selectedFr"
                 label="Fraction"
-                color="#872674"
+                color="secondary"
                 :options="['Whole Cell RNA','Cytoplasm RNA','Nucleus RNA']"
             />
         </div>

@@ -40,7 +40,7 @@
                     </va-list-item-label>
                 </va-list-item-section>
                 <va-list-item-section icon>
-                    <va-button icon="add" color="#872674"/>
+                    <va-button icon="add" color="secondary"/>
                 </va-list-item-section>
                 </va-list-item>
             </va-list>

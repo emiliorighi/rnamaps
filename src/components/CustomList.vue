@@ -14,7 +14,7 @@
                             size="small"
                             class="dt-chip"
                             :flat="!type.active"
-                            color="#872674"
+                            color="secondary"
                             @click="cellClick({dataType: type.label})"
                         >
                            {{type.label}} 
@@ -30,7 +30,7 @@
                         <!-- <span>{{tp.label}}</span> -->
                         <va-chip
                             size="small"
-                            color="#872674"
+                            color="secondary"
                             :flat="!tp.active"
                             @click="cellClick({timepoint: tp.value})"
                         >
@@ -47,7 +47,7 @@
                             square
                             @click="cellClick({timepoint: tp.value, dataType: type.label})" 
                             size="small"
-                            color="#872674"
+                            color="secondary"
                             :flat="!Exps.table[type.label][tp.value].active"
                         >
                             {{Exps.table[type.label][tp.value].value}}

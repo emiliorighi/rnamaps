@@ -11,19 +11,20 @@
     "@fontsource/roboto": "^4.5.7",
     "@jbrowse/react-linear-genome-view": "^1.7.8",
     "axios": "^0.27.2",
-    "buffer": "^6.0.3",
     "d3": "^7.4.4",
-    "emitter": "^0.0.5",
     "pinia": "^2.0.14",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "stream": "^0.0.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15",
     "vuestic-ui": "^1.4.0"
   },
   "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
     "@vitejs/plugin-vue": "^2.3.3",
-    "vite": "^2.9.9"
+    "stream-browserify": "^3.0.0",
+    "vite": "^2.9.9",
+    "vite-plugin-rewrite-all": "^0.1.2"
   }
 }
