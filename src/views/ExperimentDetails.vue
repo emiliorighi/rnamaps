@@ -1,55 +1,51 @@
 <template>
     <Title :title="id"/>
     <div class="row margin-spacer">
-        <div class="flex lg3">
-            <div class="row margin-spacer">
-                <div class="flex lg12">
-                    <va-card stripe stripe-color="primary">
-                        <va-card-title>Attributes</va-card-title>
-                        <va-card-content class="data-wrapper">
-                        <ul>
-                            <li v-for="mt in metadata" :key="mt[0]" style="padding:5px">
-                                <strong>{{mt[0]}}</strong><p class="text--secondary">{{mt[1]}}</p>
-                            </li>
-                        </ul>
-                        </va-card-content>
-                    </va-card>
-                </div>
-            </div>
+        <div class="flex lg12">
+            <va-card stripe stripe-color="primary">
+                <va-card-title>Attributes</va-card-title>
+                <va-card-content class="data-wrapper">
+                <ul style="display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap">
+                    <li v-for="mt in metadata" :key="mt[0]" style="padding:5px">
+                        <div style="display:flex">{{mt[0]}}: <p class="text--secondary">{{mt[1]}}</p></div>
+                    </li>
+                </ul>
+                </va-card-content>
+            </va-card>
         </div>
-        <div class="flex lg9">
-            <div class="row margin-spacer">
-                <div class="flex lg12">
-                    <va-card stripe stripe-color="primary">
-                        <va-card-title>Files</va-card-title>
-                        <va-card-content>
-                        <ul>
-                            <li v-for="f in expD.expObject.files" :key="f.name" style="padding:5px">
-                            <div style="display:flex;padding:5px;align-items:center;justify-content:space-between;">
-                                <a class="link" style="margin-right:5px" :href="'../'+f.url">{{f.name}}</a>
-                            </div>
-                            </li>
-                        </ul>
-                        </va-card-content>
-                    </va-card>
-                </div>
-            </div>
-            <div v-if="tracks.length" class="row margin-spacer">
-                <div class="flex lg12">
-                    <va-card stripe stripe-color="primary">
-                        <va-card-title>Genome Browser</va-card-title>
-                            <Jbrowse2 :tracks="tracks" :organism="expD.organism"/>
-                    </va-card>
-                </div>
-            </div>
+    </div>
+    <div class="row margin-spacer">
+        <div class="flex lg12">
+            <va-card stripe stripe-color="primary">
+                <va-card-title>Files</va-card-title>
+                <va-card-content>
+                <ul>
+                    <li v-for="f in expD.expObject.files" :key="f.name" style="padding:5px">
+                    <div style="display:flex;padding:5px;align-items:center;justify-content:space-between;">
+                        <p>{{f.name}}</p>
+                        <va-button size="small" color="secondary" icon="download" :href="'../'+f.url"/>
+                    </div>
+                    </li>
+                </ul>
+                </va-card-content>
+            </va-card>
+        </div>
+    </div>
+    <div v-if="tracks.length" class="row margin-spacer">
+        <div class="flex lg12">
+            <va-card stripe stripe-color="primary">
+                <va-card-title>Genome Browser</va-card-title>
+                    <Jbrowse2 :tracks="tracks" :organism="expD.organism"/>
+            </va-card>
         </div>
     </div>
 </template>
 <script setup>
-import { computed, watch,ref, onMounted, reactive } from '@vue/runtime-core'
+import { computed,ref, onMounted } from '@vue/runtime-core'
 import Jbrowse2 from '../components/Jbrowse2.vue'
 import Title from '../components/Title.vue'
-import {session} from '../stores/session'
 import {expDetails} from '../stores/ExperimentStore'
 import {mapper} from '../trackConfigs'
 import {useRoute} from 'vue-router'
@@ -58,7 +54,6 @@ const route = useRoute()
 const props = defineProps({
     id:String,
 })
-const Session = session()
 const tracks = ref([])
 onMounted(()=>{
     expD.expId = props.id
@@ -72,7 +67,9 @@ const metadata = computed(()=>{
 })
 function createTracks(files){
     const ts = files.map(f => {
+        console.log(f)
         const trackObj = structuredClone(mapper[f.type])
+        console.log(trackObj)
         trackObj.trackId=f.name
         trackObj.name=f.name
         trackObj.assemblyNames.push(expD.assemblyName)

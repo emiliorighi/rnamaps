@@ -74,7 +74,6 @@ import CustomTable from '../components/CustomTable.vue'
 import ExperimentCards from '../components/ExperimentCards.vue'
 import ExperimentList from '../components/ExperimentList.vue'
 import {dataTypes,timepoints} from '../static-config'
-import CellSvg from '../components/CellSvg.vue'
 
 const pageOpts=  [
         { label: '5', value: 5 },

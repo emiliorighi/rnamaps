@@ -68,7 +68,7 @@
                             <ul>
                                 <li class="file-element" v-for="file in exp.files" :key="file">
                                     <div style="display:flex;padding:5px;align-items:center;justify-content:space-between;">
-                                        <a style="margin-right:5px" :href="file.url">{{file.name}}</a>
+                                        <a class="link" style="margin-right:5px" :href="file.url">{{file.name}}</a>
                                         <va-popover
                                             message="add track to session"
                                             placement="right"
@@ -188,8 +188,5 @@ const paginatedExps = computed(()=> {
 .label-element:hover{
     background-color: #8080805b;
 }
-.file-element{
-    border-top: 1px solid #8080805b;
-    border-bottom: 1px solid #8080805b;
-}
+
 </style>

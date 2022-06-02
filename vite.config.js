@@ -3,7 +3,9 @@ import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfil
 import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
 import rollupNodePolyFill from 'rollup-plugin-node-polyfills'
 import vue from '@vitejs/plugin-vue'
+// import react from '@vitejs/plugin-react'
 import pluginRewriteAll from 'vite-plugin-rewrite-all';
+
 export default defineConfig({
   server:{
     proxy:{
@@ -14,6 +16,11 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/files/, "")
       }
     }
+  },
+  resolve: {
+    alias: {
+      stream: 'stream-browserify',
+    },
   },
   optimizeDeps: {
     esbuildOptions: {
@@ -47,5 +54,6 @@ export default defineConfig({
           isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
         }
       }
-    }),pluginRewriteAll()]
+    }),
+    pluginRewriteAll()]
 })
