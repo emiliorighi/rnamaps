@@ -9,7 +9,12 @@ import pluginRewriteAll from 'vite-plugin-rewrite-all';
 export default defineConfig({
   server:{
     proxy:{
-      // "https://public-docs.crg.es/rguigo/Data/":'https://public-docs.crg.es/rguigo/Data',
+      "/files":{
+        target:'https://public-docs.crg.es/rguigo/Data',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/files/, "")
+      },
       "/ucsc":{
         target:'http://hgdownload.soe.ucsc.edu/goldenPath',
         changeOrigin: true,

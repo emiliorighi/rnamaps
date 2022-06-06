@@ -53,8 +53,8 @@ const router = useRouter()
 const Session = session()
 const items = [
     // { title: 'Home', path: 'dashboard' },
-    { title: 'Fly', path: '/fly_icon.svg', route:'fly'},
-    { title: 'Human', path: '/women_icon2.svg', route:'human'},
+    { title: 'Fly', path: '/fly_icon.svg', route:'fly-new'},
+    { title: 'Human', path: '/women_icon2.svg', route:'human-new'},
 ]
 
 function loadTracks(){

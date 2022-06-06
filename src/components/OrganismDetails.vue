@@ -68,12 +68,13 @@
                             <ul>
                                 <li class="file-element" v-for="file in exp.files" :key="file">
                                     <div style="display:flex;padding:5px;align-items:center;justify-content:space-between;">
-                                        <a class="link" style="margin-right:5px" :href="file.url">{{file.name}}</a>
+                                        <p>{{file.name}}</p>
+                                        <a :href="file.url"><va-icon color="secondary" name="download" /></a>
                                         <va-popover
                                             message="add track to session"
                                             placement="right"
                                         >
-                                            <va-button icon="add" @click="addTrack(file)" size="small"/>
+                                            <va-icon name="playlist_add" @click="addTrack(file)"/>
                                         </va-popover>
                                     </div>
                                 </li>

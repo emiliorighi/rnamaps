@@ -25,7 +25,7 @@
                     <li v-for="f in expD.expObject.files" :key="f.name" style="padding:5px">
                     <div style="display:flex;padding:5px;align-items:center;justify-content:space-between;">
                         <p>{{f.name}}</p>
-                        <va-button size="small" color="secondary" icon="download" :href="'../'+f.url"/>
+                        <a :href="f.url"><va-icon color="secondary" name="download" /></a>
                     </div>
                     </li>
                 </ul>
@@ -51,6 +51,7 @@ import {mapper} from '../trackConfigs'
 import {useRoute} from 'vue-router'
 const expD = expDetails()
 const route = useRoute()
+const toParent= '../'
 const props = defineProps({
     id:String,
 })
@@ -72,10 +73,10 @@ function createTracks(files){
         trackObj.name=f.name
         trackObj.assemblyNames.push(expD.assemblyName)
         if(trackObj.adapter.bigBedLocation){
-            trackObj.adapter.bigBedLocation.uri=f.url
+            trackObj.adapter.bigBedLocation.uri=toParent+f.url
         }
         if(trackObj.adapter.bigWigLocation){
-            trackObj.adapter.bigWigLocation.uri=f.url
+            trackObj.adapter.bigWigLocation.uri=toParent+f.url
         }
         return trackObj
     })
