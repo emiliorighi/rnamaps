@@ -9,7 +9,7 @@
                     flex-direction: row;
                     flex-wrap: wrap">
                     <li v-for="mt in metadata" :key="mt[0]" style="padding:5px">
-                        <div style="display:flex">{{mt[0]}}: <p class="text--secondary">{{mt[1]}}</p></div>
+                        <div style="display:flex">{{mt[0]}}: <p class="text--secondary" style="margin-left:5px"> {{mt[1]}} </p></div>
                     </li>
                 </ul>
                 </va-card-content>
@@ -67,17 +67,15 @@ const metadata = computed(()=>{
 })
 function createTracks(files){
     const ts = files.map(f => {
-        console.log(f)
         const trackObj = structuredClone(mapper[f.type])
-        console.log(trackObj)
         trackObj.trackId=f.name
         trackObj.name=f.name
         trackObj.assemblyNames.push(expD.assemblyName)
         if(trackObj.adapter.bigBedLocation){
-            trackObj.adapter.bigBedLocation.uri='../'+f.url
+            trackObj.adapter.bigBedLocation.uri=f.url
         }
         if(trackObj.adapter.bigWigLocation){
-            trackObj.adapter.bigWigLocation.uri='../'+f.url
+            trackObj.adapter.bigWigLocation.uri=f.url
         }
         return trackObj
     })

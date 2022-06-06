@@ -7,11 +7,11 @@ export const flyGenome = Object.freeze(
             "adapter": {
                 "type": "TwoBitAdapter",
                 "twoBitLocation": {
-                    "uri": "../ucsc/dm6/bigZips/dm6.2bit",
+                    "uri": "/dm6/bigZips/dm6.2bit",
                     "locationType": "UriLocation"
                 },
                 "chromSizesLocation": {
-                    "uri": "../ucsc/dm6/bigZips/dm6.chrom.sizes",
+                    "uri": "/dm6.chrom.sizes",
                     "locationType": "UriLocation"
                 }
             }

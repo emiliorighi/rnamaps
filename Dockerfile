@@ -13,6 +13,7 @@ RUN npm run build
 # production stage
 FROM nginx:stable-alpine
 
+
 #  copy the nginx.conf in our filesystem into the image filesystem
 COPY default.conf.template /etc/nginx/templates/default.conf.template
 

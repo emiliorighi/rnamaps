@@ -5,8 +5,8 @@
     <div style="min-height:50px"  class="flex lg9">
         <div class="row justify--space-between">
             <div class="flex">
-                <div style="display:inline" v-for="q in Object.keys(Exp.query)" :key="q">
-                    <va-button v-if="Exp.query[q]" color="secondary" icon-right="clear" size="small" @click="clearFilter(q, Exp.query[q])" :rounded="false" >
+                <div style="display:inline;margin:5px;" v-for="q in Object.keys(Exp.query)" :key="q">
+                    <va-button v-if="Exp.query[q]" color="secondary" icon-right="clear" size="small" outline @click="clearFilter(q, Exp.query[q])" :rounded="false" >
                         {{Exp.query[q]}}
                     </va-button>
                 </div>
