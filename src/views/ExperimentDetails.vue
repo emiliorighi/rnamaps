@@ -67,7 +67,7 @@ const metadata = computed(()=>{
     .map(k => {return [k, expD.expObject[k]]})
 })
 function createTracks(files){
-    const ts = files.map(f => {
+    const ts = files.filter(f=>f.type!== 'bed').map(f => {
         const trackObj = structuredClone(mapper[f.type])
         trackObj.trackId=f.name
         trackObj.name=f.name

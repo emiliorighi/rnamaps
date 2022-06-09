@@ -5,10 +5,12 @@
     <div style="min-height:50px"  class="flex lg9">
         <div class="row justify--space-between">
             <div class="flex">
-                <div style="display:inline;margin:5px;" v-for="q in Object.keys(Exp.query)" :key="q">
-                    <va-button v-if="Exp.query[q]" color="secondary" icon-right="clear" size="small" outline @click="clearFilter(q, Exp.query[q])" :rounded="false" >
-                        {{Exp.query[q]}}
-                    </va-button>
+                <div style="display:inline;" v-for="q in Object.keys(Exp.query)" :key="q">
+                    <Transition name="slide-fade">
+                        <va-button v-if="Exp.query[q]" color="secondary" icon-right="clear" size="small" outline @click="clearFilter(q, Exp.query[q])" :rounded="false" >
+                            {{Exp.query[q]}}
+                        </va-button>
+                    </Transition>
                 </div>
             </div>
             <div v-if="Exp.renderedExps.length > pageSize" class="flex">
@@ -35,17 +37,19 @@
                 <div v-for="opt in Exp.table[inputKey]"
                     :key="opt.label"
                     >
-                <li 
-                    v-if="opt.count > 0"
-                    class="label-element"
-                    @click="handleClick(inputKey, opt)" 
-                >
-                    <va-badge color="primary" :text="opt.count">
-                        <div class="text--secondary">
-                            {{opt.label}}
-                        </div>
-                    </va-badge>
-                </li>
+                <Transition name="slide-fade">
+                    <li 
+                        v-if="opt.count > 0"
+                        class="label-element"
+                        @click="handleClick(inputKey, opt)" 
+                    >
+                        <va-badge color="primary" :text="opt.count">
+                            <div class="text--secondary">
+                                {{opt.label}}
+                            </div>
+                        </va-badge>
+                    </li>
+                </Transition>
                 </div>
             </ul>
         </va-collapse>
@@ -74,7 +78,7 @@
                                             message="add track to session"
                                             placement="right"
                                         >
-                                            <va-icon name="playlist_add" @click="addTrack(file)"/>
+                                            <a><va-icon name="playlist_add" @click="addTrack(file)"/></a>
                                         </va-popover>
                                     </div>
                                 </li>
@@ -126,7 +130,7 @@ onMounted(()=>{
     Exp.updateQueryInputs()
 })
 
-const showCollapse=reactive({dataType:true,time:false,fraction:false, tissue:false,compartment:false})
+const showCollapse=reactive({dataType:true,time:true,fraction:true, tissue:true,compartment:true})
 
 const index=ref(1)
 const pageSize=ref(5)
@@ -189,5 +193,17 @@ const paginatedExps = computed(()=> {
 .label-element:hover{
     background-color: #8080805b;
 }
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
 
+.slide-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(2px);
+  opacity: 0;
+}
 </style>
