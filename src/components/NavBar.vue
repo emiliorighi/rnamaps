@@ -6,7 +6,8 @@
                 :key="item.route"
                 :disabled="item.active"
             >
-                <va-button size="small" :to="{name:item.route}" color="secondary"><va-image contain style="width:50px" :src="item.path"/></va-button>
+                <va-icon name="fly" size="large"/>
+                <va-button :to="{name:item.route}" color="secondary" icon="fly"></va-button>
             </va-navbar-item>
         </template>
         <template #right>

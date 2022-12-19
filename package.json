@@ -16,15 +16,15 @@
     "buffer": "^6.0.3",
     "d3": "^7.4.4",
     "emitter": "^0.0.5",
+    "jbrowse-plugin-refget-api": "^1.0.1",
     "pinia": "^2.0.14",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.15",
-    "vuestic-ui": "^1.4.0"
+    "vuestic-ui": "^1.5.3"
   },
   "devDependencies": {
-
     "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
     "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
     "@vitejs/plugin-vue": "^2.3.3",

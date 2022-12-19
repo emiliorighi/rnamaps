@@ -2,6 +2,8 @@ import {defineStore} from 'pinia'
 import schema from '../assets/metadata.json'
 import {reactive } from 'vue'
 
+
+
 export const hExperiments = defineStore('hExperiments', {
     state: () => ({
         renderedExps:[],
@@ -40,6 +42,7 @@ export const hExperiments = defineStore('hExperiments', {
     }),
     actions:{
         loadExps(){
+            const expIds = schema.human.map(exp => exp.expId)
             const exps = schema.human
             this.renderedExps = [...exps]
         },
@@ -51,6 +54,8 @@ export const hExperiments = defineStore('hExperiments', {
             })
         },
         filterExperiments(){
+            const abs = [...new Set(schema.human.map(exp => exp.antibody))]
+            console.log(abs)
             const fExps = schema.human
             .filter(exp => Object.keys(this.query)
             .filter(key=>this.query[key]).every(key => this.query[key] === exp[key]))
@@ -67,7 +72,8 @@ export const fExperiments = defineStore('fExperiments', {
             time:null,
             fraction:null,
             tissue:null,
-            compartment:null
+            compartment:null,
+            antibody:null
         }),
         table:reactive({
             dataType: [
@@ -92,7 +98,12 @@ export const fExperiments = defineStore('fExperiments', {
                 {label:'dorsal',value:'dorsal',active:false,count:1},
                 {label:'posterior',value:'posterior',active:false,count:1},
                 {label:'ventral',value:'ventral',active:false,count:1},
-            ]
+            ],
+            // antibody:[
+            //     {label:}
+
+            // ]
+
         }),
     }),
     actions:{
@@ -108,6 +119,8 @@ export const fExperiments = defineStore('fExperiments', {
             })
         },
         filterExperiments(){
+            const abs = [...new Set(schema.fly.map(exp => exp.antibody))]
+            console.log(abs)
             const fExps = schema.fly
             .filter(exp => Object.keys(this.query)
             .filter(key=>this.query[key]).every(key => this.query[key] === exp[key]))

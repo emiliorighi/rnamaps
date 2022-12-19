@@ -182,28 +182,8 @@ const paginatedExps = computed(()=> {
 .exp-selector{
     margin: 10px 0 10px 0;
 }
-.label-element{
-    cursor: pointer;
-    padding:10px;
-    width:100%
-}
-.label-element.active{
-    background-color: #2c83e06b;
-}
-.label-element:hover{
-    background-color: #8080805b;
-}
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
 
-.slide-fade-leave-active {
-  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
-}
 
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(2px);
-  opacity: 0;
-}
+
+
 </style>

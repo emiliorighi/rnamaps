@@ -1,0 +1,8 @@
+data harmonization:
+    - fly:
+        -rnaseq
+        -chipseq
+    -human:
+        -encode links
+
+reformat Home page

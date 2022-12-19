@@ -1,12 +1,14 @@
 <template>
-    <va-card class="organism-card" :to="{name:route}">
-        <va-image
+    <va-card class="organism-card" :to="{name:organism.route}">
+        <va-card-content class="secondary-background"><h2 style="color:#fffffa" class="va-h6">{{organism.title}}</h2></va-card-content>
+        <div class="margin-spacer">
+            <va-image
             contain
-            style="height: 200px;"
-            :src="imagePath"
+            :src="organism.imagePath"
+            style="height:200px"
         />
-        <va-card-title>{{title}}</va-card-title>
-        <va-card-content>{{content}}</va-card-content>
+        </div>
+        <va-card-content><h3 class="va-h6">{{organism.content}}</h3></va-card-content>
     </va-card>
 </template>
 <script setup>
@@ -17,20 +19,20 @@ const router = useRouter()
 const Exps = experiments()
 
 const props = defineProps({
-  imagePath: String,
-  title:String,
-  content:String,
-  route:String
+    organism:
+        { 
+            imagePath: String,
+            title:String,
+            content:String,
+            route:String
+        }
 })
 
 
 </script>
 <style scoped>
 .organism-card{
-    border-radius: 1.25rem;
-    border: 2px solid transparent;
-}
-.organism-card:hover{
-    border: 2px solid #0d233f;
+    border: 1px solid #995D81;
+    box-shadow: 0 0 15px #995D81;
 }
 </style>

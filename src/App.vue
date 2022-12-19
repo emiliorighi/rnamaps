@@ -1,7 +1,7 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import NavBar from './components/NavBar.vue'
+import NavBarNew from './components/NavBarNew.vue'
 import SideBar from './components/SideBar.vue'
 import tracks from './tracks'
 
@@ -9,18 +9,35 @@ import tracks from './tracks'
 </script>
 
 <template>
-  <NavBar/>
-  <div class="layout gutter--md">
-    <router-view />
+  <NavBarNew/>
+  <div>
+    <router-view v-slot="{ Component, route }">
+        <Transition name="fade">
+          <component :is="Component" :key="route.path" />
+        </Transition>
+    </router-view>
   </div>
 
 </template>
 
 <style>
 .margin-spacer{
-  margin:15px 0 15px 0!important;
+  padding:15px;
 }
 body{
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #D8DBE2 !important;
+  color: var(--va-primary);
+}
+
+.fade-enter-active{
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.secondary-background{
+  background-color: var(--va-secondary);
 }
 </style>

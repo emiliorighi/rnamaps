@@ -1,12 +1,28 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createVuestic,
+    createIconsConfig
     // createVuesticEssential,VaImage,VaPagination,VaDivider, VaButton,VaDataTable,VaCard,VaCardTitle,VaCardContent,VaNavbar,VaNavbarItem,VaIcon,VaSidebar,VaSidebarItem,VaSidebarItemContent,VaSidebarItemTitle 
 } from 'vuestic-ui' // <-
 import 'vuestic-ui/dist/vuestic-ui.css'
 import {createPinia} from 'pinia'
 import router from './router'
 import './assets/overrides.css'
+import FlyLogo from './components/FlyLogo.vue'
+import WomanLogo from './components/WomanLogo.vue'
+
+const aliases = [
+    {
+        name: 'fly',
+        component: FlyLogo,
+        color: 'primary',
+    },
+    {
+        name: 'custom-woman',
+        component: WomanLogo,
+        color: 'primary',
+    }
+]
 
 createApp(App)
 // .use(createVuesticEssential({
@@ -16,9 +32,12 @@ createApp(App)
 .use(createVuestic({
     config:{
         colors:{
-            primary: '#135560',
-            secondary: '#872674'
-        }
+            variables:{
+                primary: '#3F3F37',
+                secondary: '#7B287D',
+            }
+        },
+        icons: createIconsConfig({aliases:aliases})
     }
 }))
 .use(router)

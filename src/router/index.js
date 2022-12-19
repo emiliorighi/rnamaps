@@ -4,14 +4,27 @@ const jBrowseComponent = () => import('../views/JBrowse.vue')
 const humanPage = () => import('../views/Human.vue')
 const humanNew = () => import('../views/HumanNew.vue')
 const flyNew = () => import('../views/FlyNew.vue')
-
+const orgNew = () => import('../views/OrganismNew.vue')
+const plot = () => import('../components/ScatterPlot.vue')
 const flyPage = () => import('../views/Fly.vue')
 const expDetails = () => import('../views/ExperimentDetails.vue')
+const singleGeneExpression = () => import('../views/SingleGeneExpression.vue')
 const routes = [
   {
     path: "/",
     name: "home",
     component: Home,
+  },
+  {
+    path: "/test",
+    name: "test",
+    component: () => import('../components/BubbleMatrix.vue'),
+  },
+  {
+    path: "/test-org/:organism",
+    name: "test",
+    props:true,
+    component: orgNew,
   },
   {
     path: "/human",
@@ -32,6 +45,11 @@ const routes = [
     path: "/fly",
     name: "fly",
     component: flyPage,
+  },
+  {
+    path: '/single-gene-expression',
+    name: 'single-gene',
+    component: singleGeneExpression
   },
   {
     path: "/experiments/:id",
