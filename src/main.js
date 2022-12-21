@@ -35,6 +35,10 @@ createApp(App)
             variables:{
                 primary: '#3F3F37',
                 secondary: '#7B287D',
+                info: '#ffffff',
+                
+
+
             }
         },
         icons: createIconsConfig({aliases:aliases})

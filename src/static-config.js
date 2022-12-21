@@ -1,3 +1,21 @@
+export const organisms = [
+    {
+        id: 'human',
+        title:'Human',
+        route:'human-new',
+        imagePath:'/transdifferentiation.v2.svg',
+        content:'Induced transdifferentiation of human pre-B cells into macrophages'
+    },
+    {
+        id:'fly',
+        title:'Fly',
+        route:'fly-new',
+        imagePath:'/development_labeled3.svg',
+        content:'Organ morphogenesis during fly development',
+        tissues: true
+    }
+]
+
 export const dataTypes = ['RNASeq','ChipSeq']
 export const timepoints = [
     {
@@ -25,5 +43,9 @@ export const timepoints = [
             {label: "7d",value: "07d00h00m",active:false},
         ]
     }
+]
+
+export const tissues = [
+    'wing','eye','antenna','leg'
 ]
 

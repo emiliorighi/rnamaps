@@ -13,24 +13,16 @@ const props = defineProps({
 const scatter = ref(null)
 const tooltip = ref(null)
 const margin = {top: 10, right: 100, bottom: 30, left: 30},
-    width = 460 - margin.left - margin.right,
+    width = 500 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
-const objectToPlot = ref({})    
 const timepoints = ['L3','WP','LP']
-const tissues = [
-    {letter:'A', name: 'antenna'},
-    {letter:'E', name:'eye'},
-    {letter:'W', name:'wing'},
-    {letter:'L', name: 'leg'}
-]
-
 
 onMounted(()=>{
     scatter.value.focus()
     tooltip.value.focus()
+    console.log(props.data)
     createPlot()
-    // objectToPlot.value=
 })
 
 function createPlot(){
@@ -117,19 +109,6 @@ function createPlot(){
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave)
-
-    // svg
-    //   .selectAll("myLabels")
-    //   .data(data.tissues)
-    //   .join('g')
-    //     .append("text")
-    //       .attr("class", d => d.tissueName)
-    //       .datum(d => { return {name: d.tissueName, value: d.values[d.values.length - 1]}; }) // keep only the last value of each time series
-    //       .attr("transform", d => `translate(${x(d.value.time)},${y(d.value.value)})`) // Put the text at the position of the last point
-    //       .attr("x", 12) // shift the text a bit more right
-    //       .text(d => d.name)
-    //       .style("fill", d => myColor(d.name))
-    //       .style("font-size", 15)
 
    const g =  svg.selectAll("myLegend")
       .data(data.tissues)

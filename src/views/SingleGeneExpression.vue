@@ -50,6 +50,7 @@ const geneIdSummary = ref("")
 
 const validFlyBaseResponse = ref(false)
 const geneIdPresent = ref(false)
+
 function searchGeneId(){
     geneIdPresent.value = false
     FlyBaseService.getGeneIdSummary(geneID.value)
