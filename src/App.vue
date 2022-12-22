@@ -10,7 +10,7 @@ import tracks from './tracks'
 
 <template>
   <NavBarNew/>
-  <div>
+  <div class="margin-spacer">
     <router-view v-slot="{ Component, route }">
         <Transition name="fade">
           <component :is="Component" :key="route.path" />
@@ -26,7 +26,7 @@ import tracks from './tracks'
 }
 body{
   font-family: 'Ubuntu', sans-serif;
-  background-color: #D8DBE2 !important;
+  background-color: var(--va-secondary)!important;
   color: var(--va-primary);
 }
 

@@ -42,6 +42,8 @@ export const hExperiments = defineStore('hExperiments', {
     }),
     actions:{
         loadExps(){
+            const targets = [...new Set(schema.human.filter(exp => exp.dataType === 'ChIPseq').map(exp => exp.antibody))]
+            console.log(targets)
             const expIds = schema.human.map(exp => exp.expId)
             const exps = schema.human
             this.renderedExps = [...exps]

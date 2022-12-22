@@ -2,14 +2,12 @@
     <svg style="overflow:visible" ref="scatter"></svg>
     <div style="position:absolute" ref="tooltip"/>
 </template>
+
 <script setup>
 import * as d3 from "d3";
 import { onMounted,ref } from "vue";
+import rnaSeq from "../assets/notrypsin-rna-seq-fly-avg.json"
 
-const props = defineProps({
-    data:Object
-})
-//up to 50 geneids x-axis tpm, y-axis timepoints
 const scatter = ref(null)
 const tooltip = ref(null)
 const margin = {top: 10, right: 100, bottom: 30, left: 30},
@@ -18,128 +16,90 @@ const margin = {top: 10, right: 100, bottom: 30, left: 30},
 
 const timepoints = ['L3','WP','LP']
 
+// set the dimensions and margins of the graph
 onMounted(()=>{
     scatter.value.focus()
     tooltip.value.focus()
-    console.log(props.data)
     createPlot()
 })
 
 function createPlot(){
-    const data = props.data
+    const data = rnaSeq
     const svg = d3.select(scatter.value)
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
 
     const myColor = d3.scaleOrdinal()
-      .domain(data.tissues.map(t => t.tissueName))
-      .range(d3.schemeCategory10);
+    .domain(data[0].tissues.map(t => t.tissueName))
+    .range(d3.schemeCategory10);
 
-    
-    const x = d3.scaleOrdinal()
-        .domain(timepoints)
-        .range([10, 210, 410]);
+    var myCircle = svg.append('g')
+    .selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x(d.Sepal_Length); } )
+      .attr("cy", function (d) { return y(d.Petal_Length); } )
+      .attr("r", 8)
+      .style("fill", function (d) { return color(d.Species) } )
+      .style("opacity", 0.5)
 
-    const y = d3.scaleLinear()
-        .domain(d3.extent(data.tissues.map(t => t.values).flat(), d => Number(d.value)))
-        .range([height, 0]);
-
-    svg.append("g")
+    const x = d3.scaleLinear()
+    .domain([4, 8])
+    .range([ 0, width ]);
+  svg.append("g")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x)
-    // .tickFormat((d,i)=>timepoints[i])
-    );
+    .call(d3.axisBottom(x));
 
-    svg.append("g")
-      .call(d3.axisLeft(y));
+  // Add Y axis
+  var y = d3.scaleLinear()
+    .domain([0, 9])
+    .range([ height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
 
-    const line = d3.line()
-      .x(d => x(d.time))
-      .y(d => y(d.value))
+  // Color scale: give me a specie name, I return a color
+  var color = d3.scaleOrdinal()
+    .domain(["setosa", "versicolor", "virginica" ])
+    .range([ "#440154ff", "#21908dff", "#fde725ff"])
 
-    svg.selectAll("myLines")
-      .data(data.tissues)
-      .join("path")
-        .attr("class", d => d.tissueName)
-        .attr("d", d => line(d.values))
-        .attr("stroke", d => myColor(d.tissueName))
-        .style("stroke-width", 4)
-        .style("fill", "none")
+  // Add dots
+  var myCircle = svg.append('g')
+    .selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return x(d.Sepal_Length); } )
+      .attr("cy", function (d) { return y(d.Petal_Length); } )
+      .attr("r", 8)
+      .style("fill", function (d) { return color(d.Species) } )
+      .style("opacity", 0.5)
 
-    var Tooltip = d3.select(tooltip.value)
-      .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "2px")
-      .style("border-radius", "5px")
-      .style("padding", "5px")
+  // Add brushing
+  svg
+    .call( d3.brush()                 // Add the brush feature using the d3.brush function
+      .extent( [ [0,0], [width,height] ] ) // initialise the brush area: start at 0,0 and finishes at width,height: it means I select the whole graph area
+      .on("start brush", updateChart) // Each time the brush selection changes, trigger the 'updateChart' function
+    )
 
-      // Three function that change the tooltip when user hover / move / leave a cell
-      const mouseover = function(event,d) {
-        Tooltip
-          .style("opacity", 1)
-      }
-      const mousemove = function(event,d) {
-        Tooltip
-          .html("Average TPMs: " + d.value)
-          .style("left", `${event.layerX+10}px`)
-          .style("top", `${event.layerY}px`)
-      }
-      const mouseleave = function(event,d) {
-        Tooltip
-          .style("opacity", 0)
-      }
+  // Function that is triggered when brushing is performed
+  function updateChart() {
+    extent = d3.event.selection
+    myCircle.classed("selected", function(d){ return isBrushed(extent, x(d.Sepal_Length), y(d.Petal_Length) ) } )
+  }
 
-    svg.selectAll("myDots")
-      .data(data.tissues)
-      .join('g')
-        .style("fill", d => myColor(d.tissueName))
-        .attr("class", d => d.tissueName)
-      .selectAll("myPoints")
-      .data(d => d.values)
-      .join("circle")
-        .attr("cx", d => x(d.time))
-        .attr("cy", d => y(d.value))
-        .attr("r", 5)
-        .attr("stroke", "white")
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseleave", mouseleave)
-
-   const g =  svg.selectAll("myLegend")
-      .data(data.tissues)
-      .enter()
-        .append('g')
-        .attr("transform", (d, i) => `translate(${460},${i * 20})`);
-
-        g.append("rect")
-        .attr("width", 15)
-        .attr("height", 15)
-        .style("fill", function(d){ return myColor(d.tissueName) });
-
-        g.append("text")
-        .attr("x", 24)
-        .attr("y", 9)
-        .attr("dy", "0.35em")
-          // .attr('x', function(d,i){ return 30 + i*60})
-          // .attr('y', 30)
-          .text(function(d) { return d.tissueName; })
-          .style("fill", function(d){ return myColor(d.tissueName) })
-          .style("font-size", 15)
-        .on("click", function(event,d){
-            console.log(d)
-          // is the element currently visible ?
-         const currentOpacity = d3.selectAll("." + d.tissueName).style("opacity")
-          // Change the opacity: from 0 to 1 or from 1 to 0
-          d3.selectAll("." + d.tissueName).transition().style("opacity", currentOpacity == 1 ? 0:1)
-
-        })
-
+  // A function that return TRUE or FALSE according if a dot is in the selection or not
+  function isBrushed(brush_coords, cx, cy) {
+       var x0 = brush_coords[0][0],
+           x1 = brush_coords[1][0],
+           y0 = brush_coords[0][1],
+           y1 = brush_coords[1][1];
+      return x0 <= cx && cx <= x1 && y0 <= cy && cy <= y1;    // This return TRUE or FALSE depending on if the points is in the selected area
+  }
+    
 }
-
 
 </script>
