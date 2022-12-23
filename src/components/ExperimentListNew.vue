@@ -5,7 +5,7 @@
             <div class="flex">
                 <div class="row">
                     <div class="flex">
-                        <h1 style="color:var(--va-secondary);" class="va-h6 title va-timeline-item__text">
+                        <h1 style="color:var(--va-secondary);" class="va-h6 title">
                             {{ exp.labExpId }}
                         </h1>
                     </div>

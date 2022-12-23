@@ -4,7 +4,7 @@
         <va-card color="secondary" no-padding-v>
           <va-card-content>
             <va-timeline vertical style="min-width: 300px">
-                <va-timeline-item color="info" active>
+                <va-timeline-item color="info" :active="true">
                     <template #before>
                         <h1 style="color:var(--va-info);text-align: end;" class="va-h1 title va-timeline-item__text">{{title}}</h1>
                     </template>
@@ -12,7 +12,7 @@
                         <div style="height:33vh"></div>
                     </template>
                 </va-timeline-item>
-                <va-timeline-item color="info" active>
+                <va-timeline-item color="info" :active="true">
                     <template #before>
                         <div style="height:33vh"></div>
                     </template>
@@ -22,21 +22,21 @@
                         </h2>
                     </template>
                 </va-timeline-item>
-                <va-timeline-item color="info" active>
+                <va-timeline-item :active="true" color="info">
                     <template #before>
                         <OrganismCard :organism="organisms[0]"/>
                     </template>
                     <template #after>
                     </template>
                 </va-timeline-item>
-                <va-timeline-item color="info" active>
+                <va-timeline-item :active="true" color="info">
                     <template #before>
                     </template>
                     <template #after>
                         <OrganismCard :organism="organisms[1]"/>
                     </template>
                 </va-timeline-item>
-                <va-timeline-item color="info" active>
+                <va-timeline-item color="info">
                     <template #before>
                         <h2 style="color:var(--va-info);" class="va-h4 title va-timeline-item__text">
                             Data can be downloaded <va-icon name="download" /> or added <va-icon name="add"/> into a session <va-icon name="shopping_bag"/> to visualize in the genome browser.
