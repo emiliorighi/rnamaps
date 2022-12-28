@@ -8,7 +8,7 @@
                             <router-link :to="{name:'home'}"><h4 style="color:#fffffa" class="va-h6">RNAmaps</h4></router-link>
                         </div>
                         <div class="flex lg8 md8 sm12 xs12">
-                            <va-input
+                            <!-- <va-input
                                 v-model="geneid"
                                 label="Search"
                                 :placeholder="organism === 'fly'? 'Ex: FBgn0000036':'Ex: HumanGeneId'"
@@ -36,7 +36,7 @@
                                         </template>
                                     </va-switch>
                                 </template>
-                            </va-input>
+                            </va-input> -->
                         </div>
                     </div>
                 </div>

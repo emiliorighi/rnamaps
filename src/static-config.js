@@ -13,7 +13,7 @@ const flyOptions = {
         {id:"genitalia", selected:false}   
     ],
     compartments : [
-        // {id:"whole tissue", selected:false},
+        {id:"whole tissue", selected:false},
         {id:"anterior", selected:false},
         {id:"dorsal", selected:false},
         {id:"posterior", selected:false},
@@ -98,12 +98,12 @@ export const expQuery = {
 
     fly : {
         ChIPseq: [
-            // {
-            //     label:'Timepoints',
-            //     key:'time',
-            //     disabled:false,
-            //     nodes: flyOptions.timepoints
-            // },
+            {
+                label:'Timepoints',
+                key:'time',
+                disabled:false,
+                nodes: flyOptions.timepoints
+            },
             {
                 label:'Tissues',
                 key:'tissue',
@@ -118,12 +118,12 @@ export const expQuery = {
             }
         ],
         RNAseq: [
-            // {
-            //     label:'Timepoints',
-            //     key:'time',
-            //     disabled:false,
-            //     nodes: flyOptions.timepoints
-            // },
+            {
+                label:'Timepoints',
+                key:'time',
+                disabled:false,
+                nodes: flyOptions.timepoints
+            },
             {
                 label:'Tissues',
                 key:'tissue',
@@ -152,20 +152,20 @@ export const expQuery = {
                 disabled:false,
                 nodes: humanOptions.targets
             },
-            // {
-            //     label:'Timepoints',
-            //     key:'time',
-            //     disabled:false,
-            //     nodes:humanOptions.timepoints
-            // },
+            {
+                label:'Timepoints',
+                key:'time',
+                disabled:false,
+                nodes:humanOptions.timepoints
+            },
         ],
         RNAseq:[
-            // {
-            //     label:'Timepoints',
-            //     key:'time',
-            //     disabled:false,
-            //     nodes:humanOptions.timepoints
-            // },
+            {
+                label:'Timepoints',
+                key:'time',
+                disabled:false,
+                nodes:humanOptions.timepoints
+            },
             {
                 label:'Fractions',
                 key:'fraction',

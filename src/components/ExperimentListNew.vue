@@ -1,5 +1,5 @@
 <template>
-    <div v-for="(exp,index) in experiments" :key="index">
+    <div v-if="show" v-for="(exp,index) in experiments" :key="index">
         <va-divider/>
         <div class="row justify-space-between align-top">
             <div class="flex">
@@ -52,7 +52,8 @@
 <script setup>
 
 const props = defineProps({
-    experiments:Array
+    experiments:Array,
+    show:Boolean
 })
 
 </script>
