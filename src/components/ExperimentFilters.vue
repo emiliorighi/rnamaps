@@ -1,33 +1,51 @@
 <template>
     <div class="row align-center">
-        <div class="flex lg4 md4">
-            <va-input v-model="expId" style="width:100%" @update:model-value="$emit('expInput',expId )"  placeholder="Find an experiment.."/>
+        <div class="flex">
+            <va-option-list
+                type="radio"
+                :options="dataTypes"
+                v-model="selectedType"
+                color="secondary"
+                @update:model-value="(value) => $emit('nodeToggle',['dataType', value])"
+            />
         </div>
-        <div v-for="(opt,index) in options" :key="index" class="flex">
-            <va-button-dropdown :disabled="opt.disabled" :close-on-content-click="false" round color="secondary" :label="opt.label">
-                <div style="max-height:300px;overflow:auto">
-                    <va-option-list
-                        color="secondary"
-                        :options="opt.nodes"
-                        v-model="selectedNodes"
-                        value-by="id"
-                        text-by="id"
-                        @update:model-value="$emit('nodeToggle',selectedNodes,opt.key)"
-                    />
-                </div>
+        <div v-for="(opt,index) in options[selectedType]" :key="index" class="flex">
+            <va-button-dropdown color="secondary"  :label="opt.label" :close-on-content-click="false" round>
+                <va-option-list
+                    type="radio"
+                    color="secondary"
+                    :options="opt.nodes"
+                    v-model="filter[opt.key]"
+                    value-by="id"
+                    text-by="id"
+                    @update:model-value="(value) => $emit('nodeToggle',[opt.key, value])"
+                />
             </va-button-dropdown>
+            <!-- <va-select 
+                @update:model-value="(value) => $emit('nodeToggle',[opt.key, value])"
+                v-model="queryValues[opt.key]"
+                bordered color="secondary"
+                value-by="id"
+                :label="opt.label"
+                :options="opt.nodes"
+                text-by="id"
+            >
+            </va-select> -->
         </div>
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref,reactive } from 'vue';
 
+const dataTypes = ['ChIPseq','RNAseq']
+const selectedType = ref('RNAseq')
+const filter = reactive({})
 const emits = defineEmits(['expInput','nodeToggle'])
-const expId = ref('')
 
 const props = defineProps({
     options:Array,
     selectedNodes:Array
 })
+const queryValues = reactive({})
 
 </script>

@@ -1,28 +1,105 @@
 <template>
-    <div class="row margin-spacer align-center">
+    <div class="row align-top margin-spacer">
         <div class="flex lg3 md3">
-            <div class="row margin-spacer">
+            <div class="row">
                 <div class="flex">
                     <h1 style="color:var(--va-info);" class="va-h2 title va-timeline-item__text">{{ selectedOrganism.title }}</h1>
                     <h1 style="color:var(--va-info);" class="va-h6 title va-timeline-item__text">{{ selectedOrganism.content }}</h1>
                 </div>
             </div>
-        </div>
-        <div class="flex lg8 md8 sm12 xs12">
-            <div class="row margin-spacer">
-                <va-timeline :key="counter" style="width: 100%;overflow-x: scroll;">
-                    <va-timeline-item :active="index<=tpIndex"  v-for="(tp,index) in selectedOrganism.timepoints" :key="index" color="info">
-                        <template #before>
-                            <div style="color:var(--va-info)" class="title va-text-center" >
-                                <va-button @click.right.stop.prevent="tpIndex=index-1;counter++" @click.left="tpIndex=index;counter++" preset="secondary" color="info">{{ tp.label }}</va-button>
-                            </div>
-                        </template>
-                    </va-timeline-item>
-                </va-timeline>
+            <div class="row">
+                <va-tabs color="info" vertical grow v-model="tabValue">
+                    <template #tabs>
+                        <va-tab
+                            v-for="tab in tabs"
+                            :key="tab.id"
+                            :name="tab.id"
+                            :disabled="tab.id === 'JBrowse'"
+                            >
+                            <va-icon v-if="tab.icon" :name="tab.icon"/>
+                            {{ tab.title }}
+                        </va-tab>
+                    </template>
+                </va-tabs>
             </div>
         </div>
+        <div class="flex lg9 md9">
+            <va-card>
+                <!-- <va-card-content>
+                    <va-timeline :key="counter" style="width: 100%;overflow-x: scroll;">
+                        <va-timeline-item :active="index<=tpIndex"  v-for="(tp,index) in selectedOrganism.timepoints" :key="index" :color="index<=tpIndex?'secondary':''">
+                            <template #before>
+                                <div class="title va-text-center" >
+                                    <va-button @click.right.stop.prevent="tpIndex=index-1;counter++" @click.left="tpIndex=index;counter++" round :preset="index<=tpIndex?'':'secondary'" :color="index<=tpIndex?'secondary':''">{{ tp.label }}</va-button>
+                                </div>
+                            </template>
+                            <template  #after>
+                                <div v-if="index === 0" style="color:var(--va-secondary)" class="va-title" >
+                                    time
+                                </div>
+                            </template>
+                        </va-timeline-item>
+                    </va-timeline>
+                </va-card-content> -->
+                <va-card-content>
+                    <ExperimentFilters :selected-nodes="selectedNodes" :options="reactiveQuery[organism]" @exp-input="search" @node-toggle="updateQuery"/>
+                    <div class="row align-center justify-end">
+
+                        <!-- <div class=flex>
+                            <div class="row">
+                                <div v-for="(node, index) in selectedNodes" :key="index" class="flex">
+                                    <va-chip closeable @click="removeNode(index)" outline color="secondary">{{node}}</va-chip>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="flex">
+                            <div class="row align-center">
+                                <div class="flex">
+                                    <span style="color:var(--va-secondary)">1 - 5 of 200</span>
+                                </div>
+                                <div class="flex">
+                                    <va-button size="large" preset="secondary" color="secondary" round icon="chevron_left" />
+                                </div>
+                                <div class="flex">
+                                    <va-button size="large" preset="secondary" color="secondary" round icon="chevron_right" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ExperimentListNewVue :experiments="schema.fly.slice(1,5)"/>
+                </va-card-content>
+            </va-card>
+        </div>
+
     </div>
     <div class="row">
+        <div class="flex lg4 md4">
+            <va-timeline style="width: 100%;overflow-x: scroll;">
+                <va-timeline-item :active="true" color="info">
+                    <template #before>
+
+                    </template>
+                    <template #after>
+                        <div style="color:var(--va-info)"  class="va-title" >
+                        timepoints
+                    </div>
+                    </template>
+                </va-timeline-item>
+            </va-timeline>
+        </div>
+        <div class="flex lg8 md8">
+            <va-timeline :key="counter" style="width: 100%;overflow-x: scroll;">
+                <va-timeline-item :active="index<=tpIndex"  v-for="(tp,index) in selectedOrganism.timepoints" :key="index" color="info">
+                    <template #before>
+                        <div style="color:var(--va-info)" class="title va-text-center" >
+                            <va-button @click.right.stop.prevent="tpIndex=index-1;counter++" @click.left="tpIndex=index;counter++" preset="secondary" color="info">{{ tp.label }}</va-button>
+                        </div>
+                    </template>
+                </va-timeline-item>
+            </va-timeline>
+        </div>
+    </div>
+    <div class="row margin-spacer">
         <div class="flex lg3 md3">
             <div class="row margin-spacer">
                 <va-tabs color="info" vertical grow v-model="tabValue">
@@ -41,28 +118,11 @@
             </div>
         </div>
         <div class="flex lg8 md8 sm12 xs12">
-            <div class="row">
-                <div class="flex lg12 md12 sm12 xs12">
-                    <va-tabs color="info" grow v-model="tabValue">
-                        <template #tabs>
-                            <va-tab
-                                v-for="tab in tabs"
-                                :key="tab.id"
-                                :name="tab.id"
-                                :disabled="tab.id === 'JBrowse'"
-                                >
-                                <va-icon v-if="tab.icon" :name="tab.icon"/>
-                                {{ tab.title }}
-                            </va-tab>
-                        </template>
-                    </va-tabs>
-                </div>
-            </div>
             <div v-if="tabValue === 'RNAseq' || tabValue === 'ChIPseq'" class="row margin-spacer">
                 <div class="flex lg12 md12">
                     <va-card>
                         <va-card-content>
-                            <ExperimentFilters :selected-nodes="selectedNodes" :options="reactiveQuery[organism][tabValue]" @exp-input="search" @node-toggle="updateQuery"/>
+                            <ExperimentFilters :selected-nodes="selectedNodes" :options="reactiveQuery[organism]" @exp-input="search" @node-toggle="updateQuery"/>
                         </va-card-content>
                         <va-card-content>
                             <div class="row align-center justify-space-between">
@@ -153,21 +213,22 @@ function search(){
 
 }
 
-function updateQuery(values, key){
-    selectedNodes.value = values
-    reactiveQuery[props.organism][tabValue.value].find(opt => opt.key === key).disabled = !reactiveQuery[props.organism][tabValue.value].find(opt => opt.key === key).disabled
-    expUpdate.value = false
-    if(values.length){
-        dataTypeExperiments = organismExperiments.filter(exp => {
-        if(Object.values(exp).filter(value => values.includes(value)).length === values.length){
-                return true
-            }
-            return false
-        })
-    }else{
-        dataTypeExperiments = organismExperiments
-    }
-    expUpdate.value = true
+function updateQuery(values){
+        console.log(values)
+    // selectedNodes.value = values
+    // reactiveQuery[props.organism][tabValue.value].find(opt => opt.key === key).disabled = !reactiveQuery[props.organism][tabValue.value].find(opt => opt.key === key).disabled
+    // expUpdate.value = false
+    // if(values.length){
+    //     dataTypeExperiments = organismExperiments.filter(exp => {
+    //     if(Object.values(exp).filter(value => values.includes(value)).length === values.length){
+    //             return true
+    //         }
+    //         return false
+    //     })
+    // }else{
+    //     dataTypeExperiments = organismExperiments
+    // }
+    // expUpdate.value = true
 }
 
 function removeNode(index){

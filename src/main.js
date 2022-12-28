@@ -36,6 +36,7 @@ createApp(App)
                 primary: '#3F3F37',
                 secondary: '#7B287D',
                 info: '#ffffff',
+                tertiary:'#BC96E6'
                 
 
 
