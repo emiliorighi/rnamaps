@@ -80,7 +80,6 @@ export const organisms = [
         path:'/human',
         imagePath:'/transdifferentiation.v2.svg',
         content:'Induced transdifferentiation of human pre-B cells into macrophages',
-        commons: ['time'],
         timepoints: humanOptions.timepoints
     },
     {
@@ -89,7 +88,6 @@ export const organisms = [
         path:'/fly',
         imagePath:'/development_labeled3.svg',
         content:'Organ morphogenesis during fly development',
-        commons: ['time','tissue'],
         timepoints: flyOptions.timepoints
 
     }

@@ -24,7 +24,21 @@
             </div>
         </div>
         <div class="flex lg9 md9">
-            <va-card v-if="isDataType">
+            <div class="row" v-if="tabValue === 'Overview'">
+                <div class="flex lg12 md12 sm12 xs12">
+                    <va-timeline color="info" centered vertical>
+                        <va-timeline-item color="info" v-for="(tp,index) in ['bla','bli']" :key="index" active>
+                            <template #before>
+                                
+                            </template>
+                            <template #after>
+                            </template>
+                        </va-timeline-item>
+                    </va-timeline> 
+                </div>
+                <h6 style="color:var(--va-info);" class="va-h6 title">{{ tabs.find(t => t.id === tabValue).title }}</h6>
+            </div>
+            <va-card v-else-if="isDataType">
                 <va-card-content><h6 style="color:var(--va-secondary);" class="va-h6 title">{{ tabs.find(t => t.id === tabValue).title }}</h6></va-card-content>
                 <va-card-content>
                     <ExperimentFilters :filter="filters" :options="reactiveQuery[organism][tabValue]" @node-toggle="updateQuery"/>
@@ -106,7 +120,6 @@ watch(tabValue, ()=>{
         return
     }
     experiments.value = filterExperiments()
-    
 })
 
 const isDataType = computed(()=>{
@@ -144,7 +157,4 @@ onMounted(() => {
     showExperiments.value = true
     selectedOrganism.value = organisms.find(org => org.id === props.organism)
 })
-
-
-
 </script>

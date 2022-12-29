@@ -11,16 +11,16 @@ const routes = [
     name: "home",
     component: Home,
   },
-
   {
-    path: "/test",
-    name: "test",
-    component: () => import('../components/BubbleMatrix.vue'),
+    path: "/fly",
+    name: "fly",
+    props:{organism:'fly'},
+    component: organismPage,
   },
   {
-    path: "/:organism",
-    name: "organism",
-    props:true,
+    path: "/human",
+    name: "human",
+    props:{organism:'human'},
     component: organismPage,
   },
   {

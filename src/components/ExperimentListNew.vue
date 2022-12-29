@@ -12,7 +12,7 @@
                 </div>
                 <div class="row">
                     <div class="flex">
-                        {{ `Platform: ${exp.platform}` }}
+                        {{ `Replicate: ${exp.replicate}` }}
                     </div>
                 </div>
                 <div class="row">

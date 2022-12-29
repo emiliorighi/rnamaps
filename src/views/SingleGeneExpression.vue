@@ -5,11 +5,11 @@
                 <va-card-content>
                 <va-input
                     v-model="geneID"
-                    label="search a geneID"
+                    label="search..."
                     >
                     <template #appendInner>
                         <va-icon
-                        name="search"
+                            name="search"
                         />
                     </template>
                     <template #append>
@@ -71,9 +71,6 @@ function searchGeneId(){
         if(data.value){
             geneIdPresent.value = true
         }
-        // validResponse.value = true
-        // geneID.value=""
-        // geneIdSummary.value = `${geneID.value} not found in FlyBase `
     })
 }
 
