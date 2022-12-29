@@ -1,0 +1,2810 @@
+{
+  "H168H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H168H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H168H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H168H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H168H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H168H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H168H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H168H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H168H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H168H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H168H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H168H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H168H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H168H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H168H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H168H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H168H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H168H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H168H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H168H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H168H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H168H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H168H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H168H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H168H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H168H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H168H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H168cEBPX3": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168cEBPX3.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168cEBPX3.fc_signal.bw"
+    }
+  ],
+  "H168cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H168cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H168cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H120H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H120H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H120H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H120H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H120H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H120H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H120H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H120H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H120H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H120H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H120H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H120H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H120H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H120H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H120H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H120H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H120H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H120H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H120H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H120H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H120H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H120H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H120H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H120H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H120H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H120H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H120H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H120cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H120cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H120cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H072H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H072H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H072H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H072H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H072H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H072H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H072H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H072H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H072H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H072H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H072H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H072H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H072H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H072H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H072H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H072H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H072H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H072H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H072H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H072H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H072H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H072H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H072H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H072H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H072H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H072H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H072H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H072cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H072cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H072cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H048H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H048H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H048H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H048H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H048H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H048H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H048H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H048H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H048H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H048H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H048H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H048H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H048H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H048H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H048H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H048H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H048H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H048H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H048H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H048H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H048H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H048H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H048H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H048H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H048H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H048H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H048H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H048cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H048cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H048cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H036H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H036H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H036H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H036H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H036H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H036H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H036H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H036H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H036H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H036H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H036H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H036H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H036H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H036H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H036H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H036H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H036H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H036H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H036H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H036H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H036H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H036H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H036H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H036H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H036H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H036H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H036H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H036cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H036cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H036cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H024H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H024H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H024H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H024H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H024H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H024H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H024H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H024H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H024H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H024H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H024H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H024H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H024H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H024H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H024H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H024H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H024H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H024H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H024H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H024H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H024H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H024H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H024H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H024H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H024H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H024H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H024H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H024cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H024cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H024cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H018H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H018H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H018H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H018H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H018H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H018H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H018H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H018H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H018H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H018H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H018H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H018H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H018H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H018H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H018H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H018H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H018H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H018H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H018H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H018H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H018H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H018H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H018H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H018H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H018H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H018H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H018H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H018cEBPX3": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018cEBPX3.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018cEBPX3.fc_signal.bw"
+    }
+  ],
+  "H018cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H018cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H018cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H012H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H012H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H012H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H012H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H012H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H012H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H012H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H012H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H012H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H012H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H012H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H012H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H012H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H012H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H012H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H012H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H012H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H012H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H012H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H012H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H012H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H012H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H012H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H012H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H012H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H012H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H012H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H012cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H012cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H012cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H009H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H009H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H009H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H009H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H009H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H009H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H009H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H009H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H009H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H009H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H009H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H009H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H009H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H009H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H009H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H009H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H009H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H009H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H009H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H009H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H009H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H009H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H009H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H009H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H009H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H009H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H009H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H009cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H009cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H009cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H006H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H006H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H006H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H006H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H006H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H006H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H006H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H006H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H006H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H006H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H006H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H006H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H006H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H006H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H006H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H006H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H006H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H006H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H006H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H006H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H006H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H006H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H006H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H006H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H006H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H006H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H006H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H006cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H006cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H006cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H003H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H003H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H003H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H003H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H003H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H003H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H003H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H003H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H003H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H003H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H003H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H003H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H003H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H003H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H003H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H003H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H003H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H003H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H003H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H003H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H003H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H003H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H003H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H003H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H003H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H003H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H003H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H003cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H003cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H003cEBPX1.fc_signal.bw"
+    }
+  ],
+  "H000H4K20me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H4K20me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H4K20me1_zerone_merged.bb"
+    }
+  ],
+  "H000H4K20me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H4K20me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H4K20me1X2.fc_signal.bw"
+    }
+  ],
+  "H000H4K20me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H4K20me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H4K20me1X1.fc_signal.bw"
+    }
+  ],
+  "H000H3K36me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K36me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K36me3_zerone_merged.bb"
+    }
+  ],
+  "H000H3K36me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K36me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K36me3X2.fc_signal.bw"
+    }
+  ],
+  "H000H3K36me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K36me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K36me3X1.fc_signal.bw"
+    }
+  ],
+  "H000H3K27me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27me3_zerone_merged.bb"
+    }
+  ],
+  "H000H3K27me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27me3X2.fc_signal.bw"
+    }
+  ],
+  "H000H3K27me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27me3X1.fc_signal.bw"
+    }
+  ],
+  "H000H3K27ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27ac_zerone_merged.bb"
+    }
+  ],
+  "H000H3K27acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27acX2.fc_signal.bw"
+    }
+  ],
+  "H000H3K27acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K27acX1.fc_signal.bw"
+    }
+  ],
+  "H000H3K9me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9me3_zerone_merged.bb"
+    }
+  ],
+  "H000H3K9me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9me3X2.fc_signal.bw"
+    }
+  ],
+  "H000H3K9me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9me3X1.fc_signal.bw"
+    }
+  ],
+  "H000H3K9ac_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9ac_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9ac_zerone_merged.bb"
+    }
+  ],
+  "H000H3K9acX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9acX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9acX2.fc_signal.bw"
+    }
+  ],
+  "H000H3K9acX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9acX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K9acX1.fc_signal.bw"
+    }
+  ],
+  "H000H3K4me3_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me3_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me3_zerone_merged.bb"
+    }
+  ],
+  "H000H3K4me3X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me3X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me3X2.fc_signal.bw"
+    }
+  ],
+  "H000H3K4me3X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me3X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me3X1.fc_signal.bw"
+    }
+  ],
+  "H000H3K4me2_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me2_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me2_zerone_merged.bb"
+    }
+  ],
+  "H000H3K4me2X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me2X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me2X2.fc_signal.bw"
+    }
+  ],
+  "H000H3K4me2X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me2X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me2X1.fc_signal.bw"
+    }
+  ],
+  "H000H3K4me1_zerone_merged": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me1_zerone_merged.bed"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me1_zerone_merged.bb"
+    }
+  ],
+  "H000H3K4me1X2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me1X2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me1X2.fc_signal.bw"
+    }
+  ],
+  "H000H3K4me1X1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me1X1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000H3K4me1X1.fc_signal.bw"
+    }
+  ],
+  "H000cEBPX3": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000cEBPX3.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000cEBPX3.fc_signal.bw"
+    }
+  ],
+  "H000cEBPX2": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000cEBPX2.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000cEBPX2.fc_signal.bw"
+    }
+  ],
+  "H000cEBPX1": [
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000cEBPX1.pileup_signal.bw"
+    },
+    {
+      "url": "/bborsari/hubs/ERC_human_hub/ChIP-Seq.files/H000cEBPX1.fc_signal.bw"
+    }
+  ]
+}

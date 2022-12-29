@@ -1,7 +1,7 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import NavBarNew from './components/NavBarNew.vue'
+import NavBar from './components/NavBar.vue'
 import SideBar from './components/SideBar.vue'
 import tracks from './tracks'
 
@@ -9,7 +9,7 @@ import tracks from './tracks'
 </script>
 
 <template>
-  <NavBarNew/>
+  <NavBar/>
   <div class="margin-spacer">
     <router-view v-slot="{ Component, route }">
         <Transition name="fade">

@@ -1,155 +1,150 @@
 <template>
-    <Title :title="title"/>
-     <div style="margin-top:50px" class="row">
-       <!-- <div class="flex lg4" >
-            <div class="row margin-spacer">
-                <div class="flex lg12 margin-spacer">
-                    <CellSvg @active="activateClass"/>
+    <div class="row align-top margin-spacer">
+        <div class="flex lg3 md3">
+            <div class="row">
+                <div class="flex">
+                    <h1 style="color:var(--va-info);" class="va-h2 title">{{ selectedOrganism.title }}</h1>
+                    <h1 style="color:var(--va-info);" class="va-h6 title">{{ selectedOrganism.content }}</h1>
                 </div>
             </div>
-        </div> -->
-        <div style="overflow:scroll" class="flex lg12">
-            <CustomTable
-                @paginate="updateExps"
-                :experiments="totalExps"
-                :time="time" 
-                :dataTypes="dataTypes" 
-                :organism="organism" 
-            />
+            <div class="row">
+                <va-tabs color="info" vertical grow v-model="tabValue">
+                    <template #tabs>
+                        <va-tab
+                            v-for="tab in tabs"
+                            :key="tab.id"
+                            :name="tab.id"
+                            :disabled="tab.id === 'JBrowse'"
+                            >
+                            <va-icon v-if="tab.icon" :name="tab.icon"/>
+                            {{ tab.title }}
+                        </va-tab>
+                    </template>
+                </va-tabs>
+            </div>
         </div>
-    </div>
-    <div class="row margin-spacer">
-        <div class="flex lg12">
-            <va-list>
-                <va-list-label>
-                    Metadata
-                </va-list-label>
-                <va-list-item
-                    v-for="exp in experiments"
-                    :key="exp.labExpId"
-                >
-                <va-list-item-section >
-                    <va-list-item-label>
-                        {{ exp.labExpId }}
-                    </va-list-item-label>
-                    <va-list-item-label caption>
-                        fraction: {{ exp.fraction }}
-                    </va-list-item-label>
-                    <va-list-item-label caption>
-                        platform: {{ exp.platform }}
-                    </va-list-item-label>
-                </va-list-item-section>
-                <va-list-item-section icon>
-                    <va-button icon="add" color="secondary"/>
-                </va-list-item-section>
-                </va-list-item>
-            </va-list>
+        <div class="flex lg9 md9">
+            <va-card v-if="isDataType">
+                <va-card-content><h6 style="color:var(--va-secondary);" class="va-h6 title">{{ tabs.find(t => t.id === tabValue).title }}</h6></va-card-content>
+                <va-card-content>
+                    <ExperimentFilters :filter="filters" :options="reactiveQuery[organism][tabValue]" @node-toggle="updateQuery"/>
+                    <div class="row align-center justify-space-between">
+                        <div class="flex lg6 md6">
+                            <va-chip shadow v-for="(k,index) in Object.keys(filters)" :key="index" icon="close" color="secondary" outline @click="removeFilter(k)">{{ filters[k] }}</va-chip>
+                        </div>
+                        <div class="flex">
+                            <div class="row align-center">
+                                <div class="flex">
+                                    <span style="color:var(--va-secondary)">{{`${index+1}-${experiments.length < index + pageSize ? experiments.length : index + pageSize} of ${experiments.length}`}}</span>
+                                </div>
+                                <div class="flex">
+                                    <va-button size="large" preset="secondary" color="secondary" round icon="chevron_left" :disabled="index-pageSize < 0" @click="index=index-pageSize"/>
+                                </div>
+                                <div class="flex">
+                                    <va-button size="large" preset="secondary" color="secondary" round icon="chevron_right" :disabled="index+pageSize >= experiments.length" @click="index=index+pageSize"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ExperimentListNewVue :key="counter" :show="showExperiments" :experiments="paginatedExps"/>
+                </va-card-content>
+            </va-card>
+            <va-card v-else-if="tabValue === 'GeneSearch'">
+                <va-card-content>
+                    <h6 style="color:var(--va-secondary);" class="va-h6 title">{{ tabs.find(t => t.id === tabValue).title }}</h6>
+                </va-card-content>
+                <va-card-content>
+                    <SingleGeneExpression/>
+                </va-card-content>
+            </va-card>
         </div>
     </div>
 </template>
 <script setup>
-import expService from '../services/ExperimentService'
-import {ref,computed, reactive} from 'vue'
-import metadata from '../../metadata.json'
-import FieldSelect from '../components/FieldSelect.vue'
-import CellSvg from '../components/CellSvg.vue'
-import Title from '../components/Title.vue'
-import CustomTable from '../components/CustomTable.vue'
+import { organisms,expQuery } from '../static-config';
+import {computed,onMounted,ref, watch,reactive} from 'vue'
+import SingleGeneExpression from "./SingleGeneExpression.vue"
+import ExperimentListNewVue from '../components/ExperimentListNew.vue';
+import ExperimentFilters from '../components/ExperimentFilters.vue';
+import schema from '../assets/metadata.json'
 
-const dataTypes=reactive([
-    {label:'Proteomics',color:'#2b4135',hovered:false},
-    {label:'RibosomeProfiling',color:'#a08852',hovered:false}, 
-    {label:'RNAseq',color:'#3d80b9',hovered:false},
-    {label:'ChIPseq',color:'872674',hovered:false}])
 
-const humanTimes = [
-    {label: "Oh",value: "00d00h00m"},
-    {label: "3h",value: "00d03h00m"},
-    {label: "6h",value: "00d06h00m"},
-    {label: "9h",value: "00d09h00m"},
-    {label: "12h",value: "00d12h00m"},
-    {label: "18h",value: "00d18h00m"},
-    {label: "1d",value: "01d00h00m"},
-    {label: "1d12h",value: "01d12h00m"},
-    {label: "2d",value: "02d00h00m"},
-    {label: "3d",value: "03d00h00m"},
-    {label: "5d",value: "05d00h00m"},
-    {label: "7d",value: "07d00h00m"},
+const reactiveQuery = reactive(expQuery)
+const showExperiments = ref(false)
+const counter = ref(0)
+const experiments = ref([])
+const selectedType = ref('RNAseq')
+const filters = ref({})
+const tabs = [
+    { icon: 'menu_book', title: 'Overview',id:'Overview'},
+    { title: 'RNA-Seq', id:'RNAseq' },
+    { title: 'ChIP-Seq', id:'ChIPseq' },
+    { icon: 'search', title: 'Gene Expression', id:'GeneSearch' },
+    { title: 'Genome Browser', id:'JBrowse' },
 ]
 
-const flyStages = [
-    {label:"L3", value:"L3"},
-    {label:"LP", value:"LP"},
-    {label:"WP", value:"WP"}
-]
+
+const tabValue = ref('Overview')
 
 const props = defineProps({
-  organism: String,
+    organism:String,
 })
 
-const selectedTime = ref('')
-const title = props.organism? props.organism[0].toUpperCase() + props.organism.slice(1).toLowerCase() : ''
-var perPage = ref(10)
-var currentPage = ref(1)
-const totalExps = expService.getExperiments({organism:props.organism})
-const experiments = ref([])
-const columns=props.organism === 'human'? ['labExpId','dataType','time','actions'] : ['labExpId','dataType','stage','actions']
+const index=ref(0)
+const pageSize=ref(5)
 
-const pages = computed(() => {
-  return (perPage && perPage.value !== 0)
-        ? Math.ceil(filtered.length / perPage.value)
-        : filtered.length
-})
+function resetPagination(){
+    index.value = 0
+    pageSize.value = 5
+}
+watch(tabValue, ()=>{
+    if(!isDataType.value) return
+    const keys = Object.keys(filters.value).filter(key => !reactiveQuery[props.organism][tabValue.value].map(opt => opt.key).includes(key)) //keys to remove
 
-const time = computed(() => {
-    if (props.organism === 'human'){
-        return humanTimes
+    if(keys.length){
+        keys.forEach(k => removeFilter(k))
+        return
     }
-    if(props.organism === 'fly'){
-        return flyStages
-    }
+    experiments.value = filterExperiments()
+    
 })
 
-function activateClass(type){
-    dataTypes.forEach(tp => {
-        if(tp.label === type){
-            tp.hovered = true
-        }else{
-            tp.hovered = false
+const isDataType = computed(()=>{
+    return tabValue.value === 'RNAseq' || tabValue.value === 'ChIPseq'
+})
+
+
+function removeFilter(key){
+    delete filters.value[key]
+    experiments.value = filterExperiments()
+}
+function updateQuery(payload){
+    showExperiments.value = false
+    filters.value[payload[0]] = payload[1]
+    experiments.value = filterExperiments()
+    showExperiments.value = true
+    resetPagination()
+}
+function filterExperiments(){
+    return [...schema[props.organism].filter(exp => exp.dataType === tabValue.value).filter(exp => {
+        if(Object.keys(filters.value).every(key => filters.value[key] === exp[key])){
+            return true
         }
-    })
+        return false
+    })]
 }
+const paginatedExps = computed(()=> {
+    return experiments.value.slice(index.value, index.value+pageSize.value)
+})
 
-function updateExps(exps){
-    console.log([...exps].slice(0,perPage.value))
-    experiments.value = [...exps]
-    console.log(experiments)
-}
+const selectedOrganism = ref({})
+
+onMounted(() => {
+    experiments.value.push(...schema[props.organism])
+    showExperiments.value = true
+    selectedOrganism.value = organisms.find(org => org.id === props.organism)
+})
+
+
+
 </script>
-<style scoped>
-.timepoints{
-    rotate: -45deg;
-}
-/* tr.space-under>td {
-  padding-bottom: 1em;
-} */
-tbody:before {
-    content:"@";
-    display:block;
-    line-height:10px;
-    text-indent:-99999px;
-}
-.sticky-col {
-  position: -webkit-sticky;
-  position: sticky;
-  background-color: white;
-}
-
-.first-col {
-    left: -5px;
-    text-align: end;
-    background-color: white;
-    z-index: 1000;
-    padding:.8rem
-}
-</style>

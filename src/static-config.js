@@ -77,7 +77,7 @@ export const organisms = [
     {
         id: 'human',
         title:'Human',
-        route:'human-new',
+        path:'/human',
         imagePath:'/transdifferentiation.v2.svg',
         content:'Induced transdifferentiation of human pre-B cells into macrophages',
         commons: ['time'],
@@ -86,7 +86,7 @@ export const organisms = [
     {
         id:'fly',
         title:'Fly',
-        route:'fly-new',
+        path:'/fly',
         imagePath:'/development_labeled3.svg',
         content:'Organ morphogenesis during fly development',
         commons: ['time','tissue'],

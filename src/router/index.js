@@ -1,62 +1,27 @@
 import { createWebHistory, createRouter } from 'vue-router';
 import Home from '../views/Home.vue';
-import HomeNew from '../views/HomeNew.vue';
 
+const organismPage = () => import('../views/Organism.vue')
 const jBrowseComponent = () => import('../views/JBrowse.vue')
-const humanPage = () => import('../views/Human.vue')
-const humanNew = () => import('../views/HumanNew.vue')
-const flyNew = () => import('../views/FlyNew.vue')
-const orgNew = () => import('../views/OrganismNew.vue')
 const plot = () => import('../components/ScatterPlot.vue')
-const flyPage = () => import('../views/Fly.vue')
 const expDetails = () => import('../views/ExperimentDetails.vue')
-const singleGeneExpression = () => import('../views/SingleGeneExpression.vue')
 const routes = [
   {
     path: "/",
     name: "home",
     component: Home,
   },
-  {
-    path: "/new",
-    name: "home",
-    component: HomeNew,
-  },
+
   {
     path: "/test",
     name: "test",
     component: () => import('../components/BubbleMatrix.vue'),
   },
   {
-    path: "/test-org/:organism",
-    name: "test",
+    path: "/:organism",
+    name: "organism",
     props:true,
-    component: orgNew,
-  },
-  {
-    path: "/human",
-    name: "human",
-    component: humanPage,
-  },
-  {
-    path: "/human-new",
-    name: "human-new",
-    component: humanNew,
-  },
-  {
-    path: "/fly-new",
-    name: "fly-new",
-    component: flyNew,
-  },
-  {
-    path: "/fly",
-    name: "fly",
-    component: flyPage,
-  },
-  {
-    path: '/single-gene-expression',
-    name: 'single-gene',
-    component: singleGeneExpression
+    component: organismPage,
   },
   {
     path: "/experiments/:id",

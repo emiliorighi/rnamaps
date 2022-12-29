@@ -1,5 +1,5 @@
 <template>
-    <va-card class="organism-card" :to="{name:organism.route}">
+    <va-card class="organism-card" :to="organism.path">
         <va-card-content>
             <h2 style="color:var(--va-secondary);" class="va-h4">{{organism.title}}</h2>
         </va-card-content>

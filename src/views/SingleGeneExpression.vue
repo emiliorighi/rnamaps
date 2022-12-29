@@ -32,7 +32,7 @@
                     {{geneIdSummary}}
                 </va-card-content>
                 <va-card-content>
-                    <ScatterPlot :data="data"/>
+                    <SingleGeneScatterPlot :data="data"/>
                 </va-card-content>
             </va-card>
         </div>
@@ -40,7 +40,7 @@
 </template>
 <script setup>
 import FlyBaseService from "../services/FlyBaseService"
-import ScatterPlot from "../components/ScatterPlot.vue"
+import SingleGeneScatterPlot from "../components/SingleGeneScatterPlot.vue"
 import rnaSeq from "../assets/notrypsin-rna-seq-fly-avg.json"
 import {ref} from "vue"
 

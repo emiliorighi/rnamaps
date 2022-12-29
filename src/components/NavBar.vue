@@ -1,80 +1,50 @@
 <template>
-    <va-navbar text-color="white" color="secondary">
-        <template #left>
-            <va-navbar-item 
-                v-for="item in items"
-                :key="item.route"
-                :disabled="item.active"
-            >
-                <va-icon name="fly" size="large"/>
-                <va-button :to="{name:item.route}" color="secondary" icon="fly"></va-button>
-            </va-navbar-item>
-        </template>
-        <template #right>
-            <va-navbar-item>
-                <va-badge color="primary" overlap :text="Session.browserTracks.length">
-                    <va-button-dropdown :disabled="!Session.browserTracks.length" size="small"  color="secondary" class="ml-2">
-                        <template #label>
-                            <va-icon name="shopping_bag" size="small" />
-                        </template>
-                        <div style="padding:10px!important;max-heigth:150px;overflow:auto">
-                            <p class="title">{{Session.currentOrganism}}</p>
-                            <ul>
-                                <li 
-                                    class="track-element"
-                                    v-for="track in Session.browserTracks"
-                                    :key="track"
-                                >
-                                    <p class="text--secondary">{{track.name}}</p>
-                                    <va-icon
-                                        name="close"
-                                        @click="Session.browserTracks.splice(Session.browserTracks.indexOf(track),1)"
-                                    />
-                                </li>
-                            </ul>
+    <div>
+        <va-affix :offset-top="0">
+            <div class="row navbar-container secondary-background margin-spacer align-center justify-space-between">
+                <div class="flex lg6 md6 sm12 xs12">
+                    <div class="row align-center justify-space-between">
+                        <div class="flex lg4 md4 sm4 xs4">
+                            <router-link :to="{name:'home'}"><h4 style="color:#fffffa" class="va-h6">RNAmaps</h4></router-link>
                         </div>
-                        <div style="display:flex;justify-content:space-between">
-                            <va-button size="small" @click="loadTracks()">Genome Browser</va-button>
-                            <va-button size="small" @click="clearSession()">Clear session</va-button>
+                    </div>
+                </div>
+                <div class="flex lg4 md4 sm12 xs12">
+                    <div class="row align-center justify-space-between">
+                        <div class="flex">
+                            <router-link :to="'/human'"><h4 style="color:#fffffa" class="va-h6">Human</h4></router-link>
                         </div>
-                    </va-button-dropdown>
-                </va-badge>
-            </va-navbar-item>
-        </template>
-    </va-navbar>
+                        <div class="flex">
+                            <router-link :to="'/fly'"><h4 style="color:#fffffa" class="va-h6">Fly</h4></router-link>
+                        </div>
+                        <div class="flex">
+                            <va-icon color="#ffffff" name="shopping_bag"></va-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </va-affix>
+    </div>
 </template>
 <script setup>
-import {session} from '../stores/session'
-import {experiments} from '../stores/experiments'
-import {flyGenome} from '../assemblies/fly'
-import {humanGenome} from '../assemblies/human'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue';
 
-const router = useRouter()
-const Session = session()
-const items = [
-    // { title: 'Home', path: 'dashboard' },
-    { title: 'Fly', path: '/fly_icon.svg', route:'fly-new'},
-    { title: 'Human', path: '/women_icon2.svg', route:'human-new'},
+
+const geneid = ref('')
+const organism = ref('fly')
+
+const navLeft = [
 ]
 
-function loadTracks(){
-    //create assembly
-    // Session.createSession()
-    router.push({name: 'jbrowse2'})
-}
-function clearSession(){
-    Session.currentOrganism=''
-    Session.browserTracks=[]
-}
+const navRight = [
+
+]
 
 
 </script>
-<style scoped>
-.track-element{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:5px;
+<style>
+.navbar-container{
+    max-height: 150px;
 }
+
 </style>
