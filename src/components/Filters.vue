@@ -1,7 +1,7 @@
 <template>
     <div class="row align-center">
         <div v-for="(opt,index) in options" :key="index" class="right-margin flex">
-            <va-button-dropdown preset="secondary" round border-color="secondary" color="secondary"  :label="opt.label" :close-on-content-click="false">
+            <va-button-dropdown color="secondary"  :label="opt.label" :close-on-content-click="false">
                 <va-option-list
                     type="radio"
                     color="secondary"

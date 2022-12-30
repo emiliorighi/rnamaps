@@ -97,19 +97,19 @@ export const expQuery = {
     fly : {
         ChIPseq: [
             {
-                label:'Timepoints',
+                label:'Timepoint',
                 key:'time',
                 disabled:false,
                 nodes: flyOptions.timepoints
             },
             {
-                label:'Tissues',
+                label:'Tissue',
                 key:'tissue',
                 disabled:false,
                 nodes: flyOptions.tissues
             },
             {
-                label:'Targets',
+                label:'Target',
                 key:'antibody',
                 disabled:false,
                 nodes: flyOptions.targets
@@ -117,13 +117,13 @@ export const expQuery = {
         ],
         RNAseq: [
             {
-                label:'Timepoints',
+                label:'Timepoint',
                 key:'time',
                 disabled:false,
                 nodes: flyOptions.timepoints
             },
             {
-                label:'Tissues',
+                label:'Tissue',
                 key:'tissue',
                 disabled:false,
                 nodes: flyOptions.tissues
@@ -145,13 +145,13 @@ export const expQuery = {
     human : {
         ChIPseq: [
             {
-                label:'Targets',
+                label:'Target',
                 key:'antibody',
                 disabled:false,
                 nodes: humanOptions.targets
             },
             {
-                label:'Timepoints',
+                label:'Timepoint',
                 key:'time',
                 disabled:false,
                 nodes:humanOptions.timepoints
@@ -159,13 +159,13 @@ export const expQuery = {
         ],
         RNAseq:[
             {
-                label:'Timepoints',
+                label:'Timepoint',
                 key:'time',
                 disabled:false,
                 nodes:humanOptions.timepoints
             },
             {
-                label:'Fractions',
+                label:'Fraction',
                 key:'fraction',
                 disabled:false,
                 nodes:humanOptions.fraction

@@ -10,41 +10,28 @@
                         </h1>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="flex">
-                        {{ `Replicate: ${exp.replicate}` }}
+                <div v-for="(attr, index) in attributes" :key="index" class="row left-padding">
+                    <div v-if="exp[attr]" class="flex">
+                       <strong>{{ attr }}</strong>: {{ exp[attr]}}
                     </div>
                 </div>
-                <div class="row">
+                <div class="row left-padding">
                     <div class="flex">
-                        {{ `Time: ${exp.time}` }}
-                    </div>
-                </div>
-                <div v-if="exp.description" class="row">
-                    <div class="flex">
-                        {{ `Description: ${exp.description}` }}
+                        <strong>replicate: </strong>: {{ exp.replicate}}
                     </div>
                 </div>
             </div>
             <div class="flex">
-                <va-dropdown>
-                    <template #anchor>
-                    <va-button round color="secondary">
-                        files
-                    </va-button>
-                    </template>
-
-                    <va-dropdown-content>
-                        <div v-for="(file , index) in exp.files" :key="index" class="row">
-                            <div class="flex">
-                                {{ file }}
-                            </div>
-                            <div class="flex">
-
-                            </div>
+                <va-button-dropdown color="secondary"  label="files" :close-on-content-click="false">
+                    <div style="overflow:scroll" v-for="(file , index) in exp.files" :key="index" class="row">
+                        <div class="flex">
+                            {{  }}
                         </div>
-                    </va-dropdown-content>
-                </va-dropdown>
+                        <div class="flex">
+
+                        </div>
+                    </div>
+                </va-button-dropdown>
             </div>
         </div>
     </div>
@@ -53,6 +40,13 @@
 
 const props = defineProps({
     experiments:Array,
+    attributes:Array // experiment attribute keys
 })
 
+
 </script>
+<style>
+.left-padding{
+    padding-left: 16px;
+}
+</style>

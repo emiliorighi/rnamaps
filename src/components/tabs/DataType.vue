@@ -17,12 +17,12 @@
             </div>
         </div>
     </div>
-    <div class="row align-center justify-space-between">
+    <div style="min-height:50px" class="row align-center justify-space-between">
         <div class="flex">
-            <va-chip shadow v-for="(k,index) in Object.keys(filters)" :key="index" icon="close" color="secondary" @click="removeFilter(k)">{{ filters[k] }}</va-chip>
+            <va-chip shadow v-for="(k,index) in Object.keys(filters)" :key="index" icon="close" color="secondary" outline @click="removeFilter(k)">{{ filters[k] }}</va-chip>
         </div>
     </div>
-    <Experiments :experiments="paginatedExps"/>
+    <Experiments :experiments="paginatedExps" :attributes="experimentKeys"/>
 </template>
 <script setup>
 import {ref,computed,reactive,watch,onMounted} from 'vue'
@@ -44,6 +44,10 @@ const props = defineProps({
 
 const paginatedExps = computed(()=> {
     return experiments.value.slice(index.value, index.value+pageSize.value)
+})
+
+const experimentKeys = computed(()=>{
+    return expQuery[props.organism][props.tabValue].map(opt => opt.key)
 })
 
 watch(()=>props.tabValue, ()=>{

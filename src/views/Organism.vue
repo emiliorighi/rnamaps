@@ -47,7 +47,7 @@
             </va-card>
             <va-card v-else-if="tabValue === 'GeneSearch'">
                 <va-card-content>
-                    <SingleGeneExpression/>
+                    <GeneExpression/>
                 </va-card-content>
             </va-card>
         </div>
@@ -56,8 +56,8 @@
 <script setup>
 import { organisms } from '../static-config';
 import {computed,onMounted,ref} from 'vue'
-import SingleGeneExpression from "./SingleGeneExpression.vue"
 import DataType from '../components/tabs/DataType.vue'
+import GeneExpression from '../components/tabs/GeneExpression.vue'
 
 const tabs = [
     { icon: 'menu_book', title: 'Overview',id:'Overview'},
