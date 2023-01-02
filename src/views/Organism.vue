@@ -1,17 +1,65 @@
 <template>
     <div class="row align-top margin-spacer">
-        <div class="flex lg3 md3">
+        <div class="flex lg3 md3 margin-spacer">
             <div class="row">
                 <div class="flex">
                     <h1 style="color:var(--va-info);" class="va-h2 title">{{ selectedOrganism.title }}</h1>
                     <h1 style="color:var(--va-info);" class="va-h6 title">{{ selectedOrganism.content }}</h1>
                 </div>
             </div>
+            <va-divider/>
+            <div class="row align-center">
+                <div class="flex">
+                    <va-icon color="info" name="schedule"/>
+                </div>
+                <div class="flex">
+                    <h1 style="color:var(--va-info);" class="va-h6 title">Timepoints</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="flex lg12 md12 sm12 xs12">
+                    <div style="max-height:60vh;overflow: scroll;">
+                        <va-sidebar-item  
+                            v-for="tp in organisms.find(org => org.id === organism).timepoints"
+                            :key="tp.id" text-color="info" >
+                            <va-sidebar-item-content>
+                            <va-sidebar-item-title>
+                                {{ `${tp.label} (${tp.id})` }}
+                            </va-sidebar-item-title>
+                            </va-sidebar-item-content>
+                        </va-sidebar-item>
+                    </div>
+                </div>
+            </div>
+            <div v-if="organism === 'fly'" class="row align-center">
+                <div class="flex">
+                    <va-icon color="info" name="science"/>
+                </div>
+                <div class="flex">
+                    <h1 style="color:var(--va-info);" class="va-h6 title">Tissues</h1>
+                </div>
+            </div>
+            <div v-if="organism === 'fly'" class="row">
+                <div class="flex lg12 md12 sm12 xs12">
+                    <div style="max-height:60vh;overflow: scroll;">
+                        <va-sidebar-item  
+                            v-for="t in flyTissues"
+                            :key="t.id" text-color="info" >
+                            <va-sidebar-item-content>
+                            <va-sidebar-item-title>
+                                {{ t.id }}
+                            </va-sidebar-item-title>
+                            </va-sidebar-item-content>
+                        </va-sidebar-item>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="flex lg9 md9">
+            <va-card>
             <div class="row margin-spacer">
                 <div class="flex lg12 md12 sm12 xs12">
-                    <va-tabs color="info" grow v-model="tabValue">
+                    <va-tabs color="secondary" grow v-model="tabValue">
                         <template #tabs>
                             <va-tab
                                 v-for="tab in tabs"
@@ -26,48 +74,32 @@
                     </va-tabs>
                 </div>
             </div>
-            <div class="row" v-if="tabValue === 'Overview'">
-                <div class="flex lg12 md12 sm12 xs12">
-                    <va-timeline color="info" centered vertical>
-                        <va-timeline-item color="info" v-for="(tp,index) in ['bla','bli']" :key="index" active>
-                            <template #before>
-                                
-                            </template>
-                            <template #after>
-                            </template>
-                        </va-timeline-item>
-                    </va-timeline> 
-                </div>
-                <h6 style="color:var(--va-info);" class="va-h6 title">{{ tabs.find(t => t.id === tabValue).title }}</h6>
+            <div class="margin-spacer" v-if="isDataType">
+                <DataType :organism="organism" :tab-value="tabValue"/>
             </div>
-            <va-card v-else-if="isDataType">
-                <va-card-content>
-                    <DataType :organism="organism" :tab-value="tabValue"/>
-                </va-card-content>
-            </va-card>
             <va-card v-else-if="tabValue === 'GeneSearch'">
                 <va-card-content>
                     <GeneExpression/>
                 </va-card-content>
             </va-card>
+            </va-card>
         </div>
     </div>
 </template>
 <script setup>
-import { organisms } from '../static-config';
+import { organisms,flyTissues } from '../static-config';
 import {computed,onMounted,ref} from 'vue'
 import DataType from '../components/tabs/DataType.vue'
 import GeneExpression from '../components/tabs/GeneExpression.vue'
 
 const tabs = [
-    { icon: 'menu_book', title: 'Overview',id:'Overview'},
     { title: 'RNA-Seq', id:'RNAseq' },
     { title: 'ChIP-Seq', id:'ChIPseq' },
     { icon: 'search', title: 'Gene Expression', id:'GeneSearch' },
     { title: 'Genome Browser', id:'JBrowse' },
 ]
 
-const tabValue = ref('Overview')
+const tabValue = ref('RNAseq')
 const selectedOrganism = ref({})
 
 const props = defineProps({

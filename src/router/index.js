@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from 'vue-router';
 import Home from '../views/Home.vue';
 
-const organismPage = () => import('../views/Organism.vue')
+const organismPage = () => import('../views/OrganismNew.vue')
 const jBrowseComponent = () => import('../views/JBrowse.vue')
 const plot = () => import('../components/ScatterPlot.vue')
 const expDetails = () => import('../views/ExperimentDetails.vue')

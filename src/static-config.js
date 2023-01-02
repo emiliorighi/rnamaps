@@ -1,8 +1,8 @@
 const flyOptions = {
     timepoints:  [
-        { id:'L3', label: 'Larva (L3)', selected:false },
-        { id: 'WP', label: 'White Pupa (WP)', selected:false },
-        { id: 'LP', label: 'Late Pupa (LP)' , selected:false}
+        { id:'L3', label: 'Larva', selected:false },
+        { id: 'WP', label: 'White Pupa', selected:false },
+        { id: 'LP', label: 'Late Pupa' , selected:false}
     ],
     tissues: [
         {id:"antenna", selected:false},
@@ -73,6 +73,14 @@ const humanOptions = {
             
 }
 
+export const flyTissues = [
+    {id:'antenna',color:'#c5ff9e'},
+    {id:'eye',color:'#0c866d'},
+    {id:'leg',color:'#f01919'},
+    {id:'wing',color:'#2a7fff'}
+
+]
+
 export const organisms = [
     {
         id: 'human',
@@ -99,19 +107,22 @@ export const expQuery = {
             {
                 label:'Timepoint',
                 key:'time',
-                disabled:false,
+                icon:'schedule',
+                open:false,
                 nodes: flyOptions.timepoints
             },
             {
                 label:'Tissue',
                 key:'tissue',
-                disabled:false,
+                icon: 'extension',
+                open:false,
                 nodes: flyOptions.tissues
             },
             {
                 label:'Target',
                 key:'antibody',
-                disabled:false,
+                icon:'bolt',
+                open:false,
                 nodes: flyOptions.targets
             }
         ],
@@ -119,55 +130,62 @@ export const expQuery = {
             {
                 label:'Timepoint',
                 key:'time',
-                disabled:false,
+                icon:'schedule',
+                open:false,
                 nodes: flyOptions.timepoints
             },
             {
                 label:'Tissue',
                 key:'tissue',
-                disabled:false,
+                icon: 'extension',
+                open:false,
                 nodes: flyOptions.tissues
             },
             {
                 label:'Wing Compartment',
                 key:'compartment',
-                disabled:false,
+                icon: 'extension',
+                open:false,
                 nodes: flyOptions.compartments
             },
-            {
-                label:'Treatment',
-                id:'treatment',
-                disabled:false,
-                nodes: flyOptions.treatment
-            },
+            // {
+            //     label:'Treatment',
+            //     id:'treatment',
+            //     open:false,
+            //     nodes: flyOptions.treatment
+            // },
         ]
     },
     human : {
         ChIPseq: [
             {
-                label:'Target',
-                key:'antibody',
-                disabled:false,
-                nodes: humanOptions.targets
-            },
-            {
                 label:'Timepoint',
                 key:'time',
-                disabled:false,
+                icon:'schedule',
+                open:false,
                 nodes:humanOptions.timepoints
             },
+            {
+                label:'Target',
+                key:'antibody',
+                icon:'bolt',
+                open:false,
+                nodes: humanOptions.targets
+            }
         ],
         RNAseq:[
             {
                 label:'Timepoint',
                 key:'time',
-                disabled:false,
+                icon:'schedule',
+                open:false,
                 nodes:humanOptions.timepoints
             },
             {
                 label:'Fraction',
                 key:'fraction',
-                disabled:false,
+                icon:'bubble_chart',
+                open:false,
                 nodes:humanOptions.fraction
             }
         ],

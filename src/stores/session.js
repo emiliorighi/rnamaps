@@ -1,5 +1,4 @@
 import {defineStore} from 'pinia'
-import { experiments } from './experiments' 
 // import schema from '../assets/schemas/test_metadata.json'
 import { mapper,humanAnnTrack } from '../trackConfigs'
 import { reactive, ref } from 'vue'
@@ -10,6 +9,7 @@ export const session = defineStore('session', {
         tracks:[],
         assembly:{},
         browserSession:{
+
         },
         browserTracks:reactive([
             // {
@@ -41,12 +41,12 @@ export const session = defineStore('session', {
         ]),
     }),
     actions:{
-        removeTracks(){
-            this.tracks=[]
-        },
-        addTrack(){
+        // removeTracks(){
+        //     this.tracks=[]
+        // },
+        // addTrack(){
 
-        },
+        // },
 
     }
     // other options...
