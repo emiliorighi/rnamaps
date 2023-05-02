@@ -18,5 +18,5 @@ export const flyGenome = Object.freeze(
                 }
             }
         }
-      }
+    }
 )

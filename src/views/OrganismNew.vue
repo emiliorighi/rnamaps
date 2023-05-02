@@ -60,6 +60,12 @@
                 </div>
             </div>
         </div>
+        <div v-else-if="tabValue === 'GeneSearch'">
+            <GeneExpression/>
+        </div>
+        <div v-else-if="tabValue === 'JBrowse'">
+            <JBrowse/>
+        </div>
     </div>
 </template>
 <script setup>
@@ -70,6 +76,7 @@ import Filters from '../components/Filters.vue';
 import ExperimentCard from '../components/ExperimentCard.vue';
 import schema from '../assets/metadata.json'
 import { session } from '../stores/session';
+import JBrowse from './JBrowse.vue';
 
 const storeSession = session()
 
@@ -112,6 +119,7 @@ const experimentKeys = computed(()=>{
 
 watch(tabValue, ()=>{
     //keys to remove
+    if(!isDataType) return
     const keys = Object.keys(filters.value)
         .filter(key => !reactiveQuery[props.organism][tabValue.value]
         .map(opt => opt.key)
