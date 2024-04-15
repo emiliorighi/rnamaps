@@ -14,8 +14,7 @@ const routes = [
   {
     path: "/fly",
     name: "fly",
-    props:{organism:'fly'},
-    component: organismPage,
+    component: () => import('../views/Fly.vue'),
   },
   {
     path: "/human",

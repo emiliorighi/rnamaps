@@ -1,0 +1,79 @@
+{
+    "organisms": {
+        "fly": {
+            "dataTypes": [
+                {
+                    "name": "RNAseq",
+                    "filters": [
+                        {
+                            "label": "Stage",
+                            "key": "stage",
+                            "icon": "schedule",
+                            "nodes": [
+                                {
+                                    "id": "L3",
+                                    "label": "Larva"
+                                },
+                                {
+                                    "id": "WP",
+                                    "label": "White Pupa"
+                                },
+                                {
+                                    "id": "LP",
+                                    "label": "Late Pupa"
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Tissue",
+                            "key": "tissue",
+                            "icon": "extension",
+                            "nodes": [
+                                {
+                                    "id": "antenna"
+                                },
+                                {
+                                    "id": "eye"
+                                },
+                                {
+                                    "id": "eye-antenna"
+                                },
+                                {
+                                    "id": "wing"
+                                },
+                                {
+                                    "id": "leg"
+                                },
+                                {
+                                    "id": "genitalia"
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Wing Compartment",
+                            "key": "compartment",
+                            "icon": "extension",
+                            "nodes": [
+                                {
+                                    "id": "whole tissue"
+                                },
+                                {
+                                    "id": "anterior"
+                                },
+                                {
+                                    "id": "dorsal"
+                                },
+                                {
+                                    "id": "posterior"
+                                },
+                                {
+                                    "id": "ventral"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
