@@ -6,7 +6,7 @@
                     "name": "RNAseq",
                     "filters": [
                         {
-                            "label": "Stage",
+                            "label": "Development Stages",
                             "key": "stage",
                             "icon": "schedule",
                             "nodes": [
@@ -25,7 +25,7 @@
                             ]
                         },
                         {
-                            "label": "Tissue",
+                            "label": "Tissues",
                             "key": "tissue",
                             "icon": "extension",
                             "nodes": [
@@ -50,7 +50,7 @@
                             ]
                         },
                         {
-                            "label": "Wing Compartment",
+                            "label": "Wing Compartments",
                             "key": "compartment",
                             "icon": "extension",
                             "nodes": [

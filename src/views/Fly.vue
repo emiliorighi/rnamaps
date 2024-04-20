@@ -1,4 +1,5 @@
 <template>
+    <SearchCTA />
     <div class="row align-end" style="margin-bottom: 16px;">
         <div class="flex">
             <h1 style="color:var(--va-info);" class="va-h2 title">Fly</h1>
@@ -40,15 +41,12 @@
             </va-card-content>
         </va-card>
     </div>
-    <div v-else>
-        <div class="flex lg3 md4 sm12 xs12">
-            <FiltersSideBar :options="filters" :searchForm="searchForm" @item-toggled="updateQuery" />
-        </div>
-        <va-card class="flex lg9 md8 sm12 xs12">
+    <FeaturesBlock v-else />
+    <!-- <div v-else class="row justify-space-between" style="height: 100vh;overflow: scroll;">
+        <va-card class="flex lg12 md12 sm12 xs12">
             <va-card-content class="row align-center justify-space-between">
                 <div class="flex">
-                    <va-chip style="margin:8px" shadow v-for="([k, v], index) in activeFilters" :key="index"
-                        color="secondary" outline @click="updateQuery(k, '')" icon="close">{{ v }}</va-chip>
+                    <VaInput placeholder="Type a Gene identifier"></VaInput>
                 </div>
                 <div class="flex">
                     <Pagination :total="pagination.total" :limit="pagination.limit" :offset="pagination.offset"
@@ -56,22 +54,33 @@
                 </div>
             </va-card-content>
             <va-card-content>
-                <va-data-table height="100%" :items="paginatedSamples" />
+                <va-data-table :columns="['Gene', 'Description', 'Actions']" height="100%" :items="paginatedSamples">
+                    <template #cell(Actions)="{ row, isExpanded }">
+                        <VaButton :icon="isExpanded ? 'va-arrow-up' : 'va-arrow-down'" preset="secondary" class="w-full"
+                            @click="row.toggleRowDetails()">
+                            {{ isExpanded ? 'Hide' : 'More info' }}
+                        </VaButton>
+                    </template>
+                    <template #expandableRow="{ rowData }">
+
+                    </template>
+                </va-data-table>
             </va-card-content>
         </va-card>
-    </div>
+    </div> -->
 </template>
 <script setup lang="ts">
 import { computed, ref, watchEffect } from 'vue'
 import FiltersSideBar from '../components/FiltersSideBar.vue';
-import Pagination from '../components/Pagination.vue';
+import Pagination from '../components/ui/Pagination.vue';
 import { organisms } from '../../config.json';
 import { useSampleData } from '../composables/useSampleData'
 import { useFeatureData } from '../composables/useFeatureData'
+import FeaturesBlock from '../components/FeaturesBlock.vue';
+import SearchCTA from '../components/ui/SearchCTA.vue';
 
 let allSamples: Record<string, any>[] = []
 
-let allFeatures: Record<string, any>[] = []
 
 const samples = ref<Record<string, any>[]>([])
 
@@ -101,6 +110,9 @@ const searchForm = ref(Object.fromEntries(filters.value.map(f => [f.key, ""])))
 const activeFilters = computed(() => {
     return Object.entries(searchForm.value).filter(([k, v]) => v)
 })
+
+
+
 
 watchEffect(async () => {
     const { parsedData, headers } = await useSampleData(dataType.value, 'fly')

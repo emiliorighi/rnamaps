@@ -31,17 +31,14 @@ createApp(App)
 .use(createPinia())
 .use(createVuestic({
     config:{
-        colors:{
-            variables:{
-                primary: '#3F3F37',
-                secondary: '#7B287D',
-                info: '#ffffff',
-                tertiary:'#BC96E6'
-                
-
-
-            }
-        },
+        // colors:{
+        //     variables:{
+        //         primary: '#3F3F37',
+        //         secondary: '#7B287D',
+        //         info: '#ffffff',
+        //         tertiary:'#BC96E6'
+        //     }
+        // },
         icons: createIconsConfig({aliases:aliases})
     }
 }))
