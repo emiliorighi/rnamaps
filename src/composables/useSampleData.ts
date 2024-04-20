@@ -3,7 +3,7 @@ export async function useSampleData(dataType: string, organism: string) {
     let parsedData: Record<string, any>[] = []
 
     try {
-        const response = await fetch('../../metadata.tsv');
+        const response = await fetch('/metadata.tsv');
         const tsvData = await response.text();
 
         // Split the TSV data into rows

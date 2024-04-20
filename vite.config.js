@@ -6,60 +6,64 @@ import vue from '@vitejs/plugin-vue'
 // import react from '@vitejs/plugin-react'
 import pluginRewriteAll from 'vite-plugin-rewrite-all';
 
-export default defineConfig({
-  server:{
-    proxy:{
-      "/files":{
-        target:'https://public-docs.crg.es/rguigo/Data',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/files/, "")
-      },
-      "/ucsc":{
-        target:'https://hgdownload.soe.ucsc.edu/goldenPath',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/ucsc/, "")
-      }
-    }
-  },
-  resolve: {
-    alias: {
-      stream: 'stream-browserify',
-    },
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      // Node.js global to browser globalThis
-      define: {
-        global: 'globalThis',
-      },
-      // Enable esbuild polyfill plugins
-      plugins: [
-        NodeGlobalsPolyfillPlugin({
-          process: true,
-          buffer: true,
-        }),
-        NodeModulesPolyfillPlugin(),
-      ],
-    },
-  },
-  build: {
-    rollupOptions: {
-      plugins: [
-        // Enable rollup polyfills plugin
-        // used during production bundling
-        rollupNodePolyFill(),
-      ],
-    },
-  },
-  plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
+export default defineConfig(({ command, mode }) => {
+
+  return {
+    base: command === 'deploy' ? '/rnamaps/' : '/',
+    server: {
+      proxy: {
+        "/files": {
+          target: 'https://public-docs.crg.es/rguigo/Data',
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/files/, "")
+        },
+        "/ucsc": {
+          target: 'https://hgdownload.soe.ucsc.edu/goldenPath',
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/ucsc/, "")
         }
       }
-    }),
-    pluginRewriteAll()]
+    },
+    resolve: {
+      alias: {
+        stream: 'stream-browserify',
+      },
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        // Node.js global to browser globalThis
+        define: {
+          global: 'globalThis',
+        },
+        // Enable esbuild polyfill plugins
+        plugins: [
+          NodeGlobalsPolyfillPlugin({
+            process: true,
+            buffer: true,
+          }),
+          NodeModulesPolyfillPlugin(),
+        ],
+      },
+    },
+    build: {
+      rollupOptions: {
+        plugins: [
+          // Enable rollup polyfills plugin
+          // used during production bundling
+          rollupNodePolyFill(),
+        ],
+      },
+    },
+    plugins: [
+      vue({
+        template: {
+          compilerOptions: {
+            isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
+          }
+        }
+      }),
+      pluginRewriteAll()]
+  }
 })

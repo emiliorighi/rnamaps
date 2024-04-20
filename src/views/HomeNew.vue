@@ -16,7 +16,7 @@
                             </va-tab>
                         </template>
                     </va-tabs>
-                    <VaInput style="width: 100%;" :placeholder="placeholder">
+                    <VaInput clearable v-model="filter" style="width: 100%;" :placeholder="placeholder">
                         <template #append>
                             <VaButton icon="search" />
                         </template>
@@ -66,11 +66,39 @@
                         <template #cell(actions)="{ row }">
                             <VaButton @click="showSampleDetails = !showSampleDetails; selectedSample = row.rowData">Show
                                 Details</VaButton>
-                            <VaButton :disabled="!getFiles(row.rowData.labExpId).length" @click="selectedSample = row.rowData; showSampleFiles = !showSampleFiles">Related
+                            <VaButton :disabled="!getFiles(row.rowData.labExpId).length"
+                                @click="selectedSample = row.rowData; showSampleFiles = !showSampleFiles">Related
                                 Files</VaButton>
                         </template>
                     </va-data-table>
                 </div>
+
+            </div>
+            <div v-else-if="rnaSeqView === 'Genes'" class="row">
+                <div class="flex lg6 md6 sm12 xs12">
+                    <div class="row">
+                        <div class="flex">
+                            <h2 class="va-h2">{{ selectedFeature.gene }}</h2>
+                        </div>
+                    </div>
+                    <VaDivider />
+                    <VaList v-if="selectedFeature.description">
+                        <VaListItem v-for="(description, index) in selectedFeature.description.split('.')" :key="index"
+                            class="flex cursor-pointer">
+                            <VaListItemSection>
+                                <VaListItemLabel :lines="10">
+                                    {{ description }}
+                                </VaListItemLabel>
+                            </VaListItemSection>
+                            <VaListSeparator />
+                        </VaListItem>
+                    </VaList>
+                </div>
+                <div class="flex lg6 md6 sm12 xs12">
+                    <ScatterPlot/>
+                </div>
+
+
             </div>
         </div>
         <VaModal hide-default-actions max-height="300px" v-model="showSampleDetails">
@@ -91,7 +119,6 @@
         <VaModal hide-default-actions v-model="showSampleFiles">
             <h4 class="va-h4">Files of sample {{ selectedSample.labExpId }}</h4>
             <VaDivider />
-
             <VaList>
                 <VaListItem v-for="(file, index) in getFiles(selectedSample.labExpId)" :key="index"
                     class="flex cursor-pointer">
@@ -108,11 +135,31 @@
 </template>
 <script setup lang="ts">
 import FiltersNew from '../components/FiltersNew.vue';
-import { computed, ref, watchEffect } from 'vue'
-import { organisms } from '../../config.json';
+import { computed, onMounted, ref, watchEffect } from 'vue'
 import { useSampleData } from '../composables/useSampleData'
 import Pagination from '../components/ui/Pagination.vue';
-import rnaSeqFiles from '../assets/fly-rnaseq.json'
+import { useFeatureData } from '../composables/useFeatureData';
+import ScatterPlot from '../components/charts/ScatterPlot.vue';
+
+
+let rnaSeqFiles
+
+let allSamples: Record<string, any>[] = []
+let allFeatures: Record<string, any>[] = []
+
+const flyConfigs = ref<Record<string, any>>({ dataTypes: [] })
+
+const selectedFeature = ref<Record<string, string>>({})
+
+onMounted(async () => {
+    const rnaseqJson = await fetch('/fly-rnaseq.json')
+    rnaSeqFiles = await rnaseqJson.json()
+    const config = await fetch('/config.json')
+    const organisms = await config.json()
+    flyConfigs.value = { ...organisms.organisms.fly }
+    allFeatures = (await useFeatureData()).parsedData
+}
+)
 
 const rnaSeqView = ref('Samples')
 
@@ -120,8 +167,6 @@ const placeholder = computed(() => rnaSeqView.value === 'Samples' ? 'Search a sa
 
 const showSampleDetails = ref(false)
 const showSampleFiles = ref(false)
-
-let allSamples: Record<string, any>[] = []
 
 const selectedSample = ref<Record<string, any>>({})
 
@@ -133,6 +178,8 @@ const initPagination = {
     total: 0
 }
 
+const filter = ref('')
+
 const totalFiles = computed(() => {
     const ids = samples.value.map(s => s.labExpId)
     return rnaSeqFiles.filter(f => ids.find(id => f.name === id))
@@ -140,20 +187,15 @@ const totalFiles = computed(() => {
 
 const pagination = ref({ ...initPagination })
 
-const flyConfigs = organisms.fly
-
 const dataType = ref('RNAseq')
 
 const columns = ref<string[]>([])
 
 const filters = computed(() => {
-    const dType = flyConfigs.dataTypes.find(d => d.name === dataType.value)
+    const dType = flyConfigs.value.dataTypes.find(d => d.name === dataType.value)
     if (dType) return dType.filters
     return []
 })
-
-
-
 
 const searchForm = ref(Object.fromEntries(filters.value.map(f => [f.key, ""])))
 
@@ -168,6 +210,20 @@ watchEffect(async () => {
     allSamples = parsedData
     samples.value = [...allSamples]
     pagination.value.total = allSamples.length
+})
+
+
+
+watchEffect(() => {
+
+    if (rnaSeqView.value === 'Samples') {
+        updateQuery('labExpId', filter.value)
+    } else if (rnaSeqView.value === 'Genes') {
+        const feature = allFeatures.find(f => f.gene === filter.value)
+        if (feature) {
+            selectedFeature.value = { ...feature }
+        }
+    }
 })
 
 const paginatedSamples = computed(() => {
@@ -195,14 +251,18 @@ function handlePagination(value: number) {
 }
 
 function fetchSamples() {
-    if (Object.entries(searchForm.value).filter(([k, v]) => v).length) {
-        const validFilters = Object.entries(searchForm.value).filter(([k, v]) => v)
-        samples.value = [...allSamples.filter(s => validFilters.every(([k, v]) => v === s[k]))]
+    const validFilters = Object.entries(searchForm.value).filter(([k, v]) => v)
+    if (validFilters.length) {
+        samples.value = [...allSamples.filter(s => validFilters.every(([k, v]) => v === s[k] || s[k].includes(v)))]
     } else {
         samples.value = [...allSamples]
     }
     pagination.value.total = samples.value.length
 }
+
+function downloadTSV() { }
+
+function setJBrowseSession() { }
 
 </script>
 

@@ -58,6 +58,7 @@ import SingleGeneScatterPlot from "../SingleGeneScatterPlot.vue"
 import rnaSeq from "../../assets/notrypsin-rna-seq-fly-avg.json"
 import {ref, reactive} from "vue"
 import LineChart from '../LineChart.vue'
+
 const id = ref("")
 const showPlot = ref(false)
 const data = ref({})
@@ -66,6 +67,7 @@ const chartData = reactive({
     labels:['L3','WP','LP'],
     datasets:[]
 })
+
 const chartOptions = reactive({
     responsive:true,
     plugins: {

@@ -3,7 +3,7 @@ export async function useFeatureData() {
     let parsedData: Record<string, any>[] = []
 
     try {
-        const response = await fetch('../../genes_with_descriptions.tsv');
+        const response = await fetch('/genes_with_descriptions.tsv');
         const tsvData = await response.text();
         // Split the TSV data into rows
         const rows = tsvData.split('\n');
