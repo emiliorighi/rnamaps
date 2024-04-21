@@ -7,28 +7,12 @@ import vue from '@vitejs/plugin-vue'
 import pluginRewriteAll from 'vite-plugin-rewrite-all';
 
 export default defineConfig(({ command, mode }) => {
-
+  console.log(command)
   return {
-    base: command === 'deploy' ? '/rnamaps/' : '/',
-    server: {
-      proxy: {
-        "/files": {
-          target: 'https://public-docs.crg.es/rguigo/Data',
-          changeOrigin: true,
-          secure: false,
-          rewrite: (path) => path.replace(/^\/files/, "")
-        },
-        "/ucsc": {
-          target: 'https://hgdownload.soe.ucsc.edu/goldenPath',
-          changeOrigin: true,
-          secure: false,
-          rewrite: (path) => path.replace(/^\/ucsc/, "")
-        }
-      }
-    },
+    base: command === 'build' ? '/rnamaps/' : '/',
     resolve: {
       alias: {
-        stream: 'stream-browserify',
+        stream: 'stream-browserify'
       },
     },
     optimizeDeps: {

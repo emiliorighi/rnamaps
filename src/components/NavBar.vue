@@ -1,7 +1,7 @@
 <template>
     <div>
         <va-affix :offset-top="0">
-            <div class="row navbar-container secondary-background margin-spacer align-center justify-space-between">
+            <div style="padding: 15px;" class="row navbar-container secondary-background align-center justify-space-between">
                 <div class="flex lg6 md6 sm12 xs12">
                     <div class="row align-center justify-space-between">
                         <div class="flex lg4 md4 sm4 xs4">
@@ -11,14 +11,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex lg4 md4 sm12 xs12">
-                    <div class="row align-center justify-end">
+                <div class="flex">
+                    <!-- <div class="row align-center justify-space-between">
+                        <div class="flex" v-for="r in ['Samples', 'Expression Profiles', 'Genome Browser']">
+                            <p  style="color:#fffffa">{{r}}</p>
+                        </div>
                         <div class="flex">
                             <va-badge left color="primary" overlap :text="sessionStore.tracks.length">
                                 <va-icon @click="showModal = true" color="#ffffff" name="shopping_bag"></va-icon>
                             </va-badge>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </va-affix>
@@ -65,6 +68,6 @@ const sessionFile = ref([''])
 
 <style>
 .navbar-container {
-    max-height: 150px;
+    height: 100px;
 }
 </style>

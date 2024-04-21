@@ -7,6 +7,10 @@
                     <p>RNA sequencing of Drosophila Melanogaster in different timepoints</p>
                 </div>
             </div>
+            <HeatMap v-if="selectedFeatures.length && samples.length" :selected-genes="selectedFeatures"
+                :selected-samples="samples" />
+
+
             <div class="row align-end mb-4">
                 <div class="flex lg6 md8 sm12 xs12">
                     <va-tabs v-model="rnaSeqView">
@@ -16,7 +20,9 @@
                             </va-tab>
                         </template>
                     </va-tabs>
-                    <VaInput clearable v-model="filter" style="width: 100%;" :placeholder="placeholder">
+                    <VaInput :error="filter.length >= 11 ? rnaSeqView === 'Genes' && !selectedFeature.gene : false"
+                        :error-messages="[`Gene ${filter} Not found`]" clearable v-model="filter" style="width: 100%;"
+                        :placeholder="placeholder">
                         <template #append>
                             <VaButton icon="search" />
                         </template>
@@ -74,7 +80,7 @@
                 </div>
 
             </div>
-            <div v-else-if="rnaSeqView === 'Genes'" class="row">
+            <div v-else-if="rnaSeqView === 'Genes' && selectedFeature.gene" class="row">
                 <div class="flex lg6 md6 sm12 xs12">
                     <div class="row">
                         <div class="flex">
@@ -95,10 +101,13 @@
                     </VaList>
                 </div>
                 <div class="flex lg6 md6 sm12 xs12">
-                    <ScatterPlot/>
+                    <VaCard>
+                        <VaCardContent>
+                            <LinePlot :gene-id="selectedFeature.gene" />
+
+                        </VaCardContent>
+                    </VaCard>
                 </div>
-
-
             </div>
         </div>
         <VaModal hide-default-actions max-height="300px" v-model="showSampleDetails">
@@ -136,13 +145,14 @@
 <script setup lang="ts">
 import FiltersNew from '../components/FiltersNew.vue';
 import { computed, onMounted, ref, watchEffect } from 'vue'
-import { useSampleData } from '../composables/useSampleData'
 import Pagination from '../components/ui/Pagination.vue';
-import { useFeatureData } from '../composables/useFeatureData';
-import ScatterPlot from '../components/charts/ScatterPlot.vue';
+import { useFeatureData, useSampleData } from '../../utils';
+import LinePlot from '../components/charts/LinePlot.vue';
+import { VaCardContent } from 'vuestic-ui/web-components';
+import rnaSeqFiles from '../data/fly-rnaseq.json'
+import { organisms } from '../data/config.json'
+import HeatMap from '../components/charts/HeatMap.vue';
 
-
-let rnaSeqFiles
 
 let allSamples: Record<string, any>[] = []
 let allFeatures: Record<string, any>[] = []
@@ -150,14 +160,14 @@ let allFeatures: Record<string, any>[] = []
 const flyConfigs = ref<Record<string, any>>({ dataTypes: [] })
 
 const selectedFeature = ref<Record<string, string>>({})
+const selectedFeatures = ref<Record<string, string>[]>([])
 
 onMounted(async () => {
-    const rnaseqJson = await fetch('/fly-rnaseq.json')
-    rnaSeqFiles = await rnaseqJson.json()
-    const config = await fetch('/config.json')
-    const organisms = await config.json()
-    flyConfigs.value = { ...organisms.organisms.fly }
+
+    flyConfigs.value = { ...organisms.fly }
     allFeatures = (await useFeatureData()).parsedData
+    selectedFeatures.value = [...allFeatures.slice(10, 30)]
+
 }
 )
 

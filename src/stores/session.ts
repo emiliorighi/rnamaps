@@ -3,9 +3,15 @@ import {defineStore} from 'pinia'
 import { mapper,humanAnnTrack } from '../trackConfigs'
 import { reactive, ref } from 'vue'
 
+
+const initSearchForm: Record<string,any> = {}
+const initItems: Record<string,any>[] = []
+
 export const session = defineStore('session', {
     state: () => ({
-        currentOrganism:'',
+        samples:[...initItems],
+        selectedFeatures:[...initItems],
+        searchForm:{...initSearchForm},
         tracks:[],
         assembly:{},
         browserSession:{

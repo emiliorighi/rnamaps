@@ -21,6 +21,7 @@ import NavBar from './components/NavBar.vue'
 <style>
 .margin-spacer{
   padding:15px;
+  height: 100vh;
 }
 body{
   font-family: 'Ubuntu', sans-serif;
