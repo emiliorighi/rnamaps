@@ -12,7 +12,7 @@
             <VaDivider />
             <div class="row">
                 <div class="flex">
-                    <VaButton>Search</VaButton>
+                    <VaButton :disabled="geneIds.length === 0" @click="searchGenes">Search</VaButton>
                 </div>
             </div>
         </div>
@@ -49,5 +49,14 @@ function loadExample() {
     sessionStore.selectedFeatures = [...allFeatures.slice(1, 20)]
     textAreaInput.value = sessionStore.selectedFeatures.map(f => f.gene).join(', ')
 }
+
+function searchGenes() {
+    const filteredFeatures = allFeatures.filter(f => {
+        const formattedGeneIds = geneIds.value.map(id => id.trim().toLowerCase());
+        return formattedGeneIds.includes(f.gene.trim().toLowerCase());
+    });
+    sessionStore.selectedFeatures = [...filteredFeatures];
+}
+
 
 </script>

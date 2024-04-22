@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, ref, watch, watchEffect } from 'vue';
-import FiltersNew from '../components/FiltersNew.vue';
+import FiltersNew from '../components/filters/Filters.vue';
 import { organisms } from '../data/config.json'
 import { session } from '../stores/session'
 import { useRouter } from 'vue-router'

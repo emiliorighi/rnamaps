@@ -18,6 +18,7 @@ const props = defineProps<{
 
 
 watchEffect(async () => {
+    console.log(props.selectedGenes)
     createPlot(props.selectedGenes, props.selectedSamples)
 })
 
@@ -107,6 +108,8 @@ async function createPlot(genes, samples) {
 
 
     // create a tooltip
+    d3.select("body").selectAll(".tooltip").remove()
+
     var tooltip = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0)

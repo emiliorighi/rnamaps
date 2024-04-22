@@ -12,7 +12,7 @@ export const session = defineStore('session', {
         samples:[...initItems],
         selectedFeatures:[...initItems],
         searchForm:{...initSearchForm},
-        tracks:[],
+        tracks:[...initItems],
         assembly:{},
         browserSession:{
 
