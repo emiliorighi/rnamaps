@@ -4,7 +4,7 @@ A front-end Vue3 app built with Vite. To display RNA sequencing values.
 
 LIVE DEMO: [https://emiliorighi.github.io/rnamaps/](https://emiliorighi.github.io/rnamaps/)
 
-FUTURE PLAN: Make the app a server-independent template to display gene expression values
+FUTURE PLAN: Make the app a client-side template to display gene expression values
 
     Needed files:
         
