@@ -1,0 +1,13 @@
+data harmonization:
+    - fly:
+        -rnaseq
+        -chipseq
+    -human:
+        -encode links
+
+reformat Home page
+
+
+UI:
+ORGANISM
+    RNASEQ

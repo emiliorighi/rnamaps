@@ -6,60 +6,48 @@ import vue from '@vitejs/plugin-vue'
 // import react from '@vitejs/plugin-react'
 import pluginRewriteAll from 'vite-plugin-rewrite-all';
 
-export default defineConfig({
-  server:{
-    proxy:{
-      "/files":{
-        target:'https://public-docs.crg.es/rguigo/Data',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/files/, "")
+export default defineConfig(({ command, mode }) => {
+  console.log(command)
+  return {
+    base: command === 'build' ? '/rnamaps/' : '/',
+    resolve: {
+      alias: {
+        stream: 'stream-browserify'
       },
-      "/ucsc":{
-        target:'http://hgdownload.soe.ucsc.edu/goldenPath',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/ucsc/, "")
-      }
-    }
-  },
-  resolve: {
-    alias: {
-      stream: 'stream-browserify',
     },
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      // Node.js global to browser globalThis
-      define: {
-        global: 'globalThis',
+    optimizeDeps: {
+      esbuildOptions: {
+        // Node.js global to browser globalThis
+        define: {
+          global: 'globalThis',
+        },
+        // Enable esbuild polyfill plugins
+        plugins: [
+          NodeGlobalsPolyfillPlugin({
+            process: true,
+            buffer: true,
+          }),
+          NodeModulesPolyfillPlugin(),
+        ],
       },
-      // Enable esbuild polyfill plugins
-      plugins: [
-        NodeGlobalsPolyfillPlugin({
-          process: true,
-          buffer: true,
-        }),
-        NodeModulesPolyfillPlugin(),
-      ],
     },
-  },
-  build: {
-    rollupOptions: {
-      plugins: [
-        // Enable rollup polyfills plugin
-        // used during production bundling
-        rollupNodePolyFill(),
-      ],
+    build: {
+      rollupOptions: {
+        plugins: [
+          // Enable rollup polyfills plugin
+          // used during production bundling
+          rollupNodePolyFill(),
+        ],
+      },
     },
-  },
-  plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
+    plugins: [
+      vue({
+        template: {
+          compilerOptions: {
+            isCustomElement: tag => tag.startsWith('fe') || tag.startsWith('sodipodi')
+          }
         }
-      }
-    }),
-    pluginRewriteAll()]
+      }),
+      pluginRewriteAll()]
+  }
 })

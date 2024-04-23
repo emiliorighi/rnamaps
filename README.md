@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+# RNAMaps Web APP:
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A front-end Vue3 app built with Vite. To display RNA sequencing values.
 
-## Recommended IDE Setup
+LIVE DEMO: [https://emiliorighi.github.io/rnamaps/](https://emiliorighi.github.io/rnamaps/)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+FUTURE PLAN: Make the app a client-side template to display gene expression values
+
+    Needed files:
+        
+            - tsv file of RNAseq (featureIds/sampleIds)
+            - tsv file containing Sample metadata
+            - tsv file containing Gene metadata
+            - json config file containing configuration variables
+
+
+# Components:
+
+- Genome Broweser (JBrowse2 + RefGet plugin)
+- D3 HeatMap
+- Vuestic UI

@@ -1,40 +1,96 @@
 <template>
-    <Title :title="title"/>
-    <div class="row margin-spacer">
-        <div class="flex">
-            <blockquote class="blockquote text--secondary">
-            <p >The RNAmaps project aims at the identification of novel genetic and epigenetic factors playing role in RNA processing.
-                Towards that end, we monitor, using massively parallel sequencing, RNA and chromatin changes across many time points in two cell differentiation models
-            </p>
-            </blockquote>
+    <div style="margin-bottom: 8px;" class="row align-end">
+        <div class="flex lg12 md12 sm12 xs12">
+            <h1 class="va-h1">RNA Sequencing of fly</h1>
+            <p>RNA sequencing of Drosophila Melanogaster in different timepoints</p>
         </div>
     </div>
-    <div class="row margin-spacer">
-        <div v-for="organism in organisms" :key="organism.title" class="flex md6 lg6">
-            <OrganismCard :route="organism.route" :title="organism.title" :content="organism.content" :imagePath="organism.imagePath"/>
-        </div>
+    <FiltersNew :options="filters" />
+    <va-tabs style="margin-top: 8px;" v-model="view">
+        <template #tabs>
+            <va-tab v-for="tab in routes" :key="tab" :name="tab.path">
+                {{ tab.label }}
+            </va-tab>
+        </template>
+    </va-tabs>
+    <VaDivider style="margin:0" />
+    <div style="padding: 15px;">
+        <router-view v-slot="{ Component, route }">
+            <Transition name="fade">
+                <component :is="Component" :key="route.path" />
+            </Transition>
+        </router-view>
     </div>
 </template>
-<script setup>
-import OrganismCard from '../components/OrganismCard.vue'
-import Title from '../components/Title.vue'
 
-const title = 'Uncovering and understanding RNA through Massively Parallel Sequencing'
-const organisms = [
+<script setup lang="ts">
+import { computed, onMounted, ref, watch, watchEffect } from 'vue';
+import FiltersNew from '../components/filters/Filters.vue';
+import { organisms } from '../data/config.json'
+import { session } from '../stores/session'
+import { useRouter } from 'vue-router'
+import { useSampleData } from '../../utils';
+
+const sessionStore = session()
+const view = ref('')
+const router = useRouter()
+let allSamples: Record<string, any>[] = []
+
+const filters = computed(() => {
+    const dType = organisms.fly.dataTypes.find(d => d.name === 'RNAseq')
+    if (dType) return dType.filters
+    return []
+})
+
+onMounted(() => 
+    view.value = router.currentRoute.value.name as string
+)
+
+watch(view, (newValue, oldValue) => {
+    if(newValue) router.push({ name: newValue });
+});
+
+const routes = [
     {
-        title:'human',
-        route:'human-new',
-        imagePath:'/transdifferentiation.v2.svg',
-        content:'induced transdifferentiation of human pre-B cells into macrophages'
+        path: 'samples',
+        label: 'Sample Table'
     },
     {
-        title:'fly',
-        route:'fly-new',
-        imagePath:'/development_labeled3.svg',
-        content:'organ morphogenesis during fly development'
+        path: 'expression-profiles',
+        label: 'Expression Profiles'
+    },
+    {
+        path: 'jbrowse2',
+        label: 'Genome Browser'
     }
 ]
-</script>
-<style scoped>
-</style>
 
+
+// watchEffect(() => {
+onMounted(async () => {
+    const { parsedData } = await useSampleData('RNAseq', 'fly')
+    allSamples = parsedData
+    sessionStore.samples = [...allSamples]
+}
+)
+
+watchEffect(() => {
+    const entries = Object.entries(sessionStore.searchForm).filter(([k, v]) => v)
+    fetchSamples(entries)
+})
+
+
+function fetchSamples(validFilters) {
+    if (validFilters.length) {
+        sessionStore.samples = [...allSamples.filter(s => validFilters.every(([k, v]) => v === s[k] || s[k].includes(v)))]
+    } else {
+        sessionStore.samples = [...allSamples]
+    }
+}
+</script>
+
+<style>
+.va-tabs__container {
+    margin-left: 0 !important;
+}
+</style>
